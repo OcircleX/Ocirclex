@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Hero from "./Hero";
+import Landing from "./Landing/page";
+
 
 export default function Home() {
   return (
-    <div className="grid ">
-      <main className="flex flex-col">
-        <Hero/>
-      </main>
+    <div className="w-full  flex flex-wrap items-center justify-between mx-auto ">
+   <Landing />
+
     </div>
   );
 }
