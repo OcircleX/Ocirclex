@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import logo from '../../images/Group 15.png'
+import logo from '../../../images/Group 15.png'
 import Link from "next/link";
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

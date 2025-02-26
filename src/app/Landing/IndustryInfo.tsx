@@ -10,7 +10,7 @@ const IndustryInfo = () => {
 
       <section className=" py-8 w-full shadow-md bg-gradient-to-r from-white to-gray-400 shadow-md  ">
         <div className="m-auto text-[#171D3F] max-w-screen-xl">
-          <div className="review-top-wrapper">
+          <div className="flex justify-between">
             <div className="review-left-col-wrapper"
               style={{
                 opacity: 1,
@@ -18,11 +18,8 @@ const IndustryInfo = () => {
                   "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
                 transformStyle: "preserve-3d",
               }}>
-              <h2 className='text-[#171D3F] text-3xl font-semibold'>
-                BUNDLED WITH
-                <br />
-                <span className=" text-[#7BB668]"><i>industry experience</i></span>
-              </h2>
+              <h1 className="text-4xl md:text-6xl font-bold text-[#171D3F] leading-tight">BUNDLED WITH</h1>
+              <span className="text-4xl md:text-6xl text-[#7BB668] italic font-serif font-thin"><i>industry experience</i></span>
             </div>
 
             <div className="flex justify-end">
@@ -137,7 +134,7 @@ const IndustryInfo = () => {
       </svg> */}
 
 
-     
+
 
 
 
