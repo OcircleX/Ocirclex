@@ -3,7 +3,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div className="bg-[#0B0D26]  border-gray-200 pt-10 border-t text-gray-700 w-full ">
+        <div className="bg-[#0B0D26]  border-gray-200 pt-10  text-gray-700 w-full ">
 
             <footer className="relative  text-white overflow-hidden  w-full">
                 {/* Top content */}

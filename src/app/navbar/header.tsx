@@ -35,9 +35,9 @@ export default function Header() {
             About Us
           </Link>
         </nav>
-        <a href="#" className="hidden md:block bg-[#171D3F] text-white px-4 py-2 hover:bg-blue-800 transition rounded-full px-4 py-1">
+        <Link href="./contact" className="hidden md:block bg-[#171D3F] text-white px-4 py-2 hover:bg-blue-800 transition rounded-full px-4 py-1">
           Contact Us {'>'}
-        </a>
+        </Link>
         <div className="md:hidden">
           <button className="text-gray-900 focus:outline-none">☰</button>
         </div>
