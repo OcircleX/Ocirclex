@@ -7,7 +7,7 @@ import img2 from '../../../images/2.png'
 import img3 from '../../../images/3.png'
 export default function Approch() {
   return (
-    <section className="flex flex-col m-auto  justify-between max-w-screen-xl">
+    <section className="flex flex-col m-auto py-[4rem] justify-between max-w-screen-xl">
       <h1 className="text-2xl md:text-3xl text-center w-full py-10 font-bold text-white leading-tight">TRUSTED BY COMPANIES</h1>
 
       <div className="flex flex-wrap gap-x-6 px-3 gap-y-3 m-auto">
@@ -247,7 +247,7 @@ export default function Approch() {
 
 
       </div>
-      <div className="w-full md:flex px-3 ">
+      <div className="w-full md:flex px-3 py-[4rem]">
         <div className="w-full md:w-1/2">
           <button className="mt-6 px-6 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
             Get Started
@@ -269,7 +269,7 @@ export default function Approch() {
 
 
 
-      <div className="w-[90%] md:flex pt-6 gap-4 h-60">
+      <div className="w-[90%] md:flex pt-6 gap-4 h-60 overflow-hidden">
         <div className="md:w-1/3 w-full  border rounded-md ">
           <Image src={img2} alt="Image 1" className="w-full h-full object-contain"
           // className="rounded-xl object-cover border w-full " 
