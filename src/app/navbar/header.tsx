@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
+import { IoMdArrowDropdown } from "react-icons/io";
 import logo from '../../../images/Group 15.png'
 import Link from "next/link";
 export default function Header() {
@@ -18,11 +18,12 @@ export default function Header() {
           <a href="#" className="text-gray-900 hover:text-green-500 transition border border-black rounded-full px-4 py-1">Home</a>
           <div className="relative">
             <button
-              className="flex items-center text-gray-900 hover:text-green-500 transition border border-black rounded-full px-4 py-1"
+              className="flex gap-1 items-center text-gray-900 hover:text-green-500 transition border border-black rounded-full px-5 py-1"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
               <span>Services</span>
-              <FaChevronDown className="ml-1 text-sm" />
+              <IoMdArrowDropdown className=""/>
+
             </button>
             {isDropdownOpen && (
               <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-36">

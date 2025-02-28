@@ -2,15 +2,15 @@
 
 import { motion } from "framer-motion";
 import Image from 'next/image';
-import img1 from '../../../images/1.png'
-import img2 from '../../../images/2.png'
-import img3 from '../../../images/3.png'
+import img1 from '../../images/1.png'
+import img2 from '../../images/2.png'
+import img3 from '../../images/3.png'
 export default function Approch() {
   return (
-    <section className="flex flex-col m-auto py-[4rem] justify-between max-w-screen-xl">
-      <h1 className="text-2xl md:text-3xl text-center w-full py-10 font-bold text-white leading-tight">TRUSTED BY COMPANIES</h1>
+    <section className="flex flex-col m-auto py-[4rem] bg-[#171D3F] justify-between max-w-screen-xl mt-4">
+      <h1 className="text-2xl md:text-3xl  text-center w-full py-10 font-bold text-white leading-tight">TRUSTED BY COMPANIES</h1>
 
-      <div className="flex flex-wrap gap-x-6 px-3 gap-y-3 m-auto">
+      <div className="flex flex-wrap gap-x-6 px-3 gap-y-3 m-auto ">
         <svg className="pt-2" width="63" height="26" viewBox="0 0 63 26" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_3338_130823)">
             <g clip-path="url(#clip1_3338_130823)">
@@ -247,10 +247,10 @@ export default function Approch() {
 
 
       </div>
-      <div className="w-full md:flex px-3 py-[4rem]">
+      <div className="w-full md:flex px-3 py-[4rem] bg-[#171D3F]">
         <div className="w-full md:w-1/2">
-          <button className="mt-6 px-6 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
-            Get Started
+          <button className="mt-6 border px-6 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+            CREATIVE STUDIO
           </button>
         </div>
         <div className="w-full md:w-1/2">
@@ -260,7 +260,7 @@ export default function Approch() {
             ARE HERE TO ELEVATE YOUR PRESENCE AND
             MAKE YOUR BRAND
           </h1>
-          <button className="px-6 py-3 bg-white text-[#0B0D26] rounded-full shadow-md hover:bg-gray-200 transition">
+          <button className="px-6 py-3 mt-2 bg-white text-[#0B0D26] rounded-full shadow-md hover:bg-gray-200 transition">
             ABOUT US ›
           </button>
 
@@ -269,21 +269,22 @@ export default function Approch() {
 
 
 
-      <div className="w-[90%] md:flex pt-6 gap-4 h-60 overflow-hidden">
-        <div className="md:w-1/3 w-full  border rounded-md ">
-          <Image src={img2} alt="Image 1" className="w-full h-full object-contain"
-          // className="rounded-xl object-cover border w-full " 
-          />
+
+      <div className="w-full justify-center flex pt-6 gap-4 h-[440px] overflow-hidden">
+        <div className=" w-[25%]   rounded-md ">
+         <img src={img2.src} alt="" />
         </div>
-        <div className="md:w-1/3 w-full h-full border rounded-md ">
-          <Image src={img1} alt="Image 2" className="w-full h-full object-contain"
-          // className="rounded-xl object-cover border w-full  " 
-          />
+        <div className="w-[50%] h-full  rounded-md ">
+        <img src={img1.src} alt="" />
         </div>
-        <div className="md:w-1/3 w-full border rounded-md ">
-          <Image src={img3} alt="Image 3" className="rounded-xl object-cover border w-full " />
+        <div className=" w-[25%]  rounded-md ">
+          
+        <img src={img3.src} alt="" />
         </div>
       </div>
+
+
+
 
     </section>
   );

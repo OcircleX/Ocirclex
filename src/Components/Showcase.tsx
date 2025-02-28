@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import image from '../../../images/img.png'
+import image from '../../images/img.png'
 import Image from "next/image";
 const Showcase = () => {
 
@@ -27,21 +27,20 @@ const Showcase = () => {
       title: "Task Management",
       category: "Web dev & UI Design",
       image:
-        "https://cdn.prod.website-files.com/6757eead5dc653562d488050/67585c225994163eddbaa9a0_a-man-standing-on-the-street-looking-at-his-cell-phone-SVwXm_hX4Wg.jpg",
+        "/Nuegas.png",
       link: "/projects/dynamic-structures",
     },
     {
       title: "Fitness  Application",
       category: "Mobile App dev & UI Design",
-      image:
-        "https://cdn.prod.website-files.com/6757eead5dc653562d488050/67585c45ee4aa7c49913ffa5_a-city-street-with-tall-buildings-and-a-clock-tower-Z9xPTZfRvNw.jpg",
+      image:"/Fitness.png",
       link: "/projects/visionary-framework",
     },
     {
       title: "Hospital Management System",
       category: "Web dev & UI Design",
       image:
-        "https://cdn.prod.website-files.com/6757eead5dc653562d488050/67585c6109c882e84710569e_a-room-with-three-circular-windows-and-a-couch-nqBD2KSAAoU.jpg",
+        "/Hospital.png",
       link: "/projects/design-revolution",
     },
   ];
@@ -67,7 +66,7 @@ const Showcase = () => {
       <section className="py-16 px-2  w-full bg-[#04081C]">
         <div className="w-full mx-auto px-6 max-w-screen-xl">
           <div className="md:flex justify-between items-center mb-12">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-4xl font-bold text-white">
               OUR CREATIVE <br />
               <span className="text-[#7BB668] font-normal"><i>showcase</i></span>
             </h2>
@@ -97,9 +96,13 @@ const Showcase = () => {
                   <button className="mt-6 px-6 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
                     {project.category}
                   </button>
-                  <h3 className="text-white w-[40vh] tracking-[-1.62px] mt-0 mb-0 text-[54px] font-bold leading-[120%]">
-                    {project.title}
-                  </h3>
+                  <h3
+  className={`w-[40vh] tracking-[-1.62px] mt-0 mb-0 text-[54px] font-bold leading-[120%] ${
+    index === 0 ? "text-white" : "text-black"
+  }`}
+>
+  {project.title}
+</h3>
 
                 </div>
               </a>
