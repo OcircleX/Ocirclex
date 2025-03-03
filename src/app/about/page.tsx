@@ -3,7 +3,17 @@ import React from 'react'
 import img2 from '../../../images/2.png'
 import img1 from '../../../images/1.png'
 import img3 from '../../../images/3.png'
-import fazal from '../../../images/fazal.png'
+import Header from '../navbar/header'
+import DarkNav from '@/app/navbar/DarkNav'
+import { Instrument_Serif } from "next/font/google";
+
+
+const instrumentSerif = Instrument_Serif({ 
+    subsets: ["latin"], 
+    weight: ["400"], 
+    style: "italic" // ✅ Correct way to load italic
+  });
+
 function page() {
 
 
@@ -12,83 +22,84 @@ function page() {
             title: "FAZAL BASIT",
             category: "CEO & founder",
             image:
-                "https://cdn.prod.website-files.com/6757eead5dc653562d488050/67585c225994163eddbaa9a0_a-man-standing-on-the-street-looking-at-his-cell-phone-SVwXm_hX4Wg.jpg",
+                "/fazal.png",
             link: "/projects/dynamic-structures",
         },
         {
             title: "Malik Iqbal",
             category: "Senior Software Engineer",
             image:
-                "https://cdn.prod.website-files.com/6757eead5dc653562d488050/67585c45ee4aa7c49913ffa5_a-city-street-with-tall-buildings-and-a-clock-tower-Z9xPTZfRvNw.jpg",
+            "/wasif.png",
             link: "/projects/visionary-framework",
         },
         {
             title: "FAZAL WASIF",
             category: "CREATIVE DIRECTOR & Co-founder",
             image:
-                "https://cdn.prod.website-files.com/6757eead5dc653562d488050/67585c6109c882e84710569e_a-room-with-three-circular-windows-and-a-couch-nqBD2KSAAoU.jpg",
+            "/wasif.png",
             link: "/projects/design-revolution",
         },
         {
             title: "MIFTAHULLAH KHAN",
             category: "FRONTEND DEVELOPER",
             image:
-                "https://cdn.prod.website-files.com/6757eead5dc653562d488050/67585c6109c882e84710569e_a-room-with-three-circular-windows-and-a-couch-nqBD2KSAAoU.jpg",
+            "/Miftah.png",
             link: "/projects/design-revolution",
         },
         {
             title: "Faisal KHAN",
             category: "BACKEND DEVELOPER",
             image:
-                "https://cdn.prod.website-files.com/6757eead5dc653562d488050/67585c6109c882e84710569e_a-room-with-three-circular-windows-and-a-couch-nqBD2KSAAoU.jpg",
+            "/wasif.png",
             link: "/projects/design-revolution",
         },
     ];
 
 
     return (
-        <>    <section className="w-full relative bg-[#171D3F] to-gray-100 py-20  flex flex-col  items-center justify-between">
+        <>   
+       <div>
+        <DarkNav/>
+       <section className="w-full relative bg-[#171D3F] to-gray-100 py-20  flex flex-col  items-center justify-between">
             <div className="max-w-screen-xl justify-between w-full m-auto ">
                 <div className="w-full items-center flex flex-col py-[2rem]">
                     <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
                         BUILDING</h1>
-                    <span className="text-4xl md:text-6xl text-green-500 italic font-serif font-thin">beyond limits</span>
+                    <span className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}>beyond limits</span>
                     <button className="mt-6 px-6 border py-3 bg-[#171D3F] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition">
                         Get Started
                     </button>
                 </div>
-                <div className='flex w-full justify-between items-center pt-6 gap-x-2 h-64 '>
-                    <div className='flex w-1/3 justify-between items-center pt-6 border h-full rounded-md'>
-                        <Image src={img1} className=' w-full h-full' />
-                    </div>
-                    <div className='flex w-1/3 justify-between items-center pt-6 border h-full rounded-md'>
-                        <Image src={img2} className=' w-full h-full' />
-
-                    </div>
-                    <div className='flex w-1/3 justify-between items-center pt-6 border h-full rounded-md'>
-                        <Image src={img3} className=' w-full h-full' />
-
-                    </div>
-                </div>
-                <div className='flex  py-[4rem] w-full justify-between items-center py-6'>
+                <div className="w-full max-w-screen-xl mx-auto flex justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4">
+  <div className="w-[30%] h-full rounded-md overflow-hidden flex-grow-0">
+    <img src={img2.src} alt="" className="w-full h-full object-cover" />
+  </div>
+  <div className="w-[40%] h-full rounded-md overflow-hidden flex-grow-0">
+    <img src={img1.src} alt="" className="w-full h-full object-cover" />
+  </div>
+  <div className="w-[30%] h-full rounded-md overflow-hidden flex-grow-0">
+    <img src={img3.src} alt="" className="w-full h-full object-cover" />
+  </div>
+</div>
+                <div className='flex   w-full justify-between items-start  py-[4rem] px-4'>
                     <button className="mt-6 border px-6 py-3 bg-[#171D3F] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition">
                         CREATIVE STUDIO
                     </button>
-                    <label className='text-md w-1/2 text-white'>
+                    <label className='text-3xl w-[65%] text-white px-4 tracking-normal'>
 
                         OUR APPROACH COMBINES BOLD AND THE
-                        CREATIVITY That DRIVES AS WE ARE HERE TO
+                        CREATIVITY THAT DRIVES AS WE ARE HERE TO
                         ELEVATE YOUR BRAND
                     </label>
                 </div>
             </div>
 
-            <div className=" py-[4rem]  w-full shadow-md bg-gradient-to-r from-white to-gray-400 shadow-md  ">
+            <div className=" py-[4rem] px-4  w-full shadow-md bg-gradient-to-r from-white to-gray-200 shadow-md  ">
                 <div className="m-auto text-[#171D3F] max-w-screen-xl">
                     <div className="flex justify-between items-center">
                         <div className="">
                             <h1 className="text-4xl md:text-6xl font-bold text-[#171D3F] leading-tight">THE CORE OF</h1>
-                            <span className="text-4xl md:text-6xl text-[#7BB668] italic font-serif font-thin"><i>our identity</i></span>
+                            <span className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}><i>our identity</i></span>
                         </div>
 
                         <div className="flex justify-end">
@@ -113,7 +124,7 @@ function page() {
                                     </div>
                                 </div>
                                 <div className='flex flex-col w-full md:w-1/2/3  mt-4 rounded-md border border-gray-400 shadow p-6  gap-x-2'>
-                                    <h2 className="md:text-4xl text-xl  py-3 text-[#171D3F]">1</h2>
+                                    <h2 className="md:text-4xl text-xl  py-3 text-[#171D3F]">2</h2>
                                     <div className="text-[#171D3F]">Collaboration</div>
                                     <div className="text-gray-400">
                                         Creativity is at the heart of our agency. We strive to
@@ -147,11 +158,11 @@ function page() {
                 </div>
             </div>
 
-            <div className="max-w-screen-xl justify-between w-full m-auto">
+            <div className="max-w-screen-xl justify-between w-full m-auto px-4">
                 <div className="w-full py-[4rem] items-center md:flex pt-6 mt-6 justify-between">
                     <div className=''>
                         <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight">MEET </h1>
-                        <span className="text-4xl md:text-4xl text-green-500 italic font-serif font-thin">Our Team</span>
+                        <span className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}>Our Team</span>
                     </div>
 
                     {/* <button className="mt-6 px-6 border py-3 bg-[#171D3F] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition">
@@ -188,11 +199,11 @@ function page() {
                     ))}
                 </div> */}
 
-                <div className="flex w-full overflow-auto  justify-between items-center overflow-x-scroll scrollbar scrollbar-thin pt-6 gap-x-2 h-[45vh]">
+                <div className="flex w-full overflow-auto  justify-between items-center  scrollbar scrollbar-thin pt-2    gap-x-4 ">
                     {team.map((x) => (
-                        <div key={x.title} className="flex flex-col  min-w-[25%] justify-between items-center border h-full rounded-md">
-                            <img src={x.image} alt={x.title} className="w-full h-[30vh] object-cover" />
-                            <div className="w-full px-2 flex justify-between items-center">
+                        <div key={x.title} className="flex flex-col  min-w-[25%] justify-between items-center h-full rounded-lg">
+                            <img src={x.image} alt={x.title} className="w-full  rounded-md object-cover" />
+                            <div className="w-full px-2 flex justify-between items-center pb-2">
                                 <div className="py-2">
                                     <div className="text-white">{x.title}</div>
                                     <div className="text-white text-[0.7rem]">{x.category}</div>
@@ -241,42 +252,43 @@ function page() {
                 <div className="w-full items-center md:flex pt-[4rem] mt-6 justify-between">
                     <div className=''>
                         <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight">WHAT WE</h1>
-                        <span className="text-4xl md:text-4xl text-green-500 italic font-serif font-thin">excel at</span>
+                        <span className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}>excel at</span>
                     </div>
                     <button className="mt-6 px-6 border py-3 bg-[#171D3F] rounded-full text-white text-md font-medium hover:bg-blue-800 transition">OUR SKILS {' >'}</button>
                 </div>
                 <div className="w-full items-center md:flex pt-6 mt-6 justify-between">
                     <h1 className="text-2xl  font- text-white leading-tight  w-11/12">WEB DESIGN</h1>
-                    <label className="text-4xl md:text-4xl text-green-500 italic font-serif font-thin">95%</label>
+                    <label className="text-4xl md:text-2xl text-gray-400">95%</label>
                 </div>
-                <div className="w-full bg-[#484848] rounded-full mt-2 h-15 ">
-                    <div className="bg-gray-400 h-1.5 rounded-full  w-[95%]" ></div>
+                <div className="w-full bg-[#484848] rounded-full mt-6 h-15 ">
+                    <div className="bg-gray-400 h-0.5 rounded-full  w-[95%] " ></div>
                 </div>
                 {/* <div className='border-b w-[95%] pt-1'></div> */}
                 <div className="w-full items-center md:flex pt-6 mt-2 justify-between">
                     <h1 className="text-2xl  font- text-white leading-tight  ">DEVELOPMENT</h1>
-                    <label className="text-4xl md:text-4xl text-green-500 italic font-serif font-thin">100%</label>
+                    <label className="text-4xl md:text-2xl text-gray-400">100%</label>
                 </div>
-                <div className="w-full bg-[#484848] rounded-full mt-2 h-15 ">
-                    <div className="bg-gray-400 h-1.5 rounded-full  w-[100%]" ></div>
+                <div className="w-full bg-[#484848] rounded-full mt-6 h-15 ">
+                    <div className="bg-gray-400 h-0.5 rounded-full  w-[100%]" ></div>
                 </div>
                 <div className="w-full items-center md:flex pt-6 mt-6 justify-between">
                     <h1 className="text-2xl  font- text-white leading-tight ">UI/UX CONCEPT</h1>
-                    <label className="text-4xl md:text-4xl text-green-500 italic font-serif font-thin">100%</label>
+                    <label className="text-4xl md:text-2xl text-gray-400">100%</label>
                 </div>
-                <div className="w-full bg-[#484848] rounded-full mt-2 h-15 ">
-                    <div className="bg-gray-400 h-1.5 rounded-full  w-[100%]" ></div>
+                <div className="w-full bg-[#484848] rounded-full mt-6 h-15 ">
+                    <div className="bg-gray-400 h-0.5 rounded-full  w-[100%]" ></div>
                 </div>
                 <div className="w-full items-center md:flex pt-6 mt-6 justify-between">
                     <h1 className="text-2xl  font- text-white leading-tight  ">BRANDING</h1>
-                    <label className="text-4xl md:text-4xl text-green-500 italic font-serif font-thin">90%</label>
+                    <label className="text-4xl md:text-2xl text-gray-400 ">90%</label>
                 </div>
-                <div className="w-full bg-[#484848] rounded-full mt-2 h-15 ">
-                    <div className="bg-gray-400 h-1.5 rounded-full  w-[90%]" ></div>
+                <div className="w-full bg-[#484848] rounded-full mt-6 h-15 ">
+                    <div className="bg-gray-400 h-0.5 rounded-full  w-[90%]" ></div>
                 </div>
 
             </div>
         </section>
+       </div>
 
         </>
     )

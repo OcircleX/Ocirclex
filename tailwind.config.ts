@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      letterSpacing: {
+        ultra: "-1px", // Custom spacing
+      },
     },
   },
   plugins: [],

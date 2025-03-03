@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./navbar/header";
 import Hero from "../Components/Hero";
+import { Instrument_Serif } from "next/font/google";
 import Footer from "./footer/Footer";
 
 const geistSans = Geist({
@@ -39,7 +40,7 @@ export default function RootLayout({
       <html data-theme="cupcake" lang="en">
 
         <body>
-          <Header />
+          
           {/* <Navbar /> */}
           <main className="h-[80%] flex justify-center">{children}</main>
           <Footer />

@@ -7,8 +7,8 @@ import img2 from '../../images/2.png'
 import img3 from '../../images/3.png'
 export default function Approch() {
   return (
-    <section className="flex flex-col m-auto py-[4rem] bg-[#171D3F] justify-between max-w-screen-xl mt-4">
-      <h1 className="text-2xl md:text-3xl  text-center w-full py-10 font-bold text-white leading-tight">TRUSTED BY COMPANIES</h1>
+    <section className="flex flex-col m-auto py-[4rem] bg-[#171D3F] justify-between max-w-screen-xl w-full ">
+      <h1 className="text-2xl   text-center w-full py-10 font-bold text-white leading-tight">TRUSTED BY COMPANIES</h1>
 
       <div className="flex flex-wrap gap-x-6 px-3 gap-y-3 m-auto ">
         <svg className="pt-2" width="63" height="26" viewBox="0 0 63 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -247,13 +247,15 @@ export default function Approch() {
 
 
       </div>
-      <div className="w-full md:flex px-3 py-[4rem] bg-[#171D3F]">
+
+
+      <div className="w-full md:flex px-3 py-[4rem] bg-[#171D3F] justify-between gap-8">
         <div className="w-full md:w-1/2">
           <button className="mt-6 border px-6 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
             CREATIVE STUDIO
           </button>
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-[60%] ">
           <h1 className="text-2xl md:text-3xl w-full py-10 font-bold text-white leading-tight">
             OUR APPROACH COMBINES BOLD AND
             CREATIVITY WITH DATE DRIVEN INSIGHTS WE
@@ -270,18 +272,20 @@ export default function Approch() {
 
 
 
-      <div className="w-full justify-center flex pt-6 gap-4 h-[440px] overflow-hidden">
-        <div className=" w-[25%]   rounded-md ">
-         <img src={img2.src} alt="" />
-        </div>
-        <div className="w-[50%] h-full  rounded-md ">
-        <img src={img1.src} alt="" />
-        </div>
-        <div className=" w-[25%]  rounded-md ">
-          
-        <img src={img3.src} alt="" />
-        </div>
-      </div>
+
+      <div className="w-full max-w-screen-xl mx-auto flex justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4">
+  <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0">
+    <img src={img2.src} alt="" className="w-full h-full object-cover" />
+  </div>
+  <div className="w-[50%] h-full rounded-md overflow-hidden flex-grow-0">
+    <img src={img1.src} alt="" className="w-full h-full object-cover" />
+  </div>
+  <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0">
+    <img src={img3.src} alt="" className="w-full h-full object-cover" />
+  </div>
+</div>
+
+
 
 
 
