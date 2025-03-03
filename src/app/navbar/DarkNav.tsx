@@ -10,7 +10,7 @@ export default function DarkNav() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <header className="bg-[#171D3F] w-full  shadow-md py-4 px-6 flex justify-between items-center " >
+    <header className="bg-[#04081C] w-full  shadow-md py-4 px-6 flex justify-between items-center " >
       <div className="w-full max-w-screen-xl  flex flex-wrap items-center justify-between mx-auto ">
         <Link href="./"> 
         <svg width="121" height="49" viewBox="0 0 121 49" fill="black" xmlns="http://www.w3.org/2000/svg">

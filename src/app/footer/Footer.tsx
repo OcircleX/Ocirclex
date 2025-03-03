@@ -3,11 +3,11 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div className="bg-[#0B0D26]  border-gray-200 pt-10  text-gray-700 w-full ">
+        <div className="bg-[#04081C] border-gray-200 pt-10  text-gray-700 w-[100%] ">
 
-            <footer className="relative  text-white overflow-hidden  w-full">
+            <footer className="relative  text-white   w-full">
                 {/* Top content */}
-                <div className="max-w-screen-xl mx-auto px-4 py-8">
+                <div className="max-w-screen-xl  mx-auto px-4 py-8">
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between space-y-6 md:space-y-0">
                         {/* Left side */}
                         <div>
@@ -18,14 +18,14 @@ function Footer() {
                             </h3>
                         </div>
 
-                        <button className="mt-6 px-6 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+                        <button className="mt-6 px-6 py-3 bg-white text-[#04081C] text-lg font-medium rounded-full hover:bg-blue-800 transition">
                             START A PROJECT
                         </button>
 
                     </div>
                 </div>
-                <div className="md:flex mb-4 justify-between items-center text-sm text-gray-200 md:gap-x-12 md:mx-auto md:w-2/3">
-                    <p className="mx-2">• ISLAMABAD, PAKISTAN</p>
+                <div className="md:flex mb-4 justify-between items-center text-sm text-gray-200 md:gap-x-12 md:mx-auto md:w-full px-4">
+                    <p className="">• ISLAMABAD, PAKISTAN</p>
                     <p className="mx-2">• circlex@gmail.com</p>
                     <p className="mx-2">• DRIBBBLE</p>
                     <p className="mx-2">• LINKEDIN</p>

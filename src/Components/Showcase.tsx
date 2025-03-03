@@ -1,8 +1,16 @@
 "use client";
+import { Instrument_Serif } from "next/font/google";
 
 import { useEffect, useState } from "react";
 import image from '../../images/img.png'
 import Image from "next/image";
+
+const instrumentSerif = Instrument_Serif({ 
+  subsets: ["latin"], 
+  weight: ["400"], 
+  style: "italic" // ✅ Correct way to load italic
+});
+
 const Showcase = () => {
 
   const [isVisible, setIsVisible] = useState(false);
@@ -68,9 +76,9 @@ const Showcase = () => {
           <div className="md:flex justify-between items-center mb-12">
             <h2 className="text-4xl font-bold text-white">
               OUR CREATIVE <br />
-              <span className="text-[#7BB668] font-normal"><i>showcase</i></span>
+              <span  className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}><i>showcase</i></span>
             </h2>
-            <button className="mt-6 px-6 flex gap-x-2 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+            <button className="mt-6 px-6 flex gap-x-2 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
               ALL CASE STUDIES
               <img
                 src="https://cdn.prod.website-files.com/6757e4a58bda42b7389bc8e0/67585a489813ca576fb1579b_direction-right%202.svg"
@@ -93,7 +101,7 @@ const Showcase = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="p-6 absolute bottom-12 left-6">
-                  <button className="mt-6 px-6 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+                  <button className="mt-6 px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
                     {project.category}
                   </button>
                   <h3
@@ -117,11 +125,11 @@ const Showcase = () => {
 
 
 
-      <div className="md:flex  bg-black text-white px-2  md:py-8 space-y-8 gap-x-2 max-w-screen-xl mx-auto">
+      <div className="md:flex  bg-[#04081C] text-white px-2  md:py-8 space-y-8 gap-x-2 max-w-screen-xl mx-auto">
         {/* Left Section: Button */}
         <div className="w-full md:w-1/3">
 
-          <button className="mt-6 px-6 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+          <button className="mt-6 px-6 py-3 bg-[#04081C] border text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
             WORKING METHODS
           </button>
         </div>
@@ -137,7 +145,7 @@ const Showcase = () => {
           <div className=" md:flex gap-8  w-full ">
 
             <div className="space-y-6 md:w-2/3 w-full ">
-              <div className="bg-black text-white flex flex-col items-start py-10">
+              <div className="bg-[#04081C] text-white flex flex-col items-start py-10">
                 <div className="relative pl-4 md:pl-10">
                   {items.map((item, index) => (
                     <div id="creative-projects" className={` duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`} style={{ color: "rgb(190, 191, 195)" }}>

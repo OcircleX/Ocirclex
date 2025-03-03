@@ -13,14 +13,17 @@ const instrumentSerif = Instrument_Serif({
 export default function Hero() { 
 
   return (
-<div className="w-full">
-<section style={{
+<div className="w-full flex items-center">
+  <section
+    style={{
       backgroundImage: `url(${Background.src})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}
-     className="w-full relative  to-gray-100 flex flex-col md:flex-row items-center justify-center px-2 md:items-end md:justify-end">
-      <div className="max-w-screen-xl md:flex justify-between px-4 py-4 w-full m-auto mt-8">
+    className="w-full relative bg-gray-100 flex flex-col md:flex-row items-center justify-center px-2 md:items-end md:justify-end"
+  >
+    <div className="max-w-screen-xl md:flex flex-wrap justify-between px-4 py-4 w-full m-auto mt-8">
+
    <div 
  
    className="mt-8"
@@ -51,7 +54,7 @@ export default function Hero() {
          transition={{duration:0.4, delay:0.2, ease: "easeInOut"}}
        >
        <button
-         className="flex items-center gap-2 w-fit mt-6  px-6 py-3 bg-white rounded-full border text-[#171D3F] border-[#171D3F] text-lg font-medium  hover:bg-blue-800 transition"
+         className="flex items-center gap-2 w-fit mt-6  px-6 py-3 bg-white rounded-full border text-[#04081C] border-[#171D3F] text-lg font-medium  hover:bg-blue-800 transition"
        
          >
             Get Started  <span><IoMdArrowDropright />
@@ -69,7 +72,7 @@ export default function Hero() {
         >
 
 
-         <div className="bg-[#171D3F] border-2    text-white p-6 rounded-xl shadow-lg w-72">
+         <div className="bg-[#04081C] border-2    text-white p-6 rounded-xl shadow-lg w-72">
          <h3 className="text-lg font-semibold  text-gray-300">AGENCY INSIGHTS</h3>
           <p className="text-gray-300 text-xs">A FUTURE FOCUSED DIGITAL STUDIO</p>
 

@@ -60,13 +60,13 @@ function page() {
         <>   
        <div>
         <DarkNav/>
-       <section className="w-full relative bg-[#171D3F] to-gray-100 py-20  flex flex-col  items-center justify-between">
+       <section className="w-full relative bg-[#04081C] to-gray-100 py-20  flex flex-col  items-center justify-between">
             <div className="max-w-screen-xl justify-between w-full m-auto ">
                 <div className="w-full items-center flex flex-col py-[2rem]">
                     <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
                         BUILDING</h1>
                     <span className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}>beyond limits</span>
-                    <button className="mt-6 px-6 border py-3 bg-[#171D3F] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition">
+                    <button className="mt-6 px-6 border py-3 bg-[#04081C] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition">
                         Get Started
                     </button>
                 </div>
@@ -82,7 +82,7 @@ function page() {
   </div>
 </div>
                 <div className='flex   w-full justify-between items-start  py-[4rem] px-4'>
-                    <button className="mt-6 border px-6 py-3 bg-[#171D3F] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition">
+                    <button className="mt-6 border px-6 py-3 bg-[#04081C] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition">
                         CREATIVE STUDIO
                     </button>
                     <label className='text-3xl w-[65%] text-white px-4 tracking-normal'>
@@ -95,15 +95,15 @@ function page() {
             </div>
 
             <div className=" py-[4rem] px-4  w-full shadow-md bg-gradient-to-r from-white to-gray-200 shadow-md  ">
-                <div className="m-auto text-[#171D3F] max-w-screen-xl">
+                <div className="m-auto text-[#04081C] max-w-screen-xl">
                     <div className="flex justify-between items-center">
                         <div className="">
-                            <h1 className="text-4xl md:text-6xl font-bold text-[#171D3F] leading-tight">THE CORE OF</h1>
+                            <h1 className="text-4xl md:text-6xl font-bold text-[#04081C] leading-tight">THE CORE OF</h1>
                             <span className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}><i>our identity</i></span>
                         </div>
 
                         <div className="flex justify-end">
-                            <button className=" px-6 border py-3 border-[#171D3F] rounded-full text-[#171D3F] text-lg font-medium hover:bg-blue-800 transition">
+                            <button className=" px-6 border py-3 border-[#171D3F] rounded-full text-[#04081C] text-lg font-medium hover:bg-blue-800 transition">
                                 SEE OUR SERVICES
                             </button>
                         </div>
@@ -115,8 +115,8 @@ function page() {
                         <div className='w-full md:w-2/3 gap-x-3'>
                             <div className='md:flex w-full gap-x-3 '>
                                 <div className='flex flex-col w-full md:w-1/2/3  mt-4 rounded-md border border-gray-400 shadow p-6  gap-x-2'>
-                                    <h2 className="md:text-4xl text-xl  py-3 text-[#171D3F]">1</h2>
-                                    <div className="text-[#171D3F]">Creativity</div>
+                                    <h2 className="md:text-4xl text-xl  py-3 text-[#04081C]">1</h2>
+                                    <div className="text-[#04081C]">Creativity</div>
                                     <div className="text-gray-400">
                                         Creativity is at the heart of our agency. We strive to
                                         innovate, think differently, and push the boundaries
@@ -124,8 +124,8 @@ function page() {
                                     </div>
                                 </div>
                                 <div className='flex flex-col w-full md:w-1/2/3  mt-4 rounded-md border border-gray-400 shadow p-6  gap-x-2'>
-                                    <h2 className="md:text-4xl text-xl  py-3 text-[#171D3F]">2</h2>
-                                    <div className="text-[#171D3F]">Collaboration</div>
+                                    <h2 className="md:text-4xl text-xl  py-3 text-[#04081C]">2</h2>
+                                    <div className="text-[#04081C]">Collaboration</div>
                                     <div className="text-gray-400">
                                         Creativity is at the heart of our agency. We strive to
                                         innovate, think differently, and push the boundaries
@@ -134,18 +134,18 @@ function page() {
                                 </div>
 
                             </div>
-                            <div className='md:flex w-full gap-x-3 text-[#171D3F]'>
+                            <div className='md:flex w-full gap-x-3 text-[#04081C]'>
                                 <div className='flex flex-col w-full md:w-1/2/3  mt-4 rounded-md border border-gray-400 shadow p-6  gap-x-2'>
-                                    <h2 className="md:text-4xl text-xl  py-3 text-[#171D3F]">3</h2>
-                                    <div className="text-[#171D3F]">Creativity</div>
+                                    <h2 className="md:text-4xl text-xl  py-3 text-[#04081C]">3</h2>
+                                    <div className="text-[#04081C]">Creativity</div>
                                     <div className="text-gray-400">
                                         Creativity is at the heart of our agency. We strive to
                                         innovate, think differently, and push the boundaries
                                         of design to bring bold and inspiring ideas to life.</div>
                                 </div>
                                 <div className='flex flex-col w-full md:w-1/2/3  mt-4 rounded-md border border-gray-400 shadow p-6  gap-x-2'>
-                                    <h2 className="md:text-4xl text-xl  py-3 text-[#171D3F]">4</h2>
-                                    <div className="text-[#171D3F]">Growth</div>
+                                    <h2 className="md:text-4xl text-xl  py-3 text-[#04081C]">4</h2>
+                                    <div className="text-[#04081C]">Growth</div>
                                     <div className="text-gray-400">
                                         Creativity is at the heart of our agency. We strive to
                                         innovate, think differently, and push the boundaries
@@ -165,7 +165,7 @@ function page() {
                         <span className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}>Our Team</span>
                     </div>
 
-                    {/* <button className="mt-6 px-6 border py-3 bg-[#171D3F] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition">
+                    {/* <button className="mt-6 px-6 border py-3 bg-[#04081C] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition">
                         Our Team
                     </button> */}
                 </div>
@@ -254,7 +254,7 @@ function page() {
                         <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight">WHAT WE</h1>
                         <span className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}>excel at</span>
                     </div>
-                    <button className="mt-6 px-6 border py-3 bg-[#171D3F] rounded-full text-white text-md font-medium hover:bg-blue-800 transition">OUR SKILS {' >'}</button>
+                    <button className="mt-6 px-6 border py-3 bg-[#04081C] rounded-full text-white text-md font-medium hover:bg-blue-800 transition">OUR SKILS {' >'}</button>
                 </div>
                 <div className="w-full items-center md:flex pt-6 mt-6 justify-between">
                     <h1 className="text-2xl  font- text-white leading-tight  w-11/12">WEB DESIGN</h1>

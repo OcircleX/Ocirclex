@@ -7,7 +7,7 @@ import img2 from '../../images/2.png'
 import img3 from '../../images/3.png'
 export default function Approch() {
   return (
-    <section className="flex flex-col m-auto py-[4rem] bg-[#171D3F] justify-between max-w-screen-xl w-full ">
+    <section className="flex flex-col m-auto py-[4rem] bg-[#04081C] justify-between max-w-screen-xl w-full ">
       <h1 className="text-2xl   text-center w-full py-10 font-bold text-white leading-tight">TRUSTED BY COMPANIES</h1>
 
       <div className="flex flex-wrap gap-x-6 px-3 gap-y-3 m-auto ">
@@ -249,9 +249,9 @@ export default function Approch() {
       </div>
 
 
-      <div className="w-full md:flex px-3 py-[4rem] bg-[#171D3F] justify-between gap-8">
+      <div className="w-full md:flex px-3 py-[4rem] bg-[#04081C] justify-between gap-8">
         <div className="w-full md:w-1/2">
-          <button className="mt-6 border px-6 py-3 bg-[#171D3F] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+          <button className="mt-6 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
             CREATIVE STUDIO
           </button>
         </div>
@@ -262,7 +262,7 @@ export default function Approch() {
             ARE HERE TO ELEVATE YOUR PRESENCE AND
             MAKE YOUR BRAND
           </h1>
-          <button className="px-6 py-3 mt-2 bg-white text-[#0B0D26] rounded-full shadow-md hover:bg-gray-200 transition">
+          <button className="px-6 py-3 mt-2 bg-white text-[#04081C] rounded-full shadow-md hover:bg-gray-200 transition">
             ABOUT US ›
           </button>
 
