@@ -1,7 +1,6 @@
 import React from 'react';
 // import './style.css';
-import ReviewCounter from '../Components/ReviewCounter';
-import ReviewCounter2 from '../Components/ReviewCounter2';
+
 import fazal2 from '../../images/wasif2.png';
 import Image from 'next/image';
 import { Instrument_Serif } from "next/font/google";

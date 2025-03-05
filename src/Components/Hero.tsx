@@ -13,33 +13,31 @@ const instrumentSerif = Instrument_Serif({
 export default function Hero() { 
 
   return (
-<div className="w-full flex items-center">
+
   <section
     style={{
       backgroundImage: `url(${Background.src})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}
-    className="w-full relative bg-gray-100 flex flex-col md:flex-row items-center justify-center px-2 md:items-end md:justify-end"
+    className="w-screen relative  overflow-hidden flex flex-col md:flex-row items-center justify-center px-2 md:items-end md:justify-end"
   >
-    <div className="max-w-screen-xl md:flex flex-wrap justify-between px-4 py-4 w-full m-auto mt-8">
+    <div className="max-w-screen-xl  md:flex flex-wrap justify-between px-4 py-4 w-full m-auto mt-8">
 
    <div 
  
    className="mt-8"
 
    >
-   <motion.div className="max-w-2xl mt-12 flex flex-col pt-10"
-     initial={{opacity:0, x: -100}}
-     animate={{opacity:1, x:0}}
-     transition={{duration:0.4}}
+   <motion.div className="md:max-w-2xl mt-12 flex flex-col pt-10"
+     
    >
-          <h1 className="text-4xl md:text-6xl font-semibold text-gray-900 leading-tight">
+          <h1 className="text-4xl md:text-6xl   font-semibold text-gray-900 leading-tight">
             INNOVATIVE{" "}
           </h1>
           <span 
            style={{ letterSpacing: "1.36px" }}
-          className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}>creative solutions</span>
+          className={`text-4xl text-center md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}   `}>creative solutions</span>
          
           {/* <h1 className={`${instrumentSerif.className} text-4xl`}> */}
 
@@ -48,10 +46,8 @@ export default function Hero() {
         </motion.div>
 
        <motion.div
-         initial={{opacity:0, x: -100}}
-         animate={{opacity:1, x:0}}
-         
-         transition={{duration:0.4, delay:0.2, ease: "easeInOut"}}
+       
+         className="flex md:block justify-center"
        >
        <button
          className="flex items-center gap-2 w-fit mt-6  px-6 py-3 bg-white rounded-full border text-[#04081C] border-[#171D3F] text-lg font-medium  hover:bg-blue-800 transition"
@@ -64,11 +60,8 @@ export default function Hero() {
    </div>
 
     
-        <motion.div className=" bg-white px-1 mb-4 rounded-xl pt-4 pb-1 border border-gray-400 w-fit py-2 ml-4" 
-         initial={{opacity:0, x: 100}}
-         animate={{opacity:1, x:0}}
-         
-         transition={{duration:0.4, delay:0.2, ease: "easeInOut"}}
+        <motion.div className=" bg-white px-1 mb-4 rounded-xl pt-4 pb-1 border border-gray-400 w-fit py-2 ml-4 hidden md:flex" 
+        
         >
 
 
@@ -88,6 +81,6 @@ export default function Hero() {
 
       </div>
     </section>
-</div>
+
   );
 }

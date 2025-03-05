@@ -1,16 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import Image from 'next/image';
 import img1 from '../../images/1.png'
 import img2 from '../../images/2.png'
 import img3 from '../../images/3.png'
 export default function Approch() {
   return (
-    <section className="flex flex-col m-auto py-[4rem] bg-[#04081C] justify-between max-w-screen-xl w-full ">
-      <h1 className="text-2xl   text-center w-full py-10 font-bold text-white leading-tight">TRUSTED BY COMPANIES</h1>
+    
+    <section className="flex flex-col m-auto py-[2rem] bg-[#04081C] justify-between items-center w-full   ">
+      <h1 className="text-xl md:text-2xl   text-center w-full py-10 font-bold text-white leading-tight">TRUSTED BY <br className="md:hidden" /> COMPANIES</h1>
 
-      <div className="flex flex-wrap gap-x-6 px-3 gap-y-3 m-auto ">
+      <div className="flex [on ] gap-x-6 px-3 gap-y-3 m-auto ">
         <svg className="pt-2" width="63" height="26" viewBox="0 0 63 26" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_3338_130823)">
             <g clip-path="url(#clip1_3338_130823)">
@@ -231,26 +232,14 @@ export default function Approch() {
             </clipPath>
           </defs>
         </svg>
-        {/* <svg className="pt-2" width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_3338_130849)">
-              <g opacity="0.4">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6832 24.274H10.439V19.2519C7.83668 20.8441 4.77904 21.7616 1.50781 21.7616V13.4918C6.44037 13.4918 10.439 9.48091 10.439 4.53311V2.22168H18.6832V24.274Z" fill="white" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.50781 3.59962L6.31679 3.59961L6.3168 9.1127L1.50782 9.11271L1.50781 3.59962Z" fill="white" />
-              </g>
-            </g>
-            <defs>
-              <clipPath id="clip0_3338_130849">
-                <rect width="79" height="24" fill="white" transform="translate(0.609375 0.84375)" />
-              </clipPath>
-            </defs>
-          </svg> */}
+      
 
 
       </div>
 
 
-      <div className="w-full md:flex px-3 py-[4rem] bg-[#04081C] justify-between gap-8">
-        <div className="w-full md:w-1/2">
+      <div className="w-full max-w-screen-xl md:flex px-3 py-[4rem] bg-[#04081C] justify-between gap-8">
+        <div className="w-full md:w-1/2 md:block flex justify-center">
           <button className="mt-6 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
             CREATIVE STUDIO
           </button>
@@ -274,15 +263,33 @@ export default function Approch() {
 
 
       <div className="w-full max-w-screen-xl mx-auto flex justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4">
-  <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0">
-    <img src={img2.src} alt="" className="w-full h-full object-cover" />
-  </div>
-  <div className="w-[50%] h-full rounded-md overflow-hidden flex-grow-0">
-    <img src={img1.src} alt="" className="w-full h-full object-cover" />
-  </div>
-  <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0">
-    <img src={img3.src} alt="" className="w-full h-full object-cover" />
-  </div>
+      <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
+  <Image
+    src={img2}
+    alt="Image description"
+    layout="fill" // Ensures it fills the parent div
+    objectFit="cover" // Makes sure it covers the div without distortion
+    className="rounded-md"
+  />
+</div>
+<div className="w-[50%] h-full rounded-md overflow-hidden flex-grow-0 relative">
+  <Image
+    src={img1}
+    alt="Image description"
+    layout="fill" // Ensures it fills the parent div
+    objectFit="cover" // Makes sure it covers the div without distortion
+    className="rounded-md"
+  />
+</div>
+  <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
+  <Image
+    src={img3}
+    alt="Image description"
+    layout="fill" // Ensures it fills the parent div
+    objectFit="cover" // Makes sure it covers the div without distortion
+    className="rounded-md"
+  />
+</div>
 </div>
 
 

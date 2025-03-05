@@ -1,16 +1,17 @@
 "use client";
 
-import Image from "next/image";
+
 import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
-import logo from '../../../images/Group 15.png'
+
+
 
 import Link from "next/link";
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <header className="w-full shadow-md py-4 px-6 bg-[#fafafa] flex justify-center">
+    <header className="w-screen shadow-md py-4 px-6 bg-[#fafafa] flex justify-center">
       
       <div className="md:w-full w-screen max-w-screen-xl bg-[#fafafa] md:gap-0 md:px-0 px-4 flex flex-wrap items-center justify-between mx-auto ">
         <Link href="./"> 
@@ -45,8 +46,19 @@ export default function Header() {
         <Link href="./contact" className="hidden md:block bg-[#04081C] text-white px-4 py-2 hover:bg-blue-800 transition rounded-full px-4 py-1">
           Contact Us {'>'}
         </Link>
+
         <div className="md:hidden">
-          <button className="text-gray-900 focus:outline-none">☰</button>
+        <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_3338_133617"  maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="31">
+<path d="M30 0.228516H0V30.2285H30V0.228516Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_3338_133617)">
+<path d="M23.3045 21.7783H12.9844" stroke="#171D3F" stroke-width="2.41425" stroke-linecap="round"/>
+<path d="M7.22656 15.2061H23.1214" stroke="#171D3F" stroke-width="2.50529" stroke-linecap="round"/>
+<path d="M7.27344 8.8916H23.2101" stroke="#171D3F" stroke-width="2.50858" stroke-linecap="round"/>
+</g>
+</svg>
+
         </div>
       </div>
     </header>

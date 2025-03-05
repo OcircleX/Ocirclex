@@ -1,9 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
-import logo from '../../../images/Group 15.png'
 
 import Link from "next/link";
 export default function DarkNav() {

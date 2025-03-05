@@ -1,12 +1,9 @@
 "use client";
 
 
-import Image from 'next/image'
+
 import React, { useState } from 'react'
-import img2 from '../../../images/2.png'
-import img1 from '../../../images/1.png'
-import img3 from '../../../images/3.png'
-import fazal from '../../../images/fazal.png'
+
 import { Instrument_Serif } from "next/font/google";
 import DarkNav from '../navbar/DarkNav';
 
@@ -19,7 +16,7 @@ const instrumentSerif = Instrument_Serif({
 
 
 
-function page() {
+function Page() {
 
 
     const [formData, setFormData] = useState({
@@ -140,4 +137,4 @@ function page() {
     )
 }
 
-export default page
+export default Page

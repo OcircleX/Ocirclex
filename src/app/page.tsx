@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 import Hero from "../Components/Hero";
 import Approch from "../Components/Approch";
@@ -9,7 +8,7 @@ import Header from "./navbar/header";
 
 export default function Home() {
   return (
- <div >
+ <div className="w-full">
   <Header />
             <Hero />
             <Approch />
