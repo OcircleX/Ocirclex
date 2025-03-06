@@ -29,10 +29,9 @@ export default function Hero() {
    className="mt-8"
 
    >
-   <motion.div className="md:max-w-2xl mt-12 flex flex-col pt-10"
-     
-   >
-          <h1 className="text-4xl md:text-6xl   font-semibold text-gray-900 leading-tight">
+   <div className="md:max-w-2xl mt-12 flex flex-col pt-10"
+>
+          <h1 className="text-4xl md:text-6xl  text-center md:text-start font-semibold text-gray-900 leading-tight">
             INNOVATIVE{" "}
           </h1>
           <span 
@@ -43,7 +42,7 @@ export default function Hero() {
 
       
         
-        </motion.div>
+        </div>
 
        <motion.div
        

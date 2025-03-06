@@ -71,12 +71,21 @@ const Showcase = () => {
 
   return (
     <>
-      <section className="py-16 px-2  w-full bg-[#04081C]">
+      <section className="py-16   w-full bg-[#04081C]">
         <div className="w-full mx-auto px-6 max-w-screen-xl">
           <div className="md:flex justify-between items-center mb-12">
-            <h2 className="text-4xl font-bold text-white">
+            <h2 className="text-4xl font-bold text-white ">
               OUR CREATIVE <br />
-              <span  className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}><i>showcase</i></span>
+              <span className="te" 
+               style={{
+                fontSize: "3.5rem", // 20px for mobile
+                fontWeight: "200", // Extra-light
+                color: "#7BB668",
+                fontStyle: "italic",
+                lineHeight: "83px",
+                fontFamily: instrumentSerif.style.fontFamily || "serif",
+              }}
+              ><i>showcase</i></span>
             </h2>
             <button className="mt-6 px-6 flex gap-x-2 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
               ALL CASE STUDIES
@@ -88,7 +97,10 @@ const Showcase = () => {
             </button>
           </div>
 
-          <div className="relitive gap-8">
+
+
+
+          <div className="relative gap-8">
             {projects.map((project, index) => (
               <a
                 key={index}
@@ -116,18 +128,23 @@ const Showcase = () => {
               </a>
             ))}
           </div>
+
+
+
+
+          
+
+
+
         </div>
       </section>
 
 
 
-
-
-
-
-      <div className="md:flex  bg-[#04081C] text-white px-2  md:py-8 space-y-8 gap-x-2 max-w-screen-xl mx-auto">
+<div className="flex justify-center" style={{ backgroundColor: '#04081C' }}>
+<div className="md:flex  bg-[#04081C] text-white px-2 max-w-screen-xl md:py-8 space-y-8 gap-x-2  mx-auto">
         {/* Left Section: Button */}
-        <div className="w-full md:w-1/3">
+        <div className="w-full md:w-1/3 px-4">
 
           <button className="mt-6 px-6 py-3 bg-[#04081C] border text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
             WORKING METHODS
@@ -177,6 +194,11 @@ const Showcase = () => {
         </div>
         {/* Bullet Points */}
       </div>
+</div>
+
+
+
+      
 
     </>
   );

@@ -11,7 +11,7 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <header className="w-screen shadow-md py-4 px-6 bg-[#fafafa] flex justify-center">
+    <header className="w-screen shadow-md py-4 md:px-6 bg-[#fafafa] flex justify-center">
       
       <div className="md:w-full w-screen max-w-screen-xl bg-[#fafafa] md:gap-0 md:px-0 px-4 flex flex-wrap items-center justify-between mx-auto ">
         <Link href="./"> 
@@ -33,7 +33,7 @@ export default function Header() {
 
             </button>
             {isDropdownOpen && (
-              <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-36">
+              <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-36 z-30">
                 <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Design</a>
                 <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">SEO</a>
               </div>

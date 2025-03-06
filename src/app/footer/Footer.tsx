@@ -23,7 +23,7 @@ function Footer() {
 
                     </div>
                 </div>
-                <div className="md:flex mb-4 justify-between items-center text-sm text-gray-200 md:gap-x-12 md:mx-auto md:w-full px-4">
+                <div className="md:flex mb-4 justify-between items-center text-sm text-gray-200 md:gap-x-12 md:mx-auto md:w-full max-w-screen-xl px-4">
                     <p className="">• ISLAMABAD, PAKISTAN</p>
                     <p className="mx-2">• circlex@gmail.com</p>
                     <p className="mx-2">• DRIBBBLE</p>

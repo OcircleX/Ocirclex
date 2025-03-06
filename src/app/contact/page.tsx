@@ -118,7 +118,7 @@ function Page() {
                                 className={' shadow border w-full rounded rounded-md  p-2 text-sm text-gray-700 focus:border-teal-500 focus:outline-none ' + (errorsP2.firstname ? ' border-red-400 ' : ' border-gray-300')} />
                         </div>
 
-                        <button className="w-full mt-6 px-6 border py-3 bg-[#04081C] hover:text-[#04081C] rounded-md text-white text-lg font-medium hover:bg-white transition">
+                        <button className="w-full mt-6 px-6 border py-3 text-[#04081C] hover:text-white rounded-md bg-white text-lg font-medium hover:bg-[#04081C] transition">
                             SEND MESSAGE
                         </button>
 

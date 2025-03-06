@@ -239,7 +239,7 @@ export default function Approch() {
 
 
       <div className="w-full max-w-screen-xl md:flex px-3 py-[4rem] bg-[#04081C] justify-between gap-8">
-        <div className="w-full md:w-1/2 md:block flex justify-center">
+        <div className="w-full md:w-1/2">
           <button className="mt-6 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
             CREATIVE STUDIO
           </button>
@@ -261,8 +261,39 @@ export default function Approch() {
 
 
 
+      <div className="w-full max-w-screen-xl mx-auto md:hidden flex flex-col justify-between gap-4 items-center pt-6 overflow-hidden px-4">
+  <div className="w-full h-[300px] rounded-md overflow-hidden relative">
+    <Image
+      src={img2}
+      alt="Image description"
+      layout="fill"
+      objectFit="cover"
+      className="rounded-md"
+    />
+  </div>
+  <div className="w-full h-[300px] rounded-md overflow-hidden relative">
+    <Image
+      src={img1}
+      alt="Image description"
+      layout="fill"
+      objectFit="cover"
+      className="rounded-md"
+    />
+  </div>
+  <div className="w-full h-[300px] rounded-md overflow-hidden relative">
+    <Image
+      src={img3}
+      alt="Image description"
+      layout="fill"
+      objectFit="cover"
+      className="rounded-md"
+    />
+  </div>
+</div>
 
-      <div className="w-full max-w-screen-xl mx-auto flex justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4">
+
+
+<div className="w-full max-w-screen-xl mx-auto hidden md:flex  justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4">
       <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
   <Image
     src={img2}

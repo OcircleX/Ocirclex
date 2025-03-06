@@ -25,13 +25,7 @@ function page() {
                 "/fazal.png",
             link: "/projects/dynamic-structures",
         },
-        {
-            title: "Malik Iqbal",
-            category: "Senior Software Engineer",
-            image:
-            "/wasif.png",
-            link: "/projects/visionary-framework",
-        },
+       
         {
             title: "FAZAL WASIF",
             category: "CREATIVE DIRECTOR & Co-founder",
@@ -47,6 +41,13 @@ function page() {
             link: "/projects/design-revolution",
         },
         {
+            title: "Malik Iqbal",
+            category: "Senior Software Engineer",
+            image:
+            "/wasif.png",
+            link: "/projects/visionary-framework",
+        },
+        {
             title: "Faisal KHAN",
             category: "BACKEND DEVELOPER",
             image:
@@ -58,9 +59,9 @@ function page() {
 
     return (
         <>   
-       <div>
+       <div className='w-full bg-[#04081C]' >
         <DarkNav/>
-       <section className="w-full relative bg-[#04081C] to-gray-100 py-20  flex flex-col  items-center justify-between">
+       <section className="w-full relative bg-[#04081C] to-gray-100 py-20  flex flex-col  items-center justify-between" >
             <div className="max-w-screen-xl justify-between w-full m-auto ">
                 <div className="w-full items-center flex flex-col py-[2rem]">
                     <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
@@ -199,10 +200,21 @@ function page() {
                     ))}
                 </div> */}
 
-                <div className="flex w-full overflow-auto  justify-between items-center  scrollbar scrollbar-thin pt-2    gap-x-4 ">
+                <div className="flex w-full overflow-auto  justify-between items-center  scrollbar scrollbar-thin pt-2    gap-x-4 h-auto ">
                     {team.map((x) => (
-                        <div key={x.title} className="flex flex-col  min-w-[25%] justify-between items-center h-full rounded-lg">
-                            <img src={x.image} alt={x.title} className="w-full  rounded-md object-cover" />
+                        <div key={x.title} className=" flex flex-col  min-w-[25%] justify-between items-center  rounded-lg">
+                            {/* <img src={x.image} alt={x.title} className="w-full  rounded-md object-cover" /> */}
+                         
+<div className='w-[100%] h-[300px]  relative'>
+<Image
+    src={x.image}
+    alt={x.title}
+    layout="fill" // Ensures it fills the parent div
+    objectFit="cover" // Makes sure it covers the div without distortion
+    className="rounded-md object-cover"
+  />
+</div>
+
                             <div className="w-full px-2 flex justify-between items-center pb-2">
                                 <div className="py-2">
                                     <div className="text-white">{x.title}</div>
