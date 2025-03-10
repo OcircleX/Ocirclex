@@ -20,16 +20,16 @@ export default function Hero() {
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}
-    className="w-screen relative  overflow-hidden flex flex-col md:flex-row items-center justify-center px-2 md:items-end md:justify-end"
+    className="w-screen relative  overflow-hidden flex flex-col md:flex-row items-center justify-center px-2 md:items-end md:justify-end "
   >
-    <div className="max-w-screen-xl  md:flex flex-wrap justify-between px-4 py-4 w-full m-auto mt-8">
+    <div className="max-w-screen-xl  md:flex flex-wrap justify-between px-4 py-8 w-full m-auto md:mt-8">
 
    <div 
  
-   className="mt-8"
+   className="mt-8 md:pt-6"
 
    >
-   <div className="md:max-w-2xl mt-12 flex flex-col pt-10"
+   <div className="md:max-w-2xl  mt-12  flex flex-col " 
 >
           <h1 className="text-4xl md:text-6xl  text-center md:text-start font-semibold text-gray-900 leading-tight">
             INNOVATIVE{" "}

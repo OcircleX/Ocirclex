@@ -87,7 +87,12 @@ const Showcase = () => {
               }}
               ><i>showcase</i></span>
             </h2>
-            <button className="mt-6 px-6 flex gap-x-2 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+            <button className="mt-6 px-3 md:px-6 flex gap-x-2 py-3 border border-gray-100 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition"
+            style={{
+              backgroundColor: "#484848",
+              fontSize: "1rem",
+            }}
+            >
               ALL CASE STUDIES
               <img
                 src="https://cdn.prod.website-files.com/6757e4a58bda42b7389bc8e0/67585a489813ca576fb1579b_direction-right%202.svg"
@@ -112,12 +117,15 @@ const Showcase = () => {
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="p-6 absolute bottom-12 left-6">
+
+
+   
+                <div id="ProjectContent" className=" p-6 absolute bottom-12 left-6">
                   <button className="mt-6 px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
                     {project.category}
                   </button>
                   <h3
-  className={`w-[40vh] tracking-[-1.62px] mt-0 mb-0 text-[54px] font-bold leading-[120%] ${
+  className={`w-[40vh] tracking-[-1.62px] mt-4 mb-0 text-[54px] font-bold leading-[120%] ${
     index === 0 ? "text-white" : "text-black"
   }`}
 >
@@ -125,6 +133,9 @@ const Showcase = () => {
 </h3>
 
                 </div>
+
+
+                
               </a>
             ))}
           </div>
