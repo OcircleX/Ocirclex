@@ -245,7 +245,7 @@ export default function Approch() {
           </button>
         </div>
         <div className="w-full md:w-[60%] ">
-          <h1 className="text-2xl md:text-3xl w-full py-10 font-bold text-white leading-tight">
+          <h1 className="text-xl md:text-3xl w-full py-10 font-bold text-white leading-tight">
             OUR APPROACH COMBINES BOLD AND
             CREATIVITY WITH DATE DRIVEN INSIGHTS WE
             ARE HERE TO ELEVATE YOUR PRESENCE AND

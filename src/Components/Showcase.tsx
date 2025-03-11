@@ -76,10 +76,10 @@ const Showcase = () => {
           <div className="md:flex justify-between items-center mb-12">
             <h2 className="text-4xl font-bold text-white ">
               OUR CREATIVE <br />
-              <span className="te" 
+              <span className="showcase" 
                style={{
-                fontSize: "3.5rem", // 20px for mobile
-                fontWeight: "200", // Extra-light
+               
+                fontWeight: "200",
                 color: "#7BB668",
                 fontStyle: "italic",
                 lineHeight: "83px",
@@ -192,7 +192,7 @@ const Showcase = () => {
 
             {/* Right Section: Image */}
             <div className=" md:w-1/3 w-full">
-              <div className="w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-800 rounded-2xl flex flex-col justify-between ">
+              <div className="w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-800 rounded-2xl md:flex flex-col justify-between hidden">
                 {/* <img src={image} alt="test" className="w-full h-full object-contain" /> */}
                 <Image
                   className="w-full h-full object-contain"

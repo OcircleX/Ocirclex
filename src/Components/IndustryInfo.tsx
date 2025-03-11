@@ -1,4 +1,5 @@
 import React from 'react';
+import "./../app/style.css"
 // import './style.css';
 
 import fazal2 from '../../images/wasif2.png';
@@ -17,7 +18,7 @@ const IndustryInfo = () => {
 
       <section className=" py-8 w-full shadow-md bg-gradient-to-r py-[5rem] from-white to-gray-400 shadow-md px-4 ">
         <div className="m-auto text-[#04081C] max-w-screen-xl">
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-col md:flex-row">
             <div className="review-left-col-wrapper"
               style={{
                 opacity: 1,
@@ -25,12 +26,21 @@ const IndustryInfo = () => {
                   "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
                 transformStyle: "preserve-3d",
               }}>
-              <h1 className="text-4xl md:text-6xl font-bold text-[#04081C] leading-tight">BUNDLED WITH</h1>
-              <span className={`text-4xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `}><i>industry experience</i></span>
+              <h1 className="text-4xl md:text-6xl font-bold text-[#04081C] ">BUNDLED WITH</h1>
+              <span className={`industryexperience font-extralight text-[#7BB668] italic  ${instrumentSerif.className}   `}
+              //  style={{
+              //   fontSize: "4.5rem", 
+              //   fontWeight: "200",
+              //   color: "#7BB668",
+              //   fontStyle: "italic",
+              //   lineHeight: "83px",
+              //   fontFamily: instrumentSerif.style.fontFamily || "serif",
+              // }}
+              ><i>industry experience</i></span>
             </div>
 
-            <div className="flex justify-end">
-              <p className="text-lg font-extralight  w-52 text-[#04081C]"
+            <div className="flex md:justify-end mt-6 md:mt-0">
+              <p className="text-lg font-extralight  w-64  text-[#04081C]"
                 style={{
                   opacity: 1,
                   transform: "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",

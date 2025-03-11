@@ -1,0 +1,18 @@
+.industryexperience {
+    font-size: 40px; /* Default for mobile */
+  }
+
+  .showcase {
+    font-size: 48px;
+  }
+  
+  @media (min-width: 768px) { /* For laptops */
+    .industryexperience {
+      font-size: 60px;
+    }
+    .showcase {
+      font-size: 60px;
+    }
+  }
+  
+     
