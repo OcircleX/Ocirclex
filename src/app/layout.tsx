@@ -37,13 +37,15 @@ export default function RootLayout({
 
       <html data-theme="cupcake" lang="en">
 
-        <body>
-          
-          {/* <Navbar /> */}
-          <main className="h-[80%] flex justify-center">{children}</main>
+      <body>
+           {/* <Navbar /> */}
+           <main className="h-[80%] flex justify-center">{children}</main>
           <Footer />
 
-        </body>
+      </body>
+          
+       
+       
       </html>
     </>
   );

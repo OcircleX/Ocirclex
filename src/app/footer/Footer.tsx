@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div className="bg-[#04081C] border-gray-200 pt-10  text-gray-700 w-[100%] ">
+        <div className="bg-[#04081C] border-gray-200 pt-10  text-gray-700 w-[100%] relative  ">
 
             <footer className="relative  text-white   w-full">
                 {/* Top content */}

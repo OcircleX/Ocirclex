@@ -1,28 +1,28 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+// import React, { useEffect, useState } from 'react';
+// import { motion } from 'framer-motion';
 
 const ReviewCounter: React.FC = () => {
-  const targetNumber = 987; // Target number for the counter
-  const [digits, setDigits] = useState<number[]>([0, 0, 0]);
+  // const targetNumber = 987; // Target number for the counter
+  // const [digits, setDigits] = useState<number[]>([0, 0, 0]);
 
-  useEffect(() => {
-    const digitsArray = String(targetNumber).padStart(3, '0').split('').map(Number);
-    setDigits(digitsArray);
-  }, [targetNumber]);
+  // useEffect(() => {
+  //   const digitsArray = String(targetNumber).padStart(3, '0').split('').map(Number);
+  //   setDigits(digitsArray);
+  // }, [targetNumber]);
 
-  const renderCounter = (digit: number, index: number) => (
-    <motion.div
-      key={index}
-      className="review-counter-number-wrap"
-      style={{ transform: `translateY(-${digit * 100}%)` }}
-      transition={{ duration: 0.5 }}
-    >
-      {[...Array(10).keys()].map((num) => (
-        <h2 className="review-counter-number" key={num}>{num}</h2>
-      ))}
-    </motion.div>
-  );
+  // const renderCounter = (digit: number, index: number) => (
+  //   <motion.div
+  //     key={index}
+  //     className="review-counter-number-wrap"
+  //     style={{ transform: `translateY(-${digit * 100}%)` }}
+  //     transition={{ duration: 0.5 }}
+  //   >
+  //     {[...Array(10).keys()].map((num) => (
+  //       <h2 className="review-counter-number" key={num}>{num}</h2>
+  //     ))}
+  //   </motion.div>
+  // );
 
   return (
     <div

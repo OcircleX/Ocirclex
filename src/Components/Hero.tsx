@@ -29,7 +29,10 @@ export default function Hero() {
    className="mt-8 md:pt-6"
 
    >
-   <div className="md:max-w-2xl  mt-12  flex flex-col " 
+   <motion.div className="md:max-w-2xl  mt-12  flex flex-col " 
+   initial={{opacity:0, x:-100}}
+   animate={{opacity:1, x:0}}
+   transition={{duration:0.5,ease: "easeInOut"}}
 >
           <h1 className="text-4xl md:text-6xl  text-center md:text-start font-semibold text-gray-900 leading-tight">
             INNOVATIVE{" "}
@@ -42,9 +45,12 @@ export default function Hero() {
 
       
         
-        </div>
+        </motion.div>
 
        <motion.div
+       initial={{opacity:0, y:100}}
+       animate={{opacity:1, y:0}}
+       transition={{duration:0.5, ease: "easeInOut"}}
        
          className="flex md:block justify-center"
        >
@@ -60,7 +66,9 @@ export default function Hero() {
 
     
         <motion.div className=" bg-white px-1 mb-4 rounded-xl pt-4 pb-1 border border-gray-400 w-fit py-2 ml-4 hidden md:flex" 
-        
+          initial={{opacity:0, x:100}}
+          animate={{opacity:1, x:0}}
+          transition={{duration:0.5, ease: "easeInOut"}}
         >
 
 

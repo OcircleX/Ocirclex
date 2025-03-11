@@ -94,29 +94,40 @@ const Showcase = () => {
             }}
             >
               ALL CASE STUDIES
-              <img
+              {/* <img
                 src="https://cdn.prod.website-files.com/6757e4a58bda42b7389bc8e0/67585a489813ca576fb1579b_direction-right%202.svg"
                 alt="Arrow Right"
                 className="w-5"
-              />
+              /> */}
             </button>
           </div>
 
 
 
 
-          <div className="relative gap-8">
+          <div className="relative gap-8 ">
             {projects.map((project, index) => (
               <a
                 key={index}
                 href={project.link}
-                className="block h-full bg-white shadow-lg rounded-lg overflow-hidden transition transform mb-6"
+                className="block h-full  shadow-lg rounded-lg overflow-hidden transition transform mb-6"
               >
-                <img
+                {/* <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
-                />
+                /> */}
+               
+               <div className="w-[100%] h-[200px] rounded-md overflow-hidden flex-grow-0 relative">
+  <Image
+    src={project.image}
+    alt={project.title}
+    
+   height={680}
+   width={1380}
+    className="rounded-md"
+  />
+</div>
 
 
    
@@ -176,7 +187,7 @@ const Showcase = () => {
               <div className="bg-[#04081C] text-white flex flex-col items-start py-10">
                 <div className="relative pl-4 md:pl-10">
                   {items.map((item, index) => (
-                    <div id="creative-projects" className={` duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`} style={{ color: "rgb(190, 191, 195)" }}>
+                    <div key={index} id="creative-projects" className={` duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`} style={{ color: "rgb(190, 191, 195)" }}>
                       <div className=" flex items-center gap-x-2">
                         <div className=" rounded-full  h-3 w-3" style={{ backgroundColor: "rgb(126, 126, 126)" }}                        ></div>
                         <div className="font-semibold">{item.title}</div>

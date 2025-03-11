@@ -1,9 +1,3 @@
-"use client";
-
-
-import { useState } from "react";
-import { IoMdArrowDropdown } from "react-icons/io";
-
 
 
 import Link from "next/link";
@@ -24,6 +18,7 @@ export default function Header() {
         <nav className="hidden md:flex space-x-6 items-center">
           <a href="#" className="text-gray-900 hover:text-green-500 transition border border-black rounded-full px-4 py-1">Home</a>
           <div className="relative">
+            <Link href="./services">
             <button
               className="flex gap-1 items-center text-gray-900 hover:text-green-500 transition border border-black rounded-full px-5 py-1"
              
@@ -32,6 +27,8 @@ export default function Header() {
              
 
             </button>
+            </Link>
+           
             
           </div>
           <Link href="./about" className="text-gray-900 hover:text-green-500 transition border border-black rounded-full px-4 py-1">
