@@ -5,6 +5,12 @@
   .showcase {
     font-size: 48px;
   }
+
+  #ProjectContent2 {
+    position: absolute;
+    bottom: 12%;
+    left: 5%;
+  }
   
   @media (min-width: 768px) { /* For laptops */
     .industryexperience {
@@ -13,6 +19,7 @@
     .showcase {
       font-size: 60px;
     }
+    
   }
   
      

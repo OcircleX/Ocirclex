@@ -118,7 +118,7 @@ const Showcase = () => {
                   className="w-full h-full object-cover"
                 /> */}
                
-               <div className="w-[100%] h-[200px] rounded-md overflow-hidden flex-grow-0 relative">
+               <div className="w-[100%]  rounded-md overflow-hidden flex-grow-0 relative">
   <Image
     src={project.image}
     alt={project.title}
@@ -131,12 +131,28 @@ const Showcase = () => {
 
 
    
-                <div id="ProjectContent" className=" p-6 absolute bottom-12 left-6">
+                <div id="ProjectContent" className=" p-6 absolute bottom-12 left-6 hidden md:flex flex-col">
                   <button className="mt-6 px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
                     {project.category}
                   </button>
                   <h3
-  className={`w-[40vh] tracking-[-1.62px] mt-4 mb-0 text-[54px] font-bold leading-[120%] ${
+  className={`w-[40vh] tracking-[-1.62px] mt-4 mb-0 text-[54px] font-bold leading-[120%]  ${
+    index === 0 ? "text-white" : "text-black"
+  }`}
+>
+  {project.title}
+</h3>
+
+                </div>
+
+
+
+                <div id="ProjectContent2" className="   md:hidden">
+                  <button className=" bg-[#04081C] px-2 py-1 text-white text-xs font-medium rounded-full hover:bg-blue-800 transition">
+                    {project.category}
+                  </button>
+                  <h3
+  className={`font-bold text-sm  ${
     index === 0 ? "text-white" : "text-black"
   }`}
 >
