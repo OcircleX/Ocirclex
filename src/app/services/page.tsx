@@ -14,6 +14,7 @@ const instrumentSerif = Instrument_Serif({
 
 const Services = () => {
 
+    
     const team = [
         {
             title: "FAZAL BASIT",
@@ -30,6 +31,14 @@ const Services = () => {
             "/wasif.png",
             link: "/projects/design-revolution",
         },
+      
+        {
+            title: "Malik Iqbal",
+            category: "Senior Software Engineer",
+            image:
+            "/Iqbal.jpeg",
+            link: "/projects/visionary-framework",
+        },
         {
             title: "MIFTAHULLAH KHAN",
             category: "FRONTEND DEVELOPER",
@@ -38,17 +47,10 @@ const Services = () => {
             link: "/projects/design-revolution",
         },
         {
-            title: "Malik Iqbal",
-            category: "Senior Software Engineer",
-            image:
-            "/wasif.png",
-            link: "/projects/visionary-framework",
-        },
-        {
             title: "Faisal KHAN",
             category: "BACKEND DEVELOPER",
             image:
-            "/wasif.png",
+            "/Faisal.jpeg",
             link: "/projects/design-revolution",
         },
     ];
