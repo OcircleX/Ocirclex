@@ -35,7 +35,7 @@ export default function Hero() {
    transition={{duration:0.5,ease: "easeInOut"}}
 >
           <h1 className="text-4xl md:text-6xl  text-center md:text-start font-semibold text-gray-900 leading-tight">
-            INNOVATIVE{" "}
+            INNOVATIVEE{" "}
           </h1>
           <span 
            style={{ letterSpacing: "1.36px" }}
