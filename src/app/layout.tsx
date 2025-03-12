@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "./style.css"
+// import "./style.css"
 
 import Footer from "./footer/Footer";
 
