@@ -45,7 +45,7 @@ function Page() {
             title: "MIFTAHULLAH KHAN",
             category: "FRONTEND DEVELOPER",
             image:
-            "/Miftah.png",
+            "/Miftah.jpeg",
             link: "/projects/design-revolution",
         },
         {
