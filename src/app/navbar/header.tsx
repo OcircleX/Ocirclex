@@ -1,8 +1,13 @@
-
+'use client'
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 import Link from "next/link";
 export default function Header() {
-  
+  const [servhovered, setservhovered] = useState(false);
+  const [abouthovered, setabouthovered] = useState(false);
+  const [homehovered, sethomehovered] = useState(false);
+  const [conthovered, setconthovered] = useState(false);
 
   return (
     <header className="w-screen shadow-md py-4 md:px-6 bg-[#fafafa] flex justify-center">
@@ -16,28 +21,152 @@ export default function Header() {
 
           </Link>
         <nav className="hidden md:flex space-x-6 items-center">
-          <a href="#" className="text-gray-900 hover:text-green-500 transition border border-black rounded-full px-4 py-1">Home</a>
-          <div className="relative">
-            <Link href="./services">
-            <button
-              className="flex gap-1 items-center text-gray-900 hover:text-green-500 transition border border-black rounded-full px-5 py-1"
-             
+
+        <div className="relative">
+        <Link href="./">
+            <motion.button
+              className="flex gap-1 items-center text-gray-900  transition border border-black rounded-full px-5 py-1"
+              onMouseEnter={() => sethomehovered(true)}
+              onMouseLeave={() => sethomehovered(false)}
             >
-              <span>Services</span>
+              <motion.span
+               initial={{ y: 0, opacity: 1 }}
+               animate={homehovered ? { y: -15, opacity: 0 } : { y: 0, opacity: 1 }}
+               transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                Home
+                </motion.span>
+
+                <motion.span
+         initial={{ y: 10, opacity: 0 }}
+         animate={homehovered ? { y: 0, opacity: 1 } : { y: 15, opacity: 0 }}
+         transition={{ duration: 0.3,ease: "easeInOut" }}
+        className="absolute left-0 right-0 text-center"
+      >
+        Home
+      </motion.span>
              
 
-            </button>
+            </motion.button>
+            </Link>
+
+            </div>
+
+
+          <div className="relative">
+            <Link href="./services">
+            <motion.button
+              className="flex gap-1 items-center text-gray-900  transition border border-black rounded-full px-5 py-1"
+              onMouseEnter={() => setservhovered(true)}
+              onMouseLeave={() => setservhovered(false)}
+            >
+              <motion.span
+               initial={{ y: 0, opacity: 1 }}
+               animate={servhovered ? { y: -15, opacity: 0 } : { y: 0, opacity: 1 }}
+               transition={{ duration: 0.3,ease: "easeInOut" }}
+               >
+                Services
+                </motion.span>
+
+                <motion.span
+         initial={{ y: 10, opacity: 0 }}
+         animate={servhovered ? { y: 0, opacity: 1 } : { y: 15, opacity: 0 }}
+         transition={{ duration: 0.3,ease: "easeInOut" }}
+        className="absolute left-0 right-0 text-center"
+      >
+        Services
+      </motion.span>
+             
+
+            </motion.button>
             </Link>
            
             
           </div>
-          <Link href="./about" className="text-gray-900 hover:text-green-500 transition border border-black rounded-full px-4 py-1">
-            About Us
-          </Link>
+
+
+          <div className="relative">
+            <Link href="./about">
+            <motion.button
+              className="flex gap-1 items-center text-gray-900  transition border border-black rounded-full px-5 py-1 overflow-hidden"
+              onMouseEnter={() => setabouthovered(true)}
+              onMouseLeave={() => setabouthovered(false)}
+            >
+              <motion.span
+               initial={{ y: 0, opacity: 1 }}
+               animate={abouthovered ? { y: -15, opacity: 0 } : { y: 0, opacity: 1 }}
+               transition={{ duration: 0.3,ease: "easeInOut" }}
+               >
+                About Us
+                </motion.span>
+
+                <motion.span
+         initial={{ y: 10, opacity: 0 }}
+         animate={abouthovered ? { y: 0, opacity: 1 } : { y: 15, opacity: 0 }}
+         transition={{ duration: 0.3,ease: "easeInOut" }}
+        className="absolute left-0 right-0 text-center"
+      >
+        About Us
+      </motion.span>
+             
+
+            </motion.button>
+            </Link>
+           
+            
+          </div>
+          
+
+
+
         </nav>
-        <Link href="./contact" className="hidden md:block bg-[#04081C] text-white px-4 py-2 hover:bg-blue-800 transition rounded-full px-4 py-1">
-          Contact Us {'>'}
-        </Link>
+        <div className="relative">
+            <Link href="./contact">
+            <motion.button
+              className="flex  items-center bg-[#04081C] text-gray-200 transition border border-black rounded-full px-6 py-2 overflow-hidden gap-3"
+              onMouseEnter={() => setconthovered(true)}
+              onMouseLeave={() => setconthovered(false)}
+            >
+              <motion.span
+               initial={{ y: 0, opacity: 1 }}
+               animate={conthovered ? { y: -15, opacity: 0 } : { y: 0, opacity: 1 }}
+               transition={{ duration: 0.3,ease: "easeInOut" }}
+               >
+                Contact Us
+                </motion.span>
+
+             
+                <motion.span
+               initial={{ x: 0, opacity: 1 }}
+               animate={conthovered ? { x: 15, opacity: 0 } : { x: 0, opacity: 1 }}
+               transition={{ duration: 0.3,ease: "easeInOut" }}
+               >
+               {">"}
+                </motion.span>
+
+
+                <motion.span
+         initial={{ y: 10, opacity: 0 }}
+         animate={conthovered ? { y: 0, opacity: 1 } : { y: 15, opacity: 0 }}
+         transition={{ duration: 0.3,ease: "easeInOut" }}
+        className="absolute left-0 right-0 text-center"
+      >
+        Contact Us
+      </motion.span>
+
+
+    
+
+    
+
+   
+             
+
+            </motion.button>
+            </Link>
+           
+            
+          </div>
 
         <div className="md:hidden">
         <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">

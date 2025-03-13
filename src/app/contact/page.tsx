@@ -59,7 +59,7 @@ function Page() {
                 </div>
                 < form className={` m-auto md:w-1/2 flex flex-wrap p-2 pt-6 mt-[1rem]  rounded-b-md`}>
                     <div className={` w-full md:flex flex-wrap   rounded-b-md border-0 pt-2 text-white`}>
-                        <div className='md:w-1/2 text-left pr-2   justify-between'>
+                    <div className='md:w-1/2 text-left  pr-2 pt-4  justify-between'>
                             <p className={" text-sm font-medium pb-1  "} >First Name</p>
                             <input type='text' name='firstname'
                                 onChange={(e) => { handleInputChange(e) }}
