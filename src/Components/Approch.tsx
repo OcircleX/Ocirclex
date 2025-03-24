@@ -1,12 +1,30 @@
 "use client";
+import { Rethink_Sans } from "next/font/google";
 
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Image from 'next/image';
 import img1 from '../../images/1.png'
 import img2 from '../../images/2.png'
 import img3 from '../../images/3.png'
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+
+
+const rethinkSans = Rethink_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Adjust weights as needed
+});
+
+
 export default function Approch() {
+
+const gsapRef = useRef();
+
+  gsap.registerPlugin(ScrollTrigger);
+
 
   const Marquee = [
     "./01.svg",
@@ -19,7 +37,22 @@ export default function Approch() {
     "./08.svg"
   ]
 
-
+  useGSAP(()=> {
+gsap.to("#aboutButton",
+   {x: 360,
+    duration:6,
+    rotate:720,
+    scrollTrigger: {
+    
+      start: "top 100%", // When the top of the element reaches 80% of the viewport
+      end: "top 30%",   // When the top of the element reaches 30% of the viewport
+      scrub: 1,         // Smooth scrolling effect
+      markers: true,    // Shows start & end markers (Remove in production)
+    },
+   
+   }
+  )
+  }, {scope:""})
 
   return (
     
@@ -30,28 +63,28 @@ export default function Approch() {
      
       >TRUSTED BY <br className="md:hidden" /> COMPANIES</motion.h1>
 
-<div className="w-[80%]  overflow-hidden flex ">
+<div className="w-[65%]  overflow-hidden flex ">
   <motion.div
-    className="flex flex-shrink-0 gap-x-6 px-3 gap-y-3 w-full"
+    className="flex flex-shrink-0 gap-x-6 px-6 gap-y-3 w-full"
     initial={{ x: "0%" }}
     animate={{ x: "-100%" }} // Moves only inside 70%
-    transition={{ duration: 1, ease: "linear", repeat: Infinity }}
+    transition={{ duration: 4.5, ease: "linear", repeat: Infinity }}
   >
     {/* Items fit perfectly inside w-[70%] */}
     {Marquee.map((src, index) => (
-      <Image key={index} src={src} alt="Marquee Icon" width={70} height={70} />
+      <Image key={index} src={src} alt="Marquee Icon" width={75} height={75} />
     ))}
   </motion.div>
 
   <motion.div
-    className="flex flex-shrink-0 gap-x-6 px-3 gap-y-3 w-full"
+    className="flex flex-shrink-0 gap-x-6 px-6 gap-y-3 w-full"
     initial={{ x: "0%" }}
     animate={{ x: "-100%" }} // Moves only inside 70%
-    transition={{ duration: 1, ease: "linear", repeat: Infinity }}
+    transition={{ duration: 4.5, ease: "linear", repeat: Infinity }}
   >
     {/* Items fit perfectly inside w-[70%] */}
     {Marquee.map((src, index) => (
-      <Image key={index} src={src} alt="Marquee Icon" width={70} height={70} />
+      <Image key={index} src={src} alt="Marquee Icon" width={75} height={75} className=''/>
     ))}
   </motion.div>
 </div>
@@ -61,20 +94,26 @@ export default function Approch() {
 
       <div className="w-full max-w-screen-xl md:flex px-3 py-[4rem] bg-[#04081C] justify-between gap-8">
         <div className="w-full md:w-1/2">
-          <button className="mt-6 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+          <motion.button
+          
+          className="mt-8 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
             CREATIVE STUDIO
-          </button>
+          </motion.button>
         </div>
-        <div className="w-full md:w-[60%] ">
-          <h1 className="text-xl md:text-3xl w-full py-10 font-bold text-white leading-tight">
-            OUR APPROACH COMBINES BOLD AND
-            CREATIVITY WITH DATE DRIVEN INSIGHTS WE
-            ARE HERE TO ELEVATE YOUR PRESENCE AND
-            MAKE YOUR BRAND
-          </h1>
-          <button className="px-6 py-3 mt-2 bg-white text-[#04081C] rounded-full shadow-md hover:bg-gray-200 transition">
+        <div className="w-full md:w-[70%] ">
+          <motion.h1
+         
+           className={`text-xl md:text-4xl w-full py-8  font-bold text-white leading-tight ${rethinkSans.className}`}>
+           We combine innovative ideas with insightful 
+data to craft strategies that make
+ your brand unforgettable.
+          </motion.h1>
+          <h1
+          ref={gsapRef}
+          id="aboutButton"
+          className="px-6 py-3 mt-2  bg-white text-[#04081C] rounded-full shadow-md hover:bg-gray-200 transition text-left w-fit">
             ABOUT US ›
-          </button>
+          </h1>
 
         </div>
       </div>
