@@ -1,6 +1,6 @@
 "use client";
 import { Instrument_Serif } from "next/font/google";
-
+import { Rethink_Sans } from "next/font/google";
 import { useEffect, useState } from "react";
 import image from '../../images/img.png'
 import Image from "next/image";
@@ -10,6 +10,12 @@ const instrumentSerif = Instrument_Serif({
   weight: ["400"], 
   style: "italic" // ✅ Correct way to load italic
 });
+
+const rethinkSans = Rethink_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Adjust weights as needed
+});
+
 
 const Showcase = () => {
 
@@ -192,10 +198,11 @@ const Showcase = () => {
         {/* Right Section: Content */}
         <div className=" flex flex-col gap-8 w-2/3">
           {/* Heading */}
-          <h1 className="text-md px-3 md:text-3xl font-bold leading-tight w-full md:w-[80%]">
-            OUR TEAM OF CREATIVE PROFESSIONAL
-            INFUSES CREATIVITY AND EXPERTISES
-            INTO EVERY PROJECT WE UNDERTAKE.
+          <h1 className={`text-md px-3 md:text-3xl font-bold leading-tight w-full md:w-[80%]  ${rethinkSans.className}`}>
+          Driven by creativity and powered
+by expertise, our team brings 
+fresh ideas and top-tier skills 
+to every project we touch.
           </h1>
           <div className=" md:flex gap-8  w-full ">
 
