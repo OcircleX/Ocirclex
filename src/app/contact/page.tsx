@@ -29,21 +29,46 @@ function Page() {
     });
     const [errorsP2, setErrorsP2] = useState('');
 
-    const handleInputChange = (e) => {
-        // setsecondPersonIsexist(null)
-        // setErrorsP2(null)
-        const { name, value } = e.target;
-        setErrorsP2(prevState => ({
-            ...prevState,
-            [name]: null,
-        }));
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value,
 
-        }));
+    const handleInputChange = (e:any) => {
+             const {name, value} = e.target;
+           
+             setFormData((prevData)=> ({
+                ...prevData, [name]: value,
+             }))
+    }
 
-    };
+const handleSubmit = async (e:any) => {
+e.preventDefault();
+console.log("Form Data Submits", formData)
+
+try {
+    const res = await fetch("/api/form", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData)
+    })
+
+  const data = await res.json();
+  console.log("Response", data)
+
+  if (res.ok) {
+    alert("Form submitted Successfully!")
+  } else {
+    alert("Error submitting form!")
+  }
+
+} catch (error) {
+    console.error("Error", error)
+}
+
+
+
+
+
+}
 
     return (
         <>   
@@ -104,7 +129,7 @@ function Page() {
                         <div className='md:w-1/2 text-left  pr-2  pt-4   justify-between'>
 
                             <p className={"text-sm font-medium   pb-1 "} >Subject</p>
-                            <input type='subject' name='subject'
+                            <input type='text' name='Subject'
                                 onChange={(e) => handleInputChange(e)}
                                 placeholder='Subject'
                                 value={formData.Subject}
@@ -117,14 +142,16 @@ function Page() {
 
                         <div className='md:w-1/2 text-left  pr-2  pt-4   justify-between'>
                             <p className={" text-sm font-medium  pb-1  "} >Address</p>
-                            <input type='text' name='medicarenumber'
+                            <input type='text' name='address'
                                 onChange={(e) => handleInputChange(e)}
                                 value={formData?.address}
                                 placeholder='Address'
                                 className={' shadow border w-full rounded   px-2 py-3 text-sm  focus:border-teal-500 focus:outline-none border-gray-500 bg-[#04081C] placeholder:text-gray-400 text-gray-100' + (errorsP2.firstname ? ' border-red-400 ' : ' border-gray-300')} />
                         </div>
 
-                        <button className="w-full mt-6 px-6 border py-3 text-[#04081C] hover:text-white rounded-md bg-white text-lg font-medium hover:bg-[#04081C] transition">
+                        <button className="w-full mt-6 px-6 border py-3 text-[#04081C] hover:text-white rounded-md bg-white text-lg font-medium hover:bg-[#04081C] transition"
+                        onClick={handleSubmit}
+                        >
                            <span className='text-[15px] '> SEND  MESSAGE </span>
                         </button>
 

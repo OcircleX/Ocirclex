@@ -8,6 +8,7 @@ export default function Header() {
   const [abouthovered, setabouthovered] = useState(false);
   const [homehovered, sethomehovered] = useState(false);
   const [conthovered, setconthovered] = useState(false);
+  const [bloghovered, setbloghovered] = useState(false);
 
   return (
     <header className="w-screen shadow-md py-4 md:px-6 bg-[#fafafa] flex justify-center">
@@ -107,6 +108,38 @@ export default function Header() {
         className="absolute left-0 right-0 text-center"
       >
         About Us
+      </motion.span>
+             
+
+            </motion.button>
+            </Link>
+           
+            
+          </div>
+
+
+          <div className="relative">
+            <Link href="./blog">
+            <motion.button
+              className="flex gap-1 items-center text-gray-900  transition border border-black rounded-full px-5 py-1"
+              onMouseEnter={() => setbloghovered(true)}
+              onMouseLeave={() => setbloghovered(false)}
+            >
+              <motion.span
+               initial={{ y: 0, opacity: 1 }}
+               animate={bloghovered ? { y: -15, opacity: 0 } : { y: 0, opacity: 1 }}
+               transition={{ duration: 0.3,ease: "easeInOut" }}
+               >
+                Blog
+                </motion.span>
+
+                <motion.span
+         initial={{ y: 10, opacity: 0 }}
+         animate={bloghovered ? { y: 0, opacity: 1 } : { y: 15, opacity: 0 }}
+         transition={{ duration: 0.3,ease: "easeInOut" }}
+        className="absolute left-0 right-0 text-center"
+      >
+        Blog
       </motion.span>
              
 

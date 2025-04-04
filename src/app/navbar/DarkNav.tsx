@@ -9,6 +9,7 @@ export default function DarkNav() {
   const [abouthovered, setabouthovered] = useState(false);
   const [homehovered, sethomehovered] = useState(false);
   const [conthovered, setconthovered] = useState(false);
+  const [bloghovered, setbloghovered] = useState(false);
 
   return (
     <header className="bg-[#04081C] w-full  shadow-md py-4 px-6 flex justify-between items-center " >
@@ -86,9 +87,9 @@ export default function DarkNav() {
 
 
           <div className="relative">
-            <Link href="./about">
+            <Link href="./services">
             <motion.button
-              className="flex gap-1 items-center text-gray-200   transition border  rounded-full px-5 py-1 overflow-hidden"
+              className="flex gap-1 items-center text-gray-200   transition border rounded-full px-5 py-1"
               onMouseEnter={() => setabouthovered(true)}
               onMouseLeave={() => setabouthovered(false)}
             >
@@ -115,7 +116,41 @@ export default function DarkNav() {
            
             
           </div>
-          
+
+
+          <div className="relative">
+            <Link href="./blog">
+            <motion.button
+              className="flex gap-1 items-center text-gray-200   transition border rounded-full px-5 py-1"
+              onMouseEnter={() => setbloghovered(true)}
+              onMouseLeave={() => setbloghovered(false)}
+            >
+              <motion.span
+               initial={{ y: 0, opacity: 1 }}
+               animate={bloghovered ? { y: -15, opacity: 0 } : { y: 0, opacity: 1 }}
+               transition={{ duration: 0.3,ease: "easeInOut" }}
+               >
+                Blog
+                </motion.span>
+
+                <motion.span
+         initial={{ y: 10, opacity: 0 }}
+         animate={bloghovered ? { y: 0, opacity: 1 } : { y: 15, opacity: 0 }}
+         transition={{ duration: 0.3,ease: "easeInOut" }}
+        className="absolute left-0 right-0 text-center"
+      >
+        Blog
+      </motion.span>
+             
+
+            </motion.button>
+            </Link>
+           
+            
+          </div>
+
+
+         
 
 
 

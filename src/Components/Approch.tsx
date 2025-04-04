@@ -11,6 +11,8 @@ import img3 from '../../images/3.png'
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 const rethinkSans = Rethink_Sans({
@@ -21,7 +23,8 @@ const rethinkSans = Rethink_Sans({
 
 export default function Approch() {
 
-const gsapRef = useRef();
+
+
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -38,32 +41,137 @@ const gsapRef = useRef();
   ]
 
   useGSAP(()=> {
-gsap.to("#aboutButton",
-   {x: 360,
-    duration:6,
-    rotate:720,
+gsap.from("#aboutButton",
+  {y: 100,
+    duration:0.2,
+    opacity:0,
+    delay:0.5,
+   
+   
     scrollTrigger: {
-    
-      start: "top 100%", // When the top of the element reaches 80% of the viewport
-      end: "top 30%",   // When the top of the element reaches 30% of the viewport
-      scrub: 1,         // Smooth scrolling effect
-      markers: true,    // Shows start & end markers (Remove in production)
+    trigger:"#aboutButton"
     },
    
    }
   )
   }, {scope:""})
 
+  useGSAP(()=> {
+    gsap.from("#trust",
+       {y: 100,
+        duration:0.5,
+        opacity:0,
+        delay:0.5,
+       
+       
+        scrollTrigger: {
+        trigger:"#trust"
+        },
+       
+       }
+      )
+      }, {scope:""})
+
+      useGSAP(()=> {
+        gsap.from("#infinity",
+           {y: 100,
+            duration:0.5,
+            opacity:0,
+            delay:0.5,
+           
+           
+            scrollTrigger: {
+            trigger:"#infinity"
+            },
+           
+           }
+          )
+          }, {scope:""})
+
+          useGSAP(()=> {
+            gsap.from("#creative",
+               {y: 100,
+                duration:0.5,
+                opacity:0,
+                delay:0.5,
+               
+               
+                scrollTrigger: {
+                trigger:"#creative"
+                },
+               
+               }
+              )
+              }, {scope:""})
+
+              useGSAP(()=> {
+                gsap.from("#combine",
+                   {y: 100,
+                    duration:1,
+                    opacity:0,
+                    delay:0.5,
+                   
+                   
+                    scrollTrigger: {
+                    trigger:"#combine"
+                    },
+                   
+                   }
+                  )
+                  }, {scope:""})
+
+
+useGSAP(()=> {
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#threepix",
+      start: "top 80%",
+      end: "top 20%", // Extend scroll range for slower effect
+      scrub: 3, // Increase scrub for smoother effect
+      markers: true, // Debugging (remove in production)
+      once: true,
+    },
+  });
+
+  tl.from("#thimg1", {
+    x: 150,
+    opacity: 0,
+    duration: 2, // Slow transition
+    ease: "power2.out",
+  })
+  .from("#thimg2", {
+    x: 150,
+    opacity: 0,
+    duration: 2,
+    ease: "power2.out",
+  }, "+=0.5") // Delay between animations for a clear difference
+  .from("#thimg3", {
+    x: 150,
+    opacity: 0,
+    duration: 2,
+    ease: "power2.out",
+  }, "+=0.5");
+  
+
+})
+
+
+                  
+                  
+          
+
   return (
     
     <section className="flex flex-col m-auto py-[2rem] bg-[#04081C] justify-between items-center w-full   ">
-      <motion.h1 className="text-xl md:text-2xl   text-center w-full py-10 font-bold text-white leading-tight"
-      initial={{y:-15, opacity:0}}
-      whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
+      <h1 id="trust" className="text-xl md:text-2xl   text-center w-full py-10 font-bold text-white leading-tight"
+      
      
-      >TRUSTED BY <br className="md:hidden" /> COMPANIES</motion.h1>
+      >TRUSTED BY <br className="md:hidden" /> COMPANIES</h1>
 
-<div className="w-[65%]  overflow-hidden flex ">
+<div className="w-[65%]  overflow-hidden flex " id="infinity"
+
+>
   <motion.div
     className="flex flex-shrink-0 gap-x-6 px-6 gap-y-3 w-full"
     initial={{ x: "0%" }}
@@ -96,20 +204,20 @@ gsap.to("#aboutButton",
         <div className="w-full md:w-1/2">
           <motion.button
           
-          className="mt-8 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+          className="mt-8 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition" id="creative">
             CREATIVE STUDIO
           </motion.button>
         </div>
         <div className="w-full md:w-[70%] ">
           <motion.h1
          
-           className={`text-xl md:text-4xl w-full py-8  font-bold text-white leading-tight ${rethinkSans.className}`}>
+           className={`text-xl md:text-4xl w-full py-8  font-bold text-white leading-tight ${rethinkSans.className}`} id="combine">
            We combine innovative ideas with insightful 
 data to craft strategies that make
  your brand unforgettable.
           </motion.h1>
           <h1
-          ref={gsapRef}
+         
           id="aboutButton"
           className="px-6 py-3 mt-2  bg-white text-[#04081C] rounded-full shadow-md hover:bg-gray-200 transition text-left w-fit">
             ABOUT US ›
@@ -153,7 +261,7 @@ data to craft strategies that make
 
 
 
-<div className="w-full max-w-screen-xl mx-auto hidden md:flex  justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4">
+<div className="w-full max-w-screen-xl mx-auto hidden md:flex  justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4" id="threepix">
       <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
   <Image
     src={img2}
@@ -161,6 +269,7 @@ data to craft strategies that make
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
     className="rounded-md"
+    id="thimg1"
   />
 </div>
 <div className="w-[50%] h-full rounded-md overflow-hidden flex-grow-0 relative">
@@ -170,6 +279,7 @@ data to craft strategies that make
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
     className="rounded-md"
+     id="thimg2"
   />
 </div>
   <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
@@ -179,6 +289,7 @@ data to craft strategies that make
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
     className="rounded-md"
+     id="thimg3"
   />
 </div>
 </div>
