@@ -1,6 +1,95 @@
+'use client'
 import React from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(ScrollTrigger);
 
 function Footer() {
+
+    useGSAP(()=> {
+        gsap.from("#date",
+           {y: 100,
+            duration:0.5,
+            opacity:0,
+            delay:0.5,
+           
+           
+            scrollTrigger: {
+            trigger:"#date"
+            },
+           
+           }
+          )
+          }, {scope:""})
+
+          useGSAP(()=> {
+            gsap.from("#lets",
+               {y: 100,
+                duration:0.5,
+                opacity:0,
+                delay:0.5,
+               
+               
+                scrollTrigger: {
+                trigger:"#lets"
+                },
+               
+               }
+              )
+              }, {scope:""})
+
+              useGSAP(()=> {
+                gsap.from("#startproject",
+                   {x: 100,
+                    duration:0.5,
+                    opacity:0,
+                    delay:0.5,
+                   
+                   
+                    scrollTrigger: {
+                    trigger:"#startproject"
+                    },
+                   
+                   }
+                  )
+                  }, {scope:""})
+
+                  useGSAP(()=> {
+                    gsap.from("#linkss",
+                       {y: 100,
+                        duration:0.5,
+                        opacity:0,
+                        delay:0.5,
+                       
+                       
+                        scrollTrigger: {
+                        trigger:"#linkss"
+                        },
+                       
+                       }
+                      )
+                      }, {scope:""})
+
+                      useGSAP(()=> {
+                        gsap.from("#copyr",
+                           {y: 100,
+                            duration:0.5,
+                            opacity:0,
+                            delay:0.5,
+                           
+                           
+                            scrollTrigger: {
+                            trigger:"#copyr"
+                            },
+                           
+                           }
+                          )
+                          }, {scope:""})
+    
+
+          
+
     return (
         <div className="bg-[#04081C] border-gray-200 pt-10  text-gray-700 w-[100%] relative  ">
 
@@ -10,14 +99,14 @@ function Footer() {
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between space-y-6 md:space-y-0">
                         {/* Left side */}
                         <div>
-                            <p className="text-sm mb-1">©2024</p>
-                            <h3 className="text-xxl md:text-3xl font-semibold uppercase leading-tight">
+                            <p className="text-sm mb-1" id='date'>©2024</p>
+                            <h3 className="text-xxl md:text-3xl font-semibold uppercase leading-tight" id='lets'>
                                 LET’S START <br />
                                 WORK TOGETHER
                             </h3>
                         </div>
 
-                        <button className="flex  justify-center items-center  gap-4 mt-6 px-4 md:px-6 py-3 bg-white text-[#04081C] text-lg font-medium rounded-full hover:bg-blue-800 transition">
+                        <button className="flex  justify-center items-center  gap-4 mt-6 px-4 md:px-6 py-3 bg-white text-[#04081C] text-lg font-medium rounded-full hover:bg-blue-800 transition" id='startproject'>
                         <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_3338_133548)">
 <g clip-path="url(#clip1_3338_133548)">
@@ -38,7 +127,7 @@ function Footer() {
 
                     </div>
                 </div>
-                <div className="md:flex mb-4 justify-between items-center text-sm text-gray-200 md:gap-x-12 md:mx-auto md:w-full max-w-screen-xl px-4">
+                <div className="md:flex mb-4 justify-between items-center text-sm text-gray-200 md:gap-x-12 md:mx-auto md:w-full max-w-screen-xl px-4" id='linkss'>
                     <p className="">• ISLAMABAD, PAKISTAN</p>
                     <p className="mx-2">• circlex@gmail.com</p>
                     <p className="mx-2">• DRIBBBLE</p>
@@ -134,7 +223,7 @@ function Footer() {
                         </svg>
                     </div>
                     <div className='w-[65%] md:w-1/3 sm:flex-1'>
-                        <p className="text-center text-sm text-gray-400 ">
+                        <p className="text-center text-sm text-gray-400 " id='copyr'>
                             © Copyright 2024 
                          
                             <span className="mx-1">| Designed & Developed By Circle X</span>

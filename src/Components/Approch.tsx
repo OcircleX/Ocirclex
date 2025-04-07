@@ -9,7 +9,7 @@ import img1 from '../../images/1.png'
 import img2 from '../../images/2.png'
 import img3 from '../../images/3.png'
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -131,27 +131,29 @@ useGSAP(()=> {
       scrub: 3, // Increase scrub for smoother effect
       markers: true, // Debugging (remove in production)
       once: true,
+    
+    
     },
   });
 
   tl.from("#thimg1", {
-    x: 150,
-    opacity: 0,
-    duration: 2, // Slow transition
-    ease: "power2.out",
+    y: 150,
+    autoAlpha: 0,
+    duration: 2,
+    ease: "expo.out",
   })
   .from("#thimg2", {
-    x: 150,
-    opacity: 0,
+    y: 150,
+    autoAlpha: 0,
     duration: 2,
-    ease: "power2.out",
-  }, "+=0.5") // Delay between animations for a clear difference
+    ease: "expo.out",
+  }, "+=0.3")
   .from("#thimg3", {
     x: 150,
-    opacity: 0,
+    autoAlpha: 0,
     duration: 2,
-    ease: "power2.out",
-  }, "+=0.5");
+    ease: "expo.out",
+  }, "+=0.3");
   
 
 })

@@ -1,6 +1,11 @@
+'use client'
 import React from 'react';
 import "./../app/style.css"
 // import './style.css';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(ScrollTrigger);
 
 import fazal2 from '../../images/wasif2.png';
 import Image from 'next/image';
@@ -12,6 +17,70 @@ const instrumentSerif = Instrument_Serif({
 });
 
 const IndustryInfo = () => {
+
+  useGSAP(()=> {
+    gsap.from("#bundled",
+       {x: -100,
+        duration:0.5,
+        opacity:0,
+        delay:0.5,
+       
+       
+        scrollTrigger: {
+        trigger:"#bundled"
+        },
+       
+       }
+      )
+      }, {scope:""})
+
+      useGSAP(()=> {
+        gsap.from("#team",
+           {x: 100,
+            duration:0.5,
+            opacity:0,
+            delay:0.5,
+           
+           
+            scrollTrigger: {
+            trigger:"#team"
+            },
+           
+           }
+          )
+          }, {scope:""})
+
+          useGSAP(()=> {
+            gsap.from("#fazala",
+               {x: 100,
+                duration:0.5,
+                opacity:0,
+                delay:0.8,
+               
+               
+                scrollTrigger: {
+                trigger:"#fazala"
+                },
+               
+               }
+              )
+              }, {scope:""})
+
+              useGSAP(()=> {
+                gsap.from("#count",
+                   {y: 100,
+                    duration:0.5,
+                    opacity:0,
+                    delay:0.8,
+                   
+                   
+                    scrollTrigger: {
+                    trigger:"#count"
+                    },
+                   
+                   }
+                  )
+                  }, {scope:""})
   return (
 
     <>
@@ -19,14 +88,15 @@ const IndustryInfo = () => {
       <section className=" py-8 w-full shadow-md bg-gradient-to-r py-[5rem] from-white to-gray-400 shadow-md px-4 ">
         <div className="m-auto text-[#04081C] max-w-screen-xl">
           <div className="flex justify-between flex-col md:flex-row">
-            <div className="review-left-col-wrapper"
+            <div className="review-left-col-wrapper" 
+            id="bundled"
               style={{
                 opacity: 1,
                 transform:
                   "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
                 transformStyle: "preserve-3d",
               }}>
-              <h1 className="text-4xl md:text-6xl font-bold text-[#04081C] ">BUNDLED WITH</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-[#04081C] " >BUNDLED WITH</h1>
               <span className={`industryexperience font-extralight text-[#7BB668] italic  ${instrumentSerif.className}   `}
               //  style={{
               //   fontSize: "4.5rem", 
@@ -39,8 +109,8 @@ const IndustryInfo = () => {
               ><i>industry experience</i></span>
             </div>
 
-            <div className="flex md:justify-end mt-6 md:mt-0">
-              <p className="text-lg font-extralight  w-64  text-[#04081C]"
+            <div className="flex md:justify-end mt-6 md:mt-0" >
+              <p className="text-lg font-extralight  w-64  text-[#04081C]"  id="team"
                 style={{
                   opacity: 1,
                   transform: "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
@@ -51,7 +121,7 @@ const IndustryInfo = () => {
             </div>
           </div>
           <div className='md:flex w-full gap-x-2 pt-6 mt-6 '>
-            <div className='w-full md:w-2/3 gap-x-3'>
+            <div className='w-full md:w-2/3 gap-x-3' id='count'>
               <div className='md:flex w-full gap-x-3 '>
                 <div className='flex flex-col w-full md:w-2/3  mt-4 rounded-md border border-gray-400 shadow p-6  gap-x-2'>
                   <div className="text-[#04081C]">
@@ -99,7 +169,7 @@ const IndustryInfo = () => {
               </div>
 
             </div>
-            <div className='flex w-full md:w-1/3 gap-x-2  mt-4 rounded-md'>
+            <div className='flex w-full md:w-1/3 gap-x-2  mt-4 rounded-md' id='fazala'>
               <Image
                 src={fazal2}
                 alt="project.title"

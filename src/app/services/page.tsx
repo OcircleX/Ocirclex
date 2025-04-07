@@ -6,6 +6,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 
 
+
 const instrumentSerif = Instrument_Serif({ 
     subsets: ["latin"], 
     weight: ["400"], 

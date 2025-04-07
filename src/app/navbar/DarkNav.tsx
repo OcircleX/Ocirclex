@@ -87,7 +87,7 @@ export default function DarkNav() {
 
 
           <div className="relative">
-            <Link href="./services">
+            <Link href="./about">
             <motion.button
               className="flex gap-1 items-center text-gray-200   transition border rounded-full px-5 py-1"
               onMouseEnter={() => setabouthovered(true)}
