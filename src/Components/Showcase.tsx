@@ -135,7 +135,6 @@ const Showcase = () => {
                             start: "top 80%",
                             end: "top 20%", // Extend scroll range for slower effect
                             scrub: 3, // Increase scrub for smoother effect
-                            markers: true, // Debugging (remove in production)
                             once: true,
                           
                           
@@ -289,10 +288,11 @@ const Showcase = () => {
 
 
    
-                <div id="ProjectContent" className=" p-6 absolute bottom-12 left-6 hidden md:flex flex-col">
-                  <button className="mt-6 px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
-                    {project.category}
-                  </button>
+                <div id="ProjectContent" className=" p-6 absolute bottom-12 left-6 hidden sm:flex flex-col">
+                <button className="mt-6 px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition md:text-base md:px-4 md:py-2">
+  {project.category}
+</button>
+
                   <h3
   className={`w-[40vh] tracking-[-1.62px] mt-4 mb-0 text-[54px] font-bold leading-[120%]  ${
     index === 0 ? "text-white" : "text-black"

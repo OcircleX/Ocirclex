@@ -129,7 +129,6 @@ useGSAP(()=> {
       start: "top 80%",
       end: "top 20%", // Extend scroll range for slower effect
       scrub: 3, // Increase scrub for smoother effect
-      markers: true, // Debugging (remove in production)
       once: true,
     
     
@@ -178,7 +177,7 @@ useGSAP(()=> {
     className="flex flex-shrink-0 gap-x-6 px-6 gap-y-3 w-full"
     initial={{ x: "0%" }}
     animate={{ x: "-100%" }} // Moves only inside 70%
-    transition={{ duration: 4.5, ease: "linear", repeat: Infinity }}
+    transition={{ duration: 8.5, ease: "linear", repeat: Infinity }}
   >
     {/* Items fit perfectly inside w-[70%] */}
     {Marquee.map((src, index) => (
@@ -190,7 +189,7 @@ useGSAP(()=> {
     className="flex flex-shrink-0 gap-x-6 px-6 gap-y-3 w-full"
     initial={{ x: "0%" }}
     animate={{ x: "-100%" }} // Moves only inside 70%
-    transition={{ duration: 4.5, ease: "linear", repeat: Infinity }}
+    transition={{ duration: 8.5, ease: "linear", repeat: Infinity }}
   >
     {/* Items fit perfectly inside w-[70%] */}
     {Marquee.map((src, index) => (
