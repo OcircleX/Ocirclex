@@ -266,7 +266,7 @@ const Showcase = () => {
             {projects.map((project, index) => (
               <a
                 key={index}
-                href={project.link}
+                // href={project.link}
                 className="block h-full  shadow-lg rounded-lg overflow-hidden transition transform mb-6"
               >
                 {/* <img
@@ -343,7 +343,7 @@ const Showcase = () => {
         {/* Left Section: Button */}
         <div className="w-full md:w-1/3 px-4" id="working">
 
-          <button className="mt-6 px-6 py-3 bg-[#04081C] border text-white text-lg font-medium rounded-full hover:bg-blue-800 transition">
+          <button className="mt-6 px-6 py-3 bg-[#04081C] border text-white text-lg font-medium rounded-full  transition">
             WORKING METHODS
           </button>
         </div>

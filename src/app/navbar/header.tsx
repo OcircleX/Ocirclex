@@ -26,7 +26,7 @@ export default function Header() {
   <Link href="/">  <li>Home</li></Link>
   <Link href="/services">  <li>Services</li></Link>
   <Link href="/about">  <li>About Us</li></Link>
-  <Link href="/blog">  <li>Blog</li></Link>
+  {/* <Link href="/blog">  <li>Blog</li></Link> */}
  
 </ul>
   </div>
@@ -137,7 +137,7 @@ export default function Header() {
           </div>
 
 
-          <div className="relative">
+          {/* <div className="relative">
             <Link href="./blog">
             <motion.button
               className="flex gap-1 items-center text-gray-900  transition border border-black rounded-full px-5 py-1"
@@ -166,7 +166,7 @@ export default function Header() {
             </Link>
            
             
-          </div>
+          </div> */}
           
 
 

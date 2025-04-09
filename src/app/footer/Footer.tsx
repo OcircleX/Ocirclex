@@ -133,10 +133,13 @@ function Footer() {
                 </div>
                 <div className="md:flex mb-4 justify-between items-center text-sm text-gray-200 md:gap-x-12 md:mx-auto md:w-full max-w-screen-xl px-4" id='linkss'>
                     <p className="">• ISLAMABAD, PAKISTAN</p>
-                    <p className="mx-2">• circlex@gmail.com</p>
-                    <p className="mx-2">• DRIBBBLE</p>
-                    <p className="mx-2">• LINKEDIN</p>
-                    <p className="mx-2">• BEHANCE</p>
+                    <p className="mx-2">• support@ocirclex.com</p>
+                    <p className="mx-2">• +92 344 9622270</p>
+                   
+                    <Link href="https://www.linkedin.com/company/circlex/?viewAsMember=true" target="_blank" rel="noopener noreferrer"> <p className="mx-2">• LINKEDIN</p></Link>
+                    <Link href="https://www.behance.net/Circle_Xproject" target="_blank" rel="noopener noreferrer"> <p className="mx-2">• BEHANCE</p></Link>
+                    <Link href=""></Link>
+                   
                 </div>
                 {/* Bottom text */}
                 <div className="  w-full flex flex-col-reverse md:flex-row  gap-8 pt-4 items-center">

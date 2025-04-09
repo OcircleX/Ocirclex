@@ -165,7 +165,7 @@ useGSAP(()=> {
 
   return (
     
-    <section className="flex flex-col m-auto py-[2rem] bg-[#04081C] justify-between items-center w-full   ">
+    <section className="flex flex-col m-auto py-[2rem] bg-[#04081C] justify-between items-center w-full   " id="approache">
       <h1 id="trust" className="text-xl md:text-2xl   text-center w-full py-10 font-bold text-white leading-tight"
       
      
@@ -206,7 +206,7 @@ useGSAP(()=> {
         <div className="w-full md:w-1/2">
           <motion.button
           
-          className="mt-8 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition" id="creative">
+          className="mt-8 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full  transition" id="creative">
             CREATIVE STUDIO
           </motion.button>
         </div>

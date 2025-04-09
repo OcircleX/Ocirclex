@@ -109,7 +109,7 @@ const Services = () => {
             category: "CEO & founder",
             image:
                 "/fazal.png",
-            link: "/projects/dynamic-structures",
+            link: "https://www.linkedin.com/in/fazal-basit-825a33194?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         },
        
         {
@@ -117,7 +117,7 @@ const Services = () => {
             category: "CREATIVE DIRECTOR & Co-founder",
             image:
             "/wasif.png",
-            link: "/projects/design-revolution",
+            link: "https://www.linkedin.com/in/fazal-wasif?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         },
       
         {
@@ -125,21 +125,21 @@ const Services = () => {
             category: "Senior Software Engineer",
             image:
             "/Iqbal.jpeg",
-            link: "/projects/visionary-framework",
+            link: "https://www.linkedin.com/in/malik-iqbal-9aba781a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         },
         {
             title: "MIFTAHULLAH KHAN",
             category: "FRONTEND DEVELOPER",
             image:
             "/Miftah.jpeg",
-            link: "/projects/design-revolution",
+            link: "https://www.linkedin.com/in/miftah-ullah-khan-b1a4aa214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         },
         {
             title: "Faisal KHAN",
             category: "BACKEND DEVELOPER",
             image:
             "/Faisal.jpeg",
-            link: "/projects/design-revolution",
+            link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         },
     ];
 
@@ -175,7 +175,7 @@ const Services = () => {
     <div className='w-full md:w-[65%] flex flex-col space-y-4 md:space-y-3  overflow-hidden h-[300px] md:ml-16' id="servv">
 
 {/* WEB DESIGN */}
-<div className="w-full flex text-[#a3a5aa] items-center justify-between py-1">
+<div className="w-full flex text-[#a3a5aa] items-center justify-between py-1 cursor-pointer">
     <h1 className="text-3xl  leading-tight">WEB DESIGN</h1>
     <GoArrowUpRight className=' text-2xl'/>
 
@@ -184,21 +184,21 @@ const Services = () => {
 
 
 {/* DEVELOPMENT */}
-<div className="w-full flex items-center justify-between md:py-1.5 text-[#a3a5aa]">
+<div className="w-full flex items-center justify-between md:py-1.5 text-[#a3a5aa] cursor-pointer">
     <h1 className="text-3xl text-[#a3a5aa] leading-tight">DEVELOPMENT</h1>
     <GoArrowUpRight className=' text-2xl'/>
 </div>
 <div className="bg-gray-800  rounded-full w-full h-0.5"></div>
 
 {/* UI/UX CONCEPT */}
-<div className="w-full flex items-center justify-between py-1.5 text-[#a3a5aa]">
+<div className="w-full flex items-center justify-between py-1.5 text-[#a3a5aa] cursor-pointer">
     <h1 className="text-3xl text-[#a3a5aa] leading-tight">UI/UX CONCEPT</h1>
     <GoArrowUpRight className=' text-2xl'/>
 </div>
 <div className="bg-gray-800  rounded-full w-full h-0.5"></div>
 
 {/* BRANDING */}
-<div className="w-full flex items-center justify-between py-1 text-[#a3a5aa]">
+<div className="w-full flex items-center justify-between py-1 text-[#a3a5aa] cursor-pointer">
     <h1 className="text-3xl text-[#a3a5aa] leading-tight">BRANDING</h1>
     <GoArrowUpRight className=' text-2xl'/>
 </div>
@@ -250,12 +250,14 @@ const Services = () => {
                                     <div className="text-white">{x.title}</div>
                                     <div className="text-gray-300 text-[0.8rem]">{x.category}</div>
                                 </div>
-                                <svg
+                                <svg 
+                                
                                     width="25"
                                     height="25"
                                     viewBox="0 0 25 25"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
+                                    onClick={() => window.open(x.link, '_blank')}                                    className='cursor-pointer'
                                 >
                                     <g clipPath="url(#clip0_3338_132101)">
                                         <g clipPath="url(#clip1_3338_132101)">

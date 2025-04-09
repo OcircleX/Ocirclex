@@ -4,6 +4,7 @@ import { Instrument_Serif } from "next/font/google";
 import { motion } from "framer-motion";
 import Background from "./../../images/Background.png"
 import { IoMdArrowDropright } from "react-icons/io";
+import Link from "next/link";
 const instrumentSerif = Instrument_Serif({ 
   subsets: ["latin"], 
   weight: ["400"], 
@@ -56,13 +57,15 @@ export default function Hero() {
        
          className="flex md:block justify-center"
        >
-       <button
+    <Link href="#approache">
+    <button
          className="flex items-center gap-2 w-fit mt-6  px-6 py-3 bg-white rounded-full border text-[#04081C] border-[#171D3F] text-lg font-medium   transition"
        
          >
             Get Started  <span><IoMdArrowDropright />
             </span>
           </button>
+    </Link>
           
        </motion.div>
    </div>

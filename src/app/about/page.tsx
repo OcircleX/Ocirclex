@@ -282,16 +282,16 @@ function Page() {
                                               scrollTrigger: {
                                                 trigger: "#webd",
                                                 start: "top 80%",
-                                                end: "top 20%", // Extend scroll range for slower effect
-                                                scrub: 3, // Increase scrub for smoother effect
-                                                once: true, // Trigger only once
-                                                toggleActions: "play none none none", // Don't re-trigger on scroll up
+                                                end: "top 20%",
+                                                scrub: 3,
+                                                once: true,
+                                                toggleActions: "play none none none",
                                               },
                                             });
                                           
                                             tl.from("#webd", {
                                               y: 150,
-                                              autoAlpha: 0,
+                                              autoAlpha: 0,  // Ensure element starts invisible (opacity 0 and visibility hidden)
                                               duration: 2,
                                               ease: "expo.out",
                                             })
@@ -305,7 +305,7 @@ function Page() {
                                                 start: "top 90%",
                                                 end: "top 20%",
                                                 scrub: 2,
-                                                once: true, // Trigger only once
+                                                once: true,
                                                 toggleActions: "play none none none",
                                               },
                                             })
@@ -325,7 +325,7 @@ function Page() {
                                                 start: "top 90%",
                                                 end: "top 20%",
                                                 scrub: 2,
-                                                once: true, // Trigger only once
+                                                once: true,
                                                 toggleActions: "play none none none",
                                               },
                                             }, "+=0.3")
@@ -345,7 +345,7 @@ function Page() {
                                                 start: "top 90%",
                                                 end: "top 20%",
                                                 scrub: 2,
-                                                once: true, // Trigger only once
+                                                once: true,
                                                 toggleActions: "play none none none",
                                               },
                                             }, "+=0.3")
@@ -357,8 +357,8 @@ function Page() {
                                             }, "+=0.3")
                                             .from("#brandinga", {
                                               x: -150,
-                                              autoAlpha: 0,
-                                              opacity: 0,
+                                              autoAlpha: 0,  // Ensure it's completely invisible before starting
+                                              opacity: 0,    // Use opacity directly if needed
                                               duration: 4,
                                               ease: "expo.out",
                                               scrollTrigger: {
@@ -366,13 +366,12 @@ function Page() {
                                                 start: "top 90%",
                                                 end: "top 20%",
                                                 scrub: 2,
-                                                once: true, // Trigger only once
+                                                once: true,
                                                 toggleActions: "play none none none",
                                               },
                                             }, "+=0.3");
                                           });
                                           
-
 
 
                                     
@@ -431,8 +430,8 @@ function Page() {
                 <div className="w-full items-center flex flex-col py-[2rem] text-center -mt-4">
                     <h1 className="text-4xl md:text-6xl font-bold text-white leading-3" id='building'>
                         BUILDING</h1>
-                    <span className={`text-5xl md:text-7xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className} text-[120px] leading-[83px] `} id='beyond'>beyond limits</span>
-               <div id='btnget'>
+                        <span id='service' className={`text-5xl md:text-7xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}  md:leading-1 `}>beyond limits</span>
+                        <div id='btnget'>
                <button  className="mt-6 px-6 border py-3 bg-[#04081C] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition" >
                       <span >  Get Started</span>
                     </button>
@@ -478,7 +477,7 @@ function Page() {
 
                 <div className='flex flex-col md:flex-row   w-full justify-between items-start  py-[4rem] px-4' id='btntext'>
                   <div id='creat'>
-                  <button className="mt-6 border px-6 py-3 bg-[#04081C] rounded-full text-white text-lg font-medium hover:bg-blue-800 transition" >
+                  <button className="mt-6 border px-6 py-3 bg-[#04081C] rounded-full text-white text-lg font-medium transition" >
                         CREATIVE STUDIO
                     </button>
                   </div>
