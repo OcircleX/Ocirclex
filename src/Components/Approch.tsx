@@ -11,6 +11,7 @@ import img3 from '../../images/3.png'
 import { motion } from 'framer-motion';
 // import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -217,12 +218,14 @@ useGSAP(()=> {
 data to craft strategies that make
  your brand unforgettable.
           </motion.h1>
-          <h1
+        <Link href="about">
+        <h1
          
-          id="aboutButton"
-          className="px-6 py-3 mt-2  bg-white text-[#04081C] rounded-full shadow-md hover:bg-gray-200 transition text-left w-fit">
-            ABOUT US ›
-          </h1>
+         id="aboutButton"
+         className="px-6 py-3 mt-2  bg-white text-[#04081C] rounded-full shadow-md hover:bg-gray-200 transition text-left w-fit">
+           ABOUT US ›
+         </h1>
+        </Link>
 
         </div>
       </div>

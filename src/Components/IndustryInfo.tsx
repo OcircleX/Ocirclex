@@ -173,7 +173,7 @@ const IndustryInfo = () => {
               <Image
                 src={fazal2}
                 alt="project.title"
-                className="w-full h-full rounded-md object-cover"
+                className="w-full h-full  rounded-md object-cover"
               />
             </div>
           </div>

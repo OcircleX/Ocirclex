@@ -3,6 +3,7 @@ import React from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
+import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 function Footer() {
@@ -106,7 +107,9 @@ function Footer() {
                             </h3>
                         </div>
 
-                        <button className="flex  justify-center items-center  gap-4 mt-6 px-4 md:px-6 py-3 bg-white text-[#04081C] text-lg font-medium rounded-full hover:bg-blue-800 transition" id='startproject'>
+
+                  <Link href="contact">
+                  <button className="flex  justify-center items-center  gap-4 mt-6 px-4 md:px-6 py-3 bg-white text-[#04081C] text-lg font-medium rounded-full  transition" id='startproject'>
                         <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_3338_133548)">
 <g clipPath="url(#clip1_3338_133548)">
@@ -124,6 +127,7 @@ function Footer() {
 </svg>
   START A PROJECT
                         </button>
+                  </Link>
 
                     </div>
                 </div>

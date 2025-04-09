@@ -6,6 +6,12 @@ import React, { useState } from 'react'
 
 import { Instrument_Serif } from "next/font/google";
 import DarkNav from '../navbar/DarkNav';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+import Link from 'next/link';
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 const instrumentSerif = Instrument_Serif({ 
@@ -17,6 +23,49 @@ const instrumentSerif = Instrument_Serif({
 
 
 function Page() {
+
+
+    useGSAP(()=> {
+        gsap.from("#getin",
+          {x: -100,
+            duration:1,
+            opacity:0,
+            delay:0.2,
+            ease: "expo.out",
+           
+        
+           
+           }
+          )
+          }, {scope:""})
+
+          useGSAP(()=> {
+            gsap.from("#oursup",
+              {x: 100,
+                duration:1,
+                opacity:0,
+                delay:0.2,
+                ease: "expo.out",
+               
+            
+               
+               }
+              )
+              }, {scope:""})
+
+              useGSAP(()=> {
+                gsap.from("#formanim",
+                  {y: 100,
+                    duration:1,
+                    opacity:0,
+                    delay:0.5,
+                    ease: "expo.out",
+                   
+                
+                   
+                   }
+                  )
+                  }, {scope:""})
 
 
     const [formData, setFormData] = useState({
@@ -146,15 +195,15 @@ function Page() {
             <section className="w-full relative bg-[#04081C] to-gray-100 py-20 flex flex-col items-center justify-between">
                 <div className="max-w-screen-xl justify-between w-full m-auto">
                     <div className="w-full items-center flex flex-col py-[2rem] text-center -mt-4 leading-9">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white leading-9">
+                        <h1 className="text-4xl md:text-6xl font-bold text-white leading-9" id='getin'>
                             GET IN TOUCH WITH
                         </h1>
-                        <span className={`text-5xl md:text-7xl font-extralight text-[#7BB668] italic ${instrumentSerif.className}`}>
+                        <span className={`text-5xl md:text-7xl font-extralight text-[#7BB668] italic ${instrumentSerif.className}`} id='oursup'>
                             our support
                         </span>
                     </div>
 
-                    <form className="m-auto md:w-1/2 flex flex-wrap p-2 pt-6 mt-[1rem] rounded-b-md" onSubmit={handleSubmit}>
+                    <form className="m-auto md:w-1/2 flex flex-wrap p-2 pt-6 mt-[1rem] rounded-b-md" onSubmit={handleSubmit} id='formanim'>
                         <div className="w-full md:flex flex-wrap rounded-b-md border-0 pt-2 text-white">
                             <div className="md:w-1/2 text-left pr-2 pt-4">
                                 <p className="text-sm font-medium pb-1">First Name</p>
@@ -228,7 +277,8 @@ function Page() {
                                     onChange={handleInputChange}
                                     value={formData.description}
                                     placeholder="Description"
-                                    className={`shadow border w-full rounded px-2 py-3 text-sm focus:border-teal-500 focus:outline-none border-gray-500 bg-[#04081C] placeholder:text-gray-400 text-gray-100 ${formErrors.description ? 'border-red-400' : 'border-gray-300'}`}
+                                    
+                                    className={`shadow border w-full rounded px-2 py-2 text-sm focus:border-teal-500 focus:outline-none border-gray-500 bg-[#04081C] placeholder:text-gray-400 text-gray-100 ${formErrors.description ? 'border-red-400' : 'border-gray-300'}`}
                                 />
                                 {formErrors.description && <p className="text-red-400 text-sm">{formErrors.description}</p>}
                             </div>
