@@ -418,6 +418,13 @@ function Page() {
                                                 "/Faisal.jpeg",
                                                 link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
                                             },
+                                            {
+                                              title: "Ruhani Agarwal",
+                                              category: "Diigital Marketer",
+                                              image:"/ruhani2.jpeg",
+                                              
+                                              link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                                          },
                                         ];
                                     
                                     
