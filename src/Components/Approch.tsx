@@ -170,7 +170,7 @@ useGSAP(()=> {
      
       >TRUSTED BY <br className="md:hidden" /> COMPANIES</h1>
 
-<div className="w-[65%]  overflow-hidden flex " id="infinity"
+<div  className="w-[30%]  overflow-hidden flex  max-w-screen-xl" id="infinity"
 
 >
   <motion.div

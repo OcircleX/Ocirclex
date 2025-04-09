@@ -95,7 +95,7 @@ const Showcase = () => {
               useGSAP(()=> {
                 gsap.from("#drivenn",
                    {y: 100,
-                    duration:0.5,
+                    duration:1.5,
                     opacity:0,
                     delay:0.5,
                    
@@ -144,39 +144,39 @@ const Showcase = () => {
                         tl.from("#pointtitle", {
                           y: 150,
                           autoAlpha: 0,
-                          duration: 2,
+                          duration: 4,
                           ease: "expo.out",
                         })
                         .from("#pointsubtitle", {
                           y: 150,
                           autoAlpha: 0,
-                          duration: 2,
+                          duration: 4,
                           ease: "expo.out",
                         }, "+=0.3")
 
                         tl.from("#pointtitleb", {
                           y: 150,
                           autoAlpha: 0,
-                          duration: 2,
+                          duration: 4,
                           ease: "expo.out",
                         })
                         .from("#pointsubtitleb", {
                           y: 150,
                           autoAlpha: 0,
-                          duration: 2,
+                          duration: 4,
                           ease: "expo.out",
                         }, "+=0.3")
 
                         tl.from("#pointtitlec", {
                           y: 150,
                           autoAlpha: 0,
-                          duration: 2,
+                          duration: 4,
                           ease: "expo.out",
                         })
                         .from("#pointsubtitlec", {
                           y: 150,
                           autoAlpha: 0,
-                          duration: 2,
+                          duration: 4,
                           ease: "expo.out",
                         }, "+=0.3")
                       
@@ -196,7 +196,7 @@ const Showcase = () => {
     },
     {
       title: "Fitness  Application",
-      category: "Mobile App dev & UI Design",
+      category: "Mobile App Dev",
       image:"/Fitness.png",
       link: "/projects/visionary-framework",
     },
@@ -289,9 +289,10 @@ const Showcase = () => {
 
    
                 <div id="ProjectContent" className=" p-6 absolute bottom-12 left-6 hidden sm:flex flex-col">
-                <button className="mt-6 px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition md:text-base md:px-4 md:py-2">
+                <button className="mt-6 px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition md:text-base md:px-4 md:py-2 md:w-[70%]">
   {project.category}
 </button>
+
 
                   <h3
   className={`w-[40vh] tracking-[-1.62px] mt-4 mb-0 text-[54px] font-bold leading-[120%]  ${

@@ -10,6 +10,8 @@ const instrumentSerif = Instrument_Serif({
   style: "italic" // ✅ Correct way to load italic
 });
 
+
+
 export default function Hero() { 
 
   return (
@@ -55,12 +57,13 @@ export default function Hero() {
          className="flex md:block justify-center"
        >
        <button
-         className="flex items-center gap-2 w-fit mt-6  px-6 py-3 bg-white rounded-full border text-[#04081C] border-[#171D3F] text-lg font-medium  hover:bg-blue-800 transition"
+         className="flex items-center gap-2 w-fit mt-6  px-6 py-3 bg-white rounded-full border text-[#04081C] border-[#171D3F] text-lg font-medium   transition"
        
          >
             Get Started  <span><IoMdArrowDropright />
             </span>
           </button>
+          
        </motion.div>
    </div>
 
@@ -74,9 +77,9 @@ export default function Hero() {
 
          <div className="bg-[#04081C] border-2    text-white p-6 rounded-xl shadow-lg w-72">
          <h3 className="text-lg font-semibold  text-gray-300">AGENCY INSIGHTS</h3>
-          <p className="text-gray-300 text-xs">A FUTURE FOCUSED DIGITAL STUDIO</p>
+          <p className="text-gray-300 text-sm">A FUTURE FOCUSED DIGITAL STUDIO</p>
 
-          <p className="mt-12 text-3xl font-bold pb-4">94+ </p>
+          <p className="mt-6 text-2xl font-bold pt-6">94+</p>
           <p className="text-gray-300">Projects Completed</p>
           <p className="mt-6 text-2xl font-bold pt-6">85%</p>
           <p className="text-gray-300">Happy Clients</p>

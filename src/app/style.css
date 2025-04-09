@@ -12,6 +12,11 @@
     left: 5%;
   }
   
+#infinity {
+  width: 800px;
+}
+
+
   @media (min-width: 768px) { /* For laptops */
     .industryexperience {
       font-size: 60px;
@@ -22,4 +27,5 @@
     
   }
   
+
      
