@@ -380,46 +380,48 @@ function Page() {
 
                 
 
-    const team = [
-        {
-            title: "FAZAL BASIT",
-            category: "CEO & founder",
-            image:
-                "/fazal.png",
-            link: "/projects/dynamic-structures",
-        },
-       
-        {
-            title: "FAZAL WASIF",
-            category: "CREATIVE DIRECTOR & Co-founder",
-            image:
-            "/wasif.png",
-            link: "/projects/design-revolution",
-        },
-      
-        {
-            title: "Malik Iqbal",
-            category: "Senior Software Engineer",
-            image:
-            "/Iqbal.jpeg",
-            link: "/projects/visionary-framework",
-        },
-        {
-            title: "MIFTAHULLAH KHAN",
-            category: "FRONTEND DEVELOPER",
-            image:
-            "/Miftah.jpeg",
-            link: "/projects/design-revolution",
-        },
-        {
-            title: "Faisal KHAN",
-            category: "BACKEND DEVELOPER",
-            image:
-            "/Faisal.jpeg",
-            link: "/projects/design-revolution",
-        },
-    ];
-
+                                          const team = [
+                                            {
+                                                title: "FAZAL BASIT",
+                                                category: "CEO & founder",
+                                                image:
+                                                    "/fazal.png",
+                                                link: "https://www.linkedin.com/in/fazal-basit-825a33194?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                                            },
+                                           
+                                            {
+                                                title: "FAZAL WASIF",
+                                                category: "CREATIVE DIRECTOR & Co-founder",
+                                                image:
+                                                "/wasif.png",
+                                                link: "https://www.linkedin.com/in/fazal-wasif?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                                            },
+                                          
+                                            {
+                                                title: "Malik Iqbal",
+                                                category: "Senior Software Engineer",
+                                                image:
+                                                "/Iqbal.jpeg",
+                                                link: "https://www.linkedin.com/in/malik-iqbal-9aba781a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                                            },
+                                            {
+                                                title: "MIFTAHULLAH KHAN",
+                                                category: "FRONTEND DEVELOPER",
+                                                image:
+                                                "/Miftah.jpeg",
+                                                link: "https://www.linkedin.com/in/miftah-ullah-khan-b1a4aa214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                                            },
+                                            {
+                                                title: "Faisal KHAN",
+                                                category: "BACKEND DEVELOPER",
+                                                image:
+                                                "/Faisal.jpeg",
+                                                link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                                            },
+                                        ];
+                                    
+                                    
+                                          
 
     return (
         <>   
@@ -593,6 +595,7 @@ function Page() {
                                     viewBox="0 0 25 25"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
+                                      onClick={() => window.open(x.link, '_blank')}                                    className='cursor-pointer'
                                 >
                                     <g clipPath="url(#clip0_3338_132101)">
                                         <g clipPath="url(#clip1_3338_132101)">
