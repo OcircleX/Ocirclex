@@ -18,6 +18,10 @@ const instrumentSerif = Instrument_Serif({
 
 const IndustryInfo = () => {
 
+
+
+
+
   useGSAP(()=> {
     gsap.from("#bundled",
        {x: -100,
@@ -129,8 +133,8 @@ const IndustryInfo = () => {
                     <br />
                     Satisfaction
                   </div>
-                  <h2 className="md:text-6xl text-xl h-28 mt-6 pt-6 text-[#04081C]">
-                    250+
+                  <h2 className="md:text-6xl text-xl h-28 mt-6 pt-6 text-[#04081C]" >
+                    <span id='clientss'>250+</span>
                   </h2>
                 </div>
                 <div className='flex flex-col w-full md:w-1/3  mt-4 rounded-md border p-6 border-gray-400 shadow gap-x-2'>
@@ -140,7 +144,7 @@ const IndustryInfo = () => {
                     experiences
                   </div>
                   <h2 className="md:text-6xl text-xl h-28 mt-6 pt-6 text-[#04081C]">
-                    250+
+                    06+
                   </h2>
                 </div>
 
@@ -148,22 +152,22 @@ const IndustryInfo = () => {
               <div className='md:flex w-full gap-x-3 text-[#04081C]'>
                 <div className='md:flex flex-col w-full mt-4 md:w-2/5 rounded-md border p-6 border-gray-400 shadow gap-x-2'>
                   <div className="">
-                    Clients
+                    Projects
                     <br />
-                    Satisfaction
+                    Completed
                   </div>
                   <h2 className="md:text-6xl text-xl h-28 mt-6 pt-6 text-[#04081C]">
-                    250+
+                    300+
                   </h2>
                 </div>
                 <div className='md:flex flex-col w-full mt-4 md:w-3/5  border rounded-md border p-6 border-gray-400 shadow gap-x-2'>
                   <div className="">
-                    Clients
+                    Worldwide
                     <br />
-                    Satisfaction
+                    Clients
                   </div>
                   <h2 className="md:text-6xl text-[#04081C] text-xl h-28 mt-6 pt-6">
-                    250+
+                    100+
                   </h2>
                 </div>
               </div>

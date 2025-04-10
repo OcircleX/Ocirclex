@@ -103,46 +103,52 @@ const Services = () => {
     
 
     
-    const team = [
-        {
-            title: "FAZAL BASIT",
-            category: "CEO & founder",
-            image:
-                "/fazal.png",
-            link: "https://www.linkedin.com/in/fazal-basit-825a33194?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-        },
-       
-        {
-            title: "FAZAL WASIF",
-            category: "CREATIVE DIRECTOR & Co-founder",
-            image:
-            "/wasif.png",
-            link: "https://www.linkedin.com/in/fazal-wasif?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        },
-      
-        {
-            title: "Malik Iqbal",
-            category: "Senior Software Engineer",
-            image:
-            "/Iqbal.jpeg",
-            link: "https://www.linkedin.com/in/malik-iqbal-9aba781a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-        },
-        {
-            title: "MIFTAHULLAH KHAN",
-            category: "FRONTEND DEVELOPER",
-            image:
-            "/Miftah.jpeg",
-            link: "https://www.linkedin.com/in/miftah-ullah-khan-b1a4aa214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        },
-        {
-            title: "Faisal KHAN",
-            category: "BACKEND DEVELOPER",
-            image:
-            "/Faisal.jpeg",
-            link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        },
-    ];
-
+                      const team = [
+                        {
+                            title: "FAZAL BASIT",
+                            category: "CEO & founder",
+                            image:
+                                "/fazal.png",
+                            link: "https://www.linkedin.com/in/fazal-basit-825a33194?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                        },
+                       
+                        {
+                            title: "FAZAL WASIF",
+                            category: "CREATIVE DIRECTOR & Co-founder",
+                            image:
+                            "/wasif.png",
+                            link: "https://www.linkedin.com/in/fazal-wasif?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                        },
+                      
+                        {
+                            title: "Malik Iqbal",
+                            category: "Senior Software Engineer",
+                            image:
+                            "/Iqbal.jpeg",
+                            link: "https://www.linkedin.com/in/malik-iqbal-9aba781a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                        },
+                        {
+                            title: "MIFTAHULLAH KHAN",
+                            category: "FRONTEND DEVELOPER",
+                            image:
+                            "/Miftah.jpeg",
+                            link: "https://www.linkedin.com/in/miftah-ullah-khan-b1a4aa214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                        },
+                        {
+                            title: "Faisal KHAN",
+                            category: "BACKEND DEVELOPER",
+                            image:
+                            "/Faisal.jpeg",
+                            link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                        },
+                        {
+                          title: "Ruhani Agarwal",
+                          category: "Diigital Marketer",
+                          image:"/ruhani2.jpeg",
+                          
+                          link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                      },
+                    ];
 
       
 

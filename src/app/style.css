@@ -1,3 +1,5 @@
+
+
 .industryexperience {
     font-size: 40px; /* Default for mobile */
   }
@@ -14,6 +16,21 @@
   
 #infinity {
   width: 800px;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.4s ease-out forwards;
 }
 
 

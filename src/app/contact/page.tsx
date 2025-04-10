@@ -79,6 +79,8 @@ function Page() {
     const [errorsP2, setErrorsP2] = useState('');
     const [isSubmit, setIsSubmit] = useState(false);
 
+    const [showSuccess, setShowSuccess] = useState(false);
+
     const [formErrors, setFormErrors] = useState({});
 
 
@@ -154,7 +156,19 @@ function Page() {
             console.log("Response", data);
 
             if (res.ok) {
-                alert("Form submitted successfully!");
+                setShowSuccess(true); // show the animation
+                setFormData({
+                    firstname: "",
+                    lastname: "",
+                    phone: "",
+                    email: "",
+                    Subject: "",
+                    description: ""
+                  });
+
+                  setTimeout(() => setShowSuccess(false), 3000);
+
+                
             } else {
                 alert("Error submitting form!");
             }
@@ -190,10 +204,41 @@ function Page() {
 
     return (
         <>   
+{showSuccess && (
+  <div className="fixed inset-0 z-30 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+    <div className="bg-white rounded-full p-6 shadow-xl animate-scaleIn">
+      <svg
+        className="w-20 h-20 text-green-500"
+        viewBox="0 0 52 52"
+      >
+        <circle
+          className="stroke-current text-green-300"
+          cx="26"
+          cy="26"
+          r="25"
+          fill="none"
+          strokeWidth="2"
+        />
+        <path
+          className="stroke-current text-green-500"
+          fill="none"
+          strokeWidth="5"
+          d="M14 27l7 7 16-16"
+        />
+      </svg>
+    </div>
+  </div>
+)}
+
+
         <div className='w-full relative bg-[#04081C]'>
             <DarkNav />
             <section className="w-full relative bg-[#04081C] to-gray-100 py-20 flex flex-col items-center justify-between">
                 <div className="max-w-screen-xl justify-between w-full m-auto">
+
+
+        
+
                     <div className="w-full items-center flex flex-col py-[2rem] text-center -mt-4 leading-9">
                         <h1 className="text-4xl md:text-6xl font-bold text-white leading-9" id='getin'>
                             GET IN TOUCH WITH
