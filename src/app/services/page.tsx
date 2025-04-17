@@ -174,7 +174,7 @@ const Services = () => {
 
 <div className='w-full  flex max-w-screen-xl   h-[300px] justify-between mt-12'>
     <div className='md:w-[28%]  relative hidden sm:block' id="imgthree">
-        <Image src="/cubea.jpg" fill alt='container' />
+        <Image src="/Container.png" fill alt='container' />
 
     </div>
 
