@@ -3,7 +3,7 @@ import DarkNav from '../navbar/DarkNav'
 import { Instrument_Serif } from 'next/font/google';
 import Image from 'next/image';
 import { Rethink_Sans } from "next/font/google";
-import BlogComponent from '@/Components/BlogComponent';
+import BlogComponent from '@/app/Components/BlogComponent';
 
 
 const instrumentSerif = Instrument_Serif({ 

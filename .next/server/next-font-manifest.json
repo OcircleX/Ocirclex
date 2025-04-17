@@ -1,1 +1,11 @@
-{"pages":{},"app":{"/Users/circlex/Ocirclex/src/app/blog/page":["static/media/e3390baf8128c1f3-s.p.woff2","static/media/e4a215cf4d491fac-s.p.woff2","static/media/e3390baf8128c1f3-s.p.woff2"],"/Users/circlex/Ocirclex/src/app/contact/page":["static/media/e4a215cf4d491fac-s.p.woff2"],"/Users/circlex/Ocirclex/src/app/page":["static/media/e3390baf8128c1f3-s.p.woff2","static/media/e4a215cf4d491fac-s.p.woff2","static/media/e4a215cf4d491fac-s.p.woff2","static/media/e4a215cf4d491fac-s.p.woff2","static/media/e3390baf8128c1f3-s.p.woff2"],"/Users/circlex/Ocirclex/src/app/services/page":["static/media/e4a215cf4d491fac-s.p.woff2"],"/Users/circlex/Ocirclex/src/app/about/page":["static/media/e4a215cf4d491fac-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}
+{
+  "app": {
+    "[project]/src/app/page": [
+      "static/media/jizHRFtNs2ka5fXjeivQ4LroWlx_6zAjjH7Motmp5g-s.p.0cb0364c.woff2",
+      "static/media/AMOWz4SDuXOMCPfdoglY9JQEVFi34dpL4w-s.p.e38b473d.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

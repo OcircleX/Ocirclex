@@ -1,8 +1,8 @@
 
-import Hero from "../Components/Hero";
-import Approch from "../Components/Approch";
-import Showcase from "../Components/Showcase";
-import IndustryInfo from "../Components/IndustryInfo";
+import Hero from "./Components/Hero";
+import Approch from "./Components/Approch";
+import Showcase from "./Components/Showcase";
+import IndustryInfo from "./Components/IndustryInfo";
 import Header from "./navbar/header";
 
 
