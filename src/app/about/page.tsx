@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
-import img2 from '../../../images/2.png'
-import img1 from '../../../images/1.png'
-import img3 from '../../../images/3.png'
+// import img2 from '../../../images/2.png'
+// import img1 from '../../../images/1.png'
+// import img3 from '../../../images/3.png'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
@@ -451,8 +451,8 @@ function Page() {
                 <div className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row  justify-between gap-4 items-center pt-6 h-[1400px] md:h-[440px] overflow-hidden px-4">
       <div className="w-full md:w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative" id='imgtree'>
   <Image
-    src={img2}
-    alt="Image description"
+     src='/2.png'
+     alt="Image description"
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
     className="rounded-md"
@@ -461,8 +461,8 @@ function Page() {
 </div>
 <div className="w-full md:w-[50%] h-full rounded-md overflow-hidden flex-grow-0 relative">
   <Image
-    src={img1}
-    alt="Image description"
+     src='/1.png'
+     alt="Image description"
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
     className="rounded-md"
@@ -471,8 +471,8 @@ function Page() {
 </div>
   <div className="w-full md:w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
   <Image
-    src={img3}
-    alt="Image description"
+     src='/3.png'
+     alt="Image description"
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
     className="rounded-md"

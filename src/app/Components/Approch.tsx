@@ -5,9 +5,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Image from 'next/image';
-import img1 from '../../images/1.png'
-import img2 from '../../images/2.png'
-import img3 from '../../images/3.png'
+// import img1 from './1.png'
+// import img2 from './2.png'
+// import img3 from './3.png'
 import { motion } from 'framer-motion';
 // import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
@@ -236,8 +236,8 @@ data to craft strategies that make
       <div className="w-full max-w-screen-xl mx-auto md:hidden flex flex-col justify-between gap-4 items-center pt-6 overflow-hidden px-4">
   <div className="w-full h-[300px] rounded-md overflow-hidden relative">
     <Image
-      src={img2}
-      alt="Image description"
+    src='/2.png'
+    alt="Image description"
       layout="fill"
       objectFit="cover"
       className="rounded-md"
@@ -245,8 +245,8 @@ data to craft strategies that make
   </div>
   <div className="w-full h-[300px] rounded-md overflow-hidden relative">
     <Image
-      src={img1}
-      alt="Image description"
+    src='/1.png'
+    alt="Image description"
       layout="fill"
       objectFit="cover"
       className="rounded-md"
@@ -254,8 +254,8 @@ data to craft strategies that make
   </div>
   <div className="w-full h-[300px] rounded-md overflow-hidden relative">
     <Image
-      src={img3}
-      alt="Image description"
+    src='/3.png'
+    alt="Image description"
       layout="fill"
       objectFit="cover"
       className="rounded-md"
@@ -268,7 +268,7 @@ data to craft strategies that make
 <div className="w-full max-w-screen-xl mx-auto hidden md:flex  justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4" id="threepix">
       <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
   <Image
-    src={img2}
+    src='/2.png'
     alt="Image description"
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
@@ -278,7 +278,7 @@ data to craft strategies that make
 </div>
 <div className="w-[50%] h-full rounded-md overflow-hidden flex-grow-0 relative">
   <Image
-    src={img1}
+     src='/1.png'
     alt="Image description"
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
@@ -288,7 +288,7 @@ data to craft strategies that make
 </div>
   <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
   <Image
-    src={img3}
+      src='/3.png'
     alt="Image description"
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion

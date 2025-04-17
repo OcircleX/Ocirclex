@@ -2,7 +2,7 @@
 import { Instrument_Serif } from "next/font/google";
 
 import { motion } from "framer-motion";
-import Background from "./../../images/Background.png"
+// import Background from "./Background.png"
 import { IoMdArrowDropright } from "react-icons/io";
 import Link from "next/link";
 const instrumentSerif = Instrument_Serif({ 
@@ -19,7 +19,7 @@ export default function Hero() {
 
   <section
     style={{
-      backgroundImage: `url(${Background.src})`,
+      backgroundImage: `url(${'./Background.png'})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}

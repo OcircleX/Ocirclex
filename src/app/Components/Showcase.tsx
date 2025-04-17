@@ -2,7 +2,7 @@
 import { Instrument_Serif } from "next/font/google";
 import { Rethink_Sans } from "next/font/google";
 import { useEffect, useState } from "react";
-import image from '../../images/img.png'
+// import image from './img.png'
 import Image from "next/image";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -399,12 +399,13 @@ to every project we touch.
 
             {/* Right Section: Image */}
             <div className=" md:w-1/3 w-full" id="workimg">
-              <div className="w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-800 rounded-2xl md:flex flex-col justify-between hidden">
+              <div className="w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-800 rounded-2xl md:flex flex-col justify-between hidden relative">
                 {/* <img src={image} alt="test" className="w-full h-full object-contain" /> */}
                 <Image
                   className="w-full h-full object-contain"
-                  src={image}
+                  src='/img.png'
                   alt="Cash GIF"
+                  fill
                 />
               </div>
             </div>

@@ -1,13 +1,11 @@
 'use client'
 import React from 'react';
-import "./../app/style.css"
 // import './style.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 
-import fazal2 from '../../images/wasif2.png';
 import Image from 'next/image';
 import { Instrument_Serif } from "next/font/google";
 const instrumentSerif = Instrument_Serif({ 
@@ -173,11 +171,12 @@ const IndustryInfo = () => {
               </div>
 
             </div>
-            <div className='flex w-full md:w-1/3 gap-x-2  mt-4 rounded-md' id='fazala'>
+            <div className='flex w-full md:w-1/3 gap-x-2  mt-4 rounded-md relative' id='fazala'>
               <Image
-                src={fazal2}
+                src='/wasif2.png'
                 alt="project.title"
                 className="w-full h-full  rounded-md object-cover"
+                fill
               />
             </div>
           </div>
