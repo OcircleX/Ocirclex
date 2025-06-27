@@ -229,9 +229,9 @@ const Showcase = () => {
     <>
       <section className="py-16   w-full bg-[#04081C]">
         <div className="w-full mx-auto px-6 max-w-screen-xl">
-          <div className="md:flex justify-between items-center mb-12 " id="creativee">
+          <div className="md:flex justify-between items-center  " id="creativee">
             <h2 className="text-4xl font-bold text-white ">
-              OUR CREATIVE <br />
+              VIEW OUR <br />
               <span className="showcase" 
                style={{
                
@@ -241,7 +241,7 @@ const Showcase = () => {
                 lineHeight: "83px",
                 fontFamily: instrumentSerif.style.fontFamily || "serif",
               }}
-              ><i>showcase</i></span>
+              ><i>portfolio</i></span>
             </h2>
             <button className="mt-4 px-3 md:px-6 flex gap-x-2 py-3 border border-gray-100 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition"
             style={{
@@ -262,12 +262,12 @@ const Showcase = () => {
 
 
 
-          <div className="relative gap-8 ">
+          <div className="relative ">
             {projects.map((project, index) => (
               <a
                 key={index}
                 // href={project.link}
-                className="block h-full  shadow-lg rounded-lg overflow-hidden transition transform mb-6"
+                className="block h-full  shadow-lg rounded-lg overflow-hidden transition transform "
               >
                 {/* <img
                   src={project.image}
@@ -275,7 +275,7 @@ const Showcase = () => {
                   className="w-full h-full object-cover"
                 /> */}
                
-               <div className="w-[100%]  rounded-md overflow-hidden flex-grow-0 relative">
+               {/* <div className="w-[100%]  rounded-md overflow-hidden flex-grow-0 relative">
   <Image
     src={project.image}
     alt={project.title}
@@ -284,11 +284,11 @@ const Showcase = () => {
    width={1380}
     className="rounded-md"
   />
-</div>
+</div> */}
 
 
    
-                <div id="ProjectContent" className=" p-6 absolute bottom-12 left-6 hidden sm:flex flex-col">
+                {/* <div id="ProjectContent" className=" p-6 absolute bottom-12 left-6 hidden sm:flex flex-col">
                 <button className="mt-6 px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition md:text-base md:px-4 md:py-2 md:w-[70%]">
   {project.category}
 </button>
@@ -302,11 +302,11 @@ const Showcase = () => {
   {project.title}
 </h3>
 
-                </div>
+                </div> */}
 
 
 
-                <div id="ProjectContent2" className="   md:hidden">
+                {/* <div id="ProjectContent2" className="   md:hidden">
                   <button className=" bg-[#04081C] px-2 py-1 text-white text-xs font-medium rounded-full hover:bg-blue-800 transition">
                     {project.category}
                   </button>
@@ -318,7 +318,7 @@ const Showcase = () => {
   {project.title}
 </h3>
 
-                </div>
+                </div> */}
 
 
                 
@@ -338,19 +338,22 @@ const Showcase = () => {
 
 
 
-<div className="flex justify-center" style={{ backgroundColor: '#04081C' }}>
+{/* <div className="flex justify-center" style={{ backgroundColor: '#04081C' }}>
 <div className="md:flex  bg-[#04081C] text-white px-2 max-w-screen-xl md:py-8 space-y-8 gap-x-2  mx-auto">
-        {/* Left Section: Button */}
+       
         <div className="w-full md:w-1/3 px-4" id="working">
 
           <button className="mt-6 px-6 py-3 bg-[#04081C] border text-white text-lg font-medium rounded-full  transition">
             WORKING METHODS
           </button>
+
+<Image src="/cube-abstract-shape.png" width={250} height={290} alt="square" className="mt-12" />
+
         </div>
 
-        {/* Right Section: Content */}
+     
         <div className=" flex flex-col gap-8 w-2/3">
-          {/* Heading */}
+       
           <h1 className={`text-md px-3 md:text-3xl font-bold leading-tight w-full md:w-[80%]  ${rethinkSans.className}`} id="drivenn">
           Driven by creativity and powered
 by expertise, our team brings 
@@ -366,7 +369,7 @@ to every project we touch.
                     <div  id="creative-projects" className={` duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`} style={{ color: "rgb(190, 191, 195)" }}>
                       <div className=" flex items-center gap-x-2" id="pointtitle">
                         <div className=" rounded-full  h-3 w-3" style={{ backgroundColor: "rgb(126, 126, 126)" }}                        ></div>
-                        <div className="font-semibold">
+                        <div className="font-semibold text-white">
                         WE DELIVER CREATIVE PROJECTS</div>
                       </div>
                       <div className="  border-l border-dashed h-16 ml-1 mb-1" style={{ borderColor: "rgb(126, 126, 126)" }} id="pointsubtitle"                     >
@@ -397,10 +400,9 @@ to every project we touch.
               </div>
             </div>
 
-            {/* Right Section: Image */}
             <div className=" md:w-1/3 w-full" id="workimg">
               <div className="w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-800 rounded-2xl md:flex flex-col justify-between hidden relative">
-                {/* <img src={image} alt="test" className="w-full h-full object-contain" /> */}
+            
                 <Image
                   className="w-full h-full object-contain"
                   src='/img.png'
@@ -411,9 +413,9 @@ to every project we touch.
             </div>
           </div>
         </div>
-        {/* Bullet Points */}
+      
       </div>
-</div>
+</div> */}
 
 
 

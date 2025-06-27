@@ -1,5 +1,11 @@
 {
+  "/mobile/page": "app/mobile/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/design/page": "app/design/page.js",
+  "/web/page": "app/web/page.js",
+  "/services/page": "app/services/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/ourteam/page": "app/ourteam/page.js"
 }

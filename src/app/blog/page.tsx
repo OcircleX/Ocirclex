@@ -4,6 +4,7 @@ import { Instrument_Serif } from 'next/font/google';
 import Image from 'next/image';
 import { Rethink_Sans } from "next/font/google";
 import BlogComponent from '@/app/Components/BlogComponent';
+import Stack from '../stack/page';
 
 
 const instrumentSerif = Instrument_Serif({ 
@@ -58,6 +59,7 @@ const Page = () => {
     </div>
 
 </section>
+
 
     </div>
   )

@@ -87,7 +87,7 @@ const IndustryInfo = () => {
 
     <>
 
-      <section className=" py-8 w-full shadow-md bg-gradient-to-r py-[5rem] from-white to-gray-300 shadow-md px-4 ">
+      <section className=" py-8 w-full shadow-md bg-white py-[5rem] shadow-md px-4 ">
         <div className="m-auto text-[#04081C] max-w-screen-xl">
           <div className="flex justify-between flex-col md:flex-row">
             <div className="review-left-col-wrapper" 
@@ -132,7 +132,7 @@ const IndustryInfo = () => {
                     Satisfaction
                   </div>
                   <h2 className="md:text-6xl text-xl h-28 mt-6 pt-6 text-[#04081C]" >
-                    <span id='clientss'>250+</span>
+                    <span id='clientss'>26  +</span>
                   </h2>
                 </div>
                 <div className='flex flex-col w-full md:w-1/3  mt-4 rounded-md border p-6 border-gray-400 shadow gap-x-2'>
@@ -142,7 +142,7 @@ const IndustryInfo = () => {
                     experiences
                   </div>
                   <h2 className="md:text-6xl text-xl h-28 mt-6 pt-6 text-[#04081C]">
-                    06+
+                    8+
                   </h2>
                 </div>
 
@@ -155,7 +155,7 @@ const IndustryInfo = () => {
                     Completed
                   </div>
                   <h2 className="md:text-6xl text-xl h-28 mt-6 pt-6 text-[#04081C]">
-                    300+
+                    20+
                   </h2>
                 </div>
                 <div className='md:flex flex-col w-full mt-4 md:w-3/5  border rounded-md border p-6 border-gray-400 shadow gap-x-2'>

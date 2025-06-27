@@ -165,13 +165,15 @@ useGSAP(()=> {
 
   return (
     
-    <section className="flex flex-col m-auto py-[2rem] bg-[#04081C] justify-between items-center w-full   " id="approache">
-      <h1 id="trust" className="text-xl md:text-2xl   text-center w-full py-10 font-bold text-white leading-tight"
+    <section className="flex flex-col m-auto  pb-[2rem] bg-[#04081C] justify-between items-center w-full   " id="approache">
+   
+<div>
+<h1 id="trust" className="text-xl md:text-xl   text-center w-full py-10 text-white leading-tight"
       
      
-      >TRUSTED BY <br className="md:hidden" /> COMPANIES</h1>
+      >Partnered with Innovators Around the Globe <br className="md:hidden" /> </h1>
 
-<div  className="w-[30%]  overflow-hidden flex  max-w-screen-xl" id="infinity"
+<div  className="w-[30%] pb-8  overflow-hidden flex  max-w-screen-xl" id="infinity"
 
 >
   <motion.div
@@ -198,7 +200,7 @@ useGSAP(()=> {
     ))}
   </motion.div>
 </div>
-
+</div>
      
 
 
@@ -213,17 +215,15 @@ useGSAP(()=> {
         <div className="w-full md:w-[70%] ">
           <motion.h1
          
-           className={`text-xl md:text-4xl w-full py-8  font-bold text-white leading-tight ${rethinkSans.className}`} id="combine">
-           We combine innovative ideas with insightful 
-data to craft strategies that make
- your brand unforgettable.
+           className={`text-xl md:text-2xl w-full py-8  font-light text-white leading-tight ${rethinkSans.className}`} id="combine">
+           At CircleX, we craft tailored digital solutions that drive business growth through exceptional user experience and seamless functionality. Backed by a team of 7 seasoned professionals, we leverage cutting-edge technologies to deliver scalable, high-performance applications designed around your unique goals.
           </motion.h1>
         <Link href="about">
         <h1
          
          id="aboutButton"
          className="px-6 py-3 mt-2  bg-white text-[#04081C] rounded-full shadow-md hover:bg-gray-200 transition text-left w-fit">
-           ABOUT US ›
+           MEET THE TEAM ›
          </h1>
         </Link>
 
@@ -233,7 +233,7 @@ data to craft strategies that make
 
 
 
-      <div className="w-full max-w-screen-xl mx-auto md:hidden flex flex-col justify-between gap-4 items-center pt-6 overflow-hidden px-4">
+      {/* <div className="w-full max-w-screen-xl mx-auto md:hidden flex flex-col justify-between gap-4 items-center pt-6 overflow-hidden px-4">
   <div className="w-full h-[300px] rounded-md overflow-hidden relative">
     <Image
     src='/2.png'
@@ -261,10 +261,10 @@ data to craft strategies that make
       className="rounded-md"
     />
   </div>
-</div>
+</div> */}
 
 
-
+{/* 
 <div className="w-full max-w-screen-xl mx-auto hidden md:flex  justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4" id="threepix">
       <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
   <Image
@@ -296,7 +296,7 @@ data to craft strategies that make
      id="thimg3"
   />
 </div>
-</div>
+</div> */}
 
 
 
