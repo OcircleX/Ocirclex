@@ -49,7 +49,7 @@ ALL CASE STUDIES
 
 
 
-          <ul className="text-white text-2xl list-disc pl-5 font-light space-y-4">
+          <ul className="text-white text-2xl list-disc pl-5 font-light space-y-6">
    
           <li>       Our skilled team stays current with the latest technologies to deliver innovative, scalable solutions.</li>
           <li>We tailor every project to your goals, ensuring practical results and lasting value.
