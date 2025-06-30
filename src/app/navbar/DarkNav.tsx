@@ -1,17 +1,27 @@
 'use client'
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 import Link from "next/link";
 import { RxCross1 } from "react-icons/rx";
+import { IoMdArrowDropdown } from "react-icons/io";
+import { usePathname } from "next/navigation";
 export default function DarkNav() {
   const [servhovered, setservhovered] = useState(false);
   const [abouthovered, setabouthovered] = useState(false);
   const [homehovered, sethomehovered] = useState(false);
   const [conthovered, setconthovered] = useState(false);
   const [bloghovered, setbloghovered] = useState(false);
+  const [toggleDropDown, setToggleDropDown] = useState(false);
 
+
+  const pathname = usePathname();
+
+
+  const isToggleDropDown = () => {
+    setToggleDropDown(prev => !prev);
+  }
 
   const [burgerOn, setburgerOn] = useState(false);
 
@@ -26,6 +36,21 @@ const pr = () => {
 useEffect(() => {
  pr()
 }, [])
+
+
+
+const dropdownRef = useRef(null);
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setToggleDropDown(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => document.removeEventListener("mousedown", handleClickOutside);
+}, []);
 
 
 
@@ -84,10 +109,9 @@ useEffect(() => {
             </div>
 
 
-          <div className="relative">
-            <Link href="./services">
+            <div className="relative" onClick={isToggleDropDown} ref={dropdownRef}>
             <motion.button
-              className="flex gap-1 items-center text-gray-200   transition border rounded-full px-5 py-1"
+              className="flex gap-1 items-center text-gray-200   transition border rounded-full px-4 py-1 "
               onMouseEnter={() => setservhovered(true)}
               onMouseLeave={() => setservhovered(false)}
             >
@@ -95,9 +119,76 @@ useEffect(() => {
                initial={{ y: 0, opacity: 1 }}
                animate={servhovered ? { y: -15, opacity: 0 } : { y: 0, opacity: 1 }}
                transition={{ duration: 0.3,ease: "easeInOut" }}
+               className="flex justify-center items-center gap-1"
                >
-                Services
+                Services 
+                <IoMdArrowDropdown />
+
+
                 </motion.span>
+
+
+
+
+{toggleDropDown && (
+    <div className="w-[180px] text-gray-600  bg-white rounded-xl border border-black absolute z-30  top-14 left-0 animate-dropdown transition-all duration-300 ease-out shadow-md">
+
+    <ul className="flex flex-col  justify-between h-full py-4 text-left  font-light">
+      
+    <li
+        className={`pl-4 py-2 transition-all delay-50 duration-300 ease-in-out ${
+          pathname === "/web"
+            ? "bg-black text-white"
+            : "hover:bg-black hover:text-white"
+        }`}
+      >
+        <Link href="/web" className="block w-full h-full">Web development</Link>
+      </li>
+
+      <li
+        className={`pl-4 py-2 transition-all delay-50 duration-300 ease-in-out ${
+          pathname === "/mobile"
+            ? "bg-black text-white"
+            : "hover:bg-black hover:text-white"
+        }`}
+      >
+        <Link href="/mobile" className="block w-full h-full">Mobile development</Link>
+      </li>
+
+      <li
+        className={`pl-4 py-2 transition-all delay-50 duration-300 ease-in-out ${
+          pathname === "/design"
+            ? "bg-black text-white"
+            : "hover:bg-black hover:text-white"
+        }`}
+      >
+        <Link href="/design" className="block w-full h-full">Branding & Design</Link>
+      </li>
+
+      <li
+        className={`pl-4 py-2 transition-all delay-50 duration-300 ease-in-out ${
+          pathname === "/ourteam"
+            ? "bg-black text-white"
+            : "hover:bg-black hover:text-white"
+        }`}
+      >
+        <Link href="/ourteam" className="block w-full h-full"> Team as a Service</Link>
+      </li>
+
+     
+  
+     
+    </ul>
+    </div>
+)}
+
+            
+
+
+
+
+
+
 
                 <motion.span
          initial={{ y: 10, opacity: 0 }}
@@ -106,11 +197,11 @@ useEffect(() => {
         className="absolute left-0 right-0 text-center"
       >
         Services
+
       </motion.span>
              
 
             </motion.button>
-            </Link>
            
             
           </div>

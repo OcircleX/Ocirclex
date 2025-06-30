@@ -32,7 +32,7 @@ const ourTechs = [
   },
   {
     title: "React / Next.js / Node.js",
-    imgSrc: ["/react.png", "/nextjs.png", "/node.png"],
+    imgSrc: ["/react.png", "/nextjs.png", "/Node.png"],
     descr: "Our developers rely on modern frameworks and runtimes to build fast, scalable, and reliable digital products. These technologies enable efficient development, seamless integration, and high performance—ensuring each solution we deliver meets the demands of today’s users and tomorrow’s growth.",
   },
   {

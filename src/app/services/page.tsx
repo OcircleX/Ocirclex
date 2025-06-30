@@ -182,7 +182,7 @@ const Services = () => {
 
 {/* WEB DESIGN */}
 <div className="w-full flex text-[#a3a5aa] items-center justify-between py-1 cursor-pointer">
-    <h1 className="text-3xl  leading-tight">WEB DESIGN</h1>
+    <h1 className="text-3xl  leading-tight">WEB DEVELOPMENT</h1>
     <GoArrowUpRight className=' text-2xl'/>
 
 </div>
@@ -191,21 +191,21 @@ const Services = () => {
 
 {/* DEVELOPMENT */}
 <div className="w-full flex items-center justify-between md:py-1.5 text-[#a3a5aa] cursor-pointer">
-    <h1 className="text-3xl text-[#a3a5aa] leading-tight">DEVELOPMENT</h1>
+    <h1 className="text-3xl text-[#a3a5aa] leading-tight">APP DEVELOPMENT</h1>
     <GoArrowUpRight className=' text-2xl'/>
 </div>
 <div className="bg-gray-800  rounded-full w-full h-0.5"></div>
 
 {/* UI/UX CONCEPT */}
 <div className="w-full flex items-center justify-between py-1.5 text-[#a3a5aa] cursor-pointer">
-    <h1 className="text-3xl text-[#a3a5aa] leading-tight">UI/UX CONCEPT</h1>
+    <h1 className="text-3xl text-[#a3a5aa] leading-tight">BRANDING & DESIGN</h1>
     <GoArrowUpRight className=' text-2xl'/>
 </div>
 <div className="bg-gray-800  rounded-full w-full h-0.5"></div>
 
 {/* BRANDING */}
 <div className="w-full flex items-center justify-between py-1 text-[#a3a5aa] cursor-pointer">
-    <h1 className="text-3xl text-[#a3a5aa] leading-tight">BRANDING</h1>
+    <h1 className="text-3xl text-[#a3a5aa] leading-tight">UI/UX DESIGN</h1>
     <GoArrowUpRight className=' text-2xl'/>
 </div>
 <div className="bg-gray-800  rounded-full w-full h-0.5"></div>

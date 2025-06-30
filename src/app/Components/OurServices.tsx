@@ -4,6 +4,7 @@ import { Rethink_Sans } from "next/font/google";
 import Image from 'next/image';
 import { GoArrowUpRight } from "react-icons/go";
 import Link from 'next/link';
+import { GoArrowRight } from "react-icons/go";
 
 const instrumentSerif = Instrument_Serif({ 
     subsets: ["latin"], 
@@ -83,16 +84,22 @@ const OurServices = () => {
     {services.map((service, index) => (
  
     <Link href={service.link}>
-       <div
-      key={index}
-      className="w-full flex text-black items-center justify-between py-1 cursor-pointer hover:bg-[#04081C] hover:text-white hover:px-2 hover:py-0.5 transition-all duration-500 rounded-lg"
-      style={{
-        fontFamily: rethinkSans.style.fontFamily || "serif",
-      }}
-    >
-      <h1 className="text-3xl leading-tight capitalize">{service.title}</h1>
-      <GoArrowUpRight className="text-2xl" />
-    </div>
+    <div
+  key={index}
+  className="group w-full flex text-black items-center justify-between py-3 cursor-pointer hover:bg-[#04081C] hover:text-white px-5 transition-all duration-500 rounded-lg"
+  style={{
+    fontFamily: rethinkSans.style.fontFamily || "serif",
+  }}
+>
+  <h1 className="text-3xl leading-tight capitalize">{service.title}</h1>
+
+  {/* Show on normal */}
+  <GoArrowUpRight className="text-2xl block group-hover:hidden transition-all duration-500 "  />
+
+  {/* Show on hover */}
+  <GoArrowRight className="text-2xl hidden group-hover:block transition-all duration-500 " />
+</div>
+
     </Link>
 
   ))}

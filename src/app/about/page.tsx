@@ -398,6 +398,13 @@ function Page() {
                                                 "/wasif.png",
                                                 link: "https://www.linkedin.com/in/fazal-wasif?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
                                             },
+                                            {
+                                                title: "Abraiz Khan",
+                                                category: "Marketing Lead",
+                                                image:"/abraiz.png",
+                                                
+                                                link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                                            },
                                           
                                             {
                                                 title: "Malik Iqbal",
@@ -420,13 +427,7 @@ function Page() {
                                                 "/Faisal.jpeg",
                                                 link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
                                             },
-                                            {
-                                              title: "Ruhani Agarwal",
-                                              category: "Diigital Marketer",
-                                              image:"/ruhani2.jpeg",
-                                              
-                                              link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-                                          },
+                                          
                                         ];
                     
                                     

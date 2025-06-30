@@ -1,10 +1,11 @@
 'use client'
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 export default function Header() {
   const [servhovered, setservhovered] = useState(false);
   const [abouthovered, setabouthovered] = useState(false);
@@ -14,6 +15,7 @@ export default function Header() {
 
   const [toggleDropDown, setToggleDropDown] = useState(false);
 
+  const pathname = usePathname();
 
 
   const [burgerOn, setburgerOn] = useState(false);
@@ -25,6 +27,23 @@ export default function Header() {
   const toggleBurger = () => {
     setburgerOn(prev => !prev);
   }
+
+
+
+const dropdownRef = useRef(null);
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setToggleDropDown(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => document.removeEventListener("mousedown", handleClickOutside);
+}, []);
+
+
 
   return (
     <header className="w-screen shadow-md py-4 md:px-6 bg-[#fafafa] flex justify-center relative">
@@ -91,7 +110,7 @@ export default function Header() {
             </div>
 
 
-          <div className="relative" onClick={isToggleDropDown}>
+          <div className="relative" onClick={isToggleDropDown} ref={dropdownRef}>
             <motion.button
               className="flex gap-1 items-center text-gray-900  transition border border-black rounded-full px-4 py-1 "
               onMouseEnter={() => setservhovered(true)}
@@ -112,18 +131,57 @@ export default function Header() {
 
 
 
-{toggleDropDown && (
-    <div className="w-[180px]  bg-white rounded-xl border border-black absolute z-30  top-14 left-0 animate-dropdown transition-all duration-300 ease-out shadow-md">
+                {toggleDropDown && (
+    <div className="w-[180px] text-gray-600  bg-white rounded-xl border border-black absolute z-30  top-14 left-0 animate-dropdown transition-all duration-300 ease-out shadow-md">
 
     <ul className="flex flex-col  justify-between h-full py-4 text-left  font-light">
-      <li className="cursor-pointer hover:bg-black hover:text-white pl-4 py-2 transition-all delay-50 duration-300 ease-in-out">Web development</li>
-      <li className="cursor-pointer pl-4 py-2 hover:bg-black hover:text-white transition-all delay-50 duration-300 ease-in-out">Mobile development</li>
-      <li className="cursor-pointer pl-4 py-2 hover:bg-black hover:text-white transition-all delay-50 duration-300 ease-in-out">Branding & Design</li>
-      <li className="cursor-pointer pl-4 py-2 hover:bg-black hover:text-white transition-all delay-50 duration-300 ease-in-out">As a Team Services</li>
+      
+    <li
+        className={`pl-4 py-2 transition-all delay-50 duration-300 ease-in-out ${
+          pathname === "/web"
+            ? "bg-black text-white"
+            : "hover:bg-black hover:text-white"
+        }`}
+      >
+        <Link href="/web" className="block w-full h-full">Web development</Link>
+      </li>
+
+      <li
+        className={`pl-4 py-2 transition-all delay-50 duration-300 ease-in-out ${
+          pathname === "/mobile"
+            ? "bg-black text-white"
+            : "hover:bg-black hover:text-white"
+        }`}
+      >
+        <Link href="/mobile" className="block w-full h-full">Mobile development</Link>
+      </li>
+
+      <li
+        className={`pl-4 py-2 transition-all delay-50 duration-300 ease-in-out ${
+          pathname === "/design"
+            ? "bg-black text-white"
+            : "hover:bg-black hover:text-white"
+        }`}
+      >
+        <Link href="/design" className="block w-full h-full">Branding & Design</Link>
+      </li>
+
+      <li
+        className={`pl-4 py-2 transition-all delay-50 duration-300 ease-in-out ${
+          pathname === "/ourteam"
+            ? "bg-black text-white"
+            : "hover:bg-black hover:text-white"
+        }`}
+      >
+        <Link href="/ourteam" className="block w-full h-full">Team as a Service</Link>
+      </li>
+
+     
+  
+     
     </ul>
     </div>
 )}
-
             
 
 
