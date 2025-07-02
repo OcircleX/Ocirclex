@@ -22,9 +22,14 @@ const WhyChoose = () => {
         <div className="w-full mx-auto px-6 max-w-screen-xl">
 
         <div className="md:flex justify-between items-center mb-12  " id="creativee">
-            <h2 className="text-4xl font-bold   text-white
- ">
-              OUR  <br />
+            <h2 className="text-4xl font-   text-white
+ "
+ style={{
+  fontFamily: rethinkSans.style.fontFamily || "serif",
+}}
+ >
+
+              Why Choose  <br />
               <span className="showcase" 
                style={{
                

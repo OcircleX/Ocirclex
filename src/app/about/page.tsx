@@ -439,7 +439,7 @@ function Page() {
                                             {
                                               title: "BUILDING",
                                               titlegreen: "beyond limits",
-                                              desc: "Lorem ipsum molestie at tincidunt in viverra eget ullamcorper cursus vel dui ut sit cursus egestas aliquam dui nulla aliquam dignissim donec nulla sed iaculis phasellus malesuada scelerisque est elementum vel adipiscing .",
+                                              desc: "We are a team of passionate creatives and technologists dedicated to helping brands grow through innovative digital solutions. With a user-first mindset, we craft custom strategies that align with your vision and drive real results. Our focus is on building long-term partnerships through trust, transparency, and measurable impact.",
                                           
                                             }
                                           ]

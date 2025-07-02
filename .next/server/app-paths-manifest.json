@@ -1,11 +1,10 @@
 {
   "/page": "app/page.js",
   "/web/page": "app/web/page.js",
-  "/about/page": "app/about/page.js",
+  "/ourteam/page": "app/ourteam/page.js",
+  "/design/page": "app/design/page.js",
   "/mobile/page": "app/mobile/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/design/page": "app/design/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/api/mail/route": "app/api/mail/route.js",
-  "/ourteam/page": "app/ourteam/page.js"
+  "/services/page": "app/services/page.js",
+  "/about/page": "app/about/page.js"
 }
