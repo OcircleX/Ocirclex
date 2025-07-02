@@ -41,15 +41,18 @@ const WhyChoose = () => {
               }}
               ><i>OcircleX</i></span>
             </h2>
-            {/* <button className="mt-4 px-3 md:px-6 flex gap-x-2 py-3 border border-gray-100   bg-transparent
- text-white text-lg font-medium rounded-full hover:bg-blue-800 transition"
+            <button className="mt-4 px-3 md:px-6 flex gap-x-2 py-4 border border-gray-500   bg-transparent
+ text-white text-md font-medium rounded-full  transition  items-center"
             style={{
               fontSize: "1rem",
             }}
             id="casestudies"
             >
-ALL CASE STUDIES    
-            </button> */}
+ALL CASE STUDIES     <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.58643 4.66675L5.2531 8.00008L2.58643 11.3334" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+            </button> 
           </div>
 
 
