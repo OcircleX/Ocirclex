@@ -229,7 +229,7 @@ const Showcase = () => {
     <>
       <section className="py-16   w-full bg-[#04081C]">
         <div className="w-full mx-auto px-6 max-w-screen-xl">
-          <div className="md:flex justify-between items-center  " id="creativee">
+          <div className="flex justify-between  items-start md:items-center  " id="creativee">
             <h2 className="text-4xl font-bold text-white ">
               VIEW OUR <br />
               <span className="showcase" 
@@ -238,25 +238,21 @@ const Showcase = () => {
                 fontWeight: "200",
                 color: "#7BB668",
                 fontStyle: "italic",
-                lineHeight: "83px",
+                lineHeight: "70px",
                 fontFamily: instrumentSerif.style.fontFamily || "serif",
               }}
               ><i>portfolio</i></span>
             </h2>
-            <button className="mt-4 px-3 md:px-6 flex gap-x-2 py-3 border border-gray-100 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition"
-            style={{
-              backgroundColor: "#484848",
-              fontSize: "1rem",
-            }}
+            <button className="md:mt-4 px-3 md:px-6 flex gap-x-2 py-4 border border-gray-500   bg-transparent
+ text-white text-md font-medium rounded-full  transition  items-center text-xs "
+           
             id="casestudies"
             >
-              ALL CASE STUDIES
-              {/* <img
-                src="https://cdn.prod.website-files.com/6757e4a58bda42b7389bc8e0/67585a489813ca576fb1579b_direction-right%202.svg"
-                alt="Arrow Right"
-                className="w-5"
-              /> */}
-            </button>
+ALL CASE STUDIES     <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.58643 4.66675L5.2531 8.00008L2.58643 11.3334" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+            </button> 
           </div>
 
 

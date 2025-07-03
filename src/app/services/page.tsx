@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import DarkNav from '../navbar/DarkNav'
 import { Instrument_Serif } from "next/font/google";
 import Image from 'next/image';
@@ -18,6 +18,7 @@ const instrumentSerif = Instrument_Serif({
   });
 
 const Services = () => {
+    const [details, setDetails] = useState(false)
 
 
     useGSAP(()=> {
@@ -114,10 +115,17 @@ const Services = () => {
                        
                         {
                             title: "FAZAL WASIF",
-                            category: "CREATIVE DIRECTOR & Co-founder",
+                            category: "Creative Director & Co-founder",
                             image:
                             "/wasif.png",
                             link: "https://www.linkedin.com/in/fazal-wasif?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                        },
+                        {
+                            title: "Abraiz Khan",
+                            category: "Marketing Lead",
+                            image:"/abraiz.png",
+                            
+                            link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
                         },
                       
                         {
@@ -129,27 +137,34 @@ const Services = () => {
                         },
                         {
                             title: "MIFTAHULLAH KHAN",
-                            category: "FRONTEND DEVELOPER",
+                            category: "Frontend Developer",
                             image:
                             "/Miftah.jpeg",
                             link: "https://www.linkedin.com/in/miftah-ullah-khan-b1a4aa214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
                         },
                         {
                             title: "Faisal KHAN",
-                            category: "BACKEND DEVELOPER",
+                            category: "Backend Developer",
                             image:
                             "/Faisal.jpeg",
                             link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
                         },
                         {
-                          title: "Ruhani Agarwal",
-                          category: "Diigital Marketer",
-                          image:"/ruhani2.jpeg",
-                          
-                          link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-                      },
+                            title: "Azan Khan",
+                            category: "Flutter Developer",
+                            image:
+                            "/azan.jpg",
+                            link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                        },
+                        {
+                            title: "Kamran Khan",
+                            category: "Flutter Developer",
+                            image:
+                            "/kamran.jpg",
+                            link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                        },
+                      
                     ];
-
       
 
    
@@ -240,61 +255,38 @@ const Services = () => {
                         <div key={index} className=" flex flex-col  min-w-[25%] justify-between items-center  rounded-lg">
                             {/* <img src={x.image} alt={x.title} className="w-full  rounded-md object-cover" /> */}
                          
-<div className='w-[100%] h-[300px]  relative' id="imgabcd">
+                            <div className='w-[100%] h-[350px]  relative group' onMouseEnter={()=> setDetails(true)} onMouseLeave={()=> setDetails(false)}>
 <Image
     src={x.image}
     alt={x.title}
-
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
-    className="rounded-md object-cover"
+    className="rounded-md  cursor-pointer"
   />
-</div>
 
-                            <div className="w-full px-2 flex justify-between items-center pb-2">
+{/* <div className="absolute inset-0 bg-white  opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex items-center justify-center cursor-pointer">
+    <div className="text-center">
+      <p className="text-black font-semibold">Product Name</p>
+      <p className="text-black">Price</p>
+    </div>
+  </div> */}
+
+  {/* {details && (
+    <div className='w-[100%] h-[300px] bg-white z-50 opacity-40'>
+
+</div>
+  )} */}
+
+  
+
+</div>
+<div className="w-full px-2 flex justify-between items-center pb-2">
                                 <div className="py-2">
-                                    <div className="text-white">{x.title}</div>
-                                    <div className="text-gray-300 text-[0.8rem]">{x.category}</div>
+                                    <div className="text-white uppercase">{x.title}</div>
+                                    <div className="text-gray-400 text-[0.9rem] ">{x.category}</div>
                                 </div>
-                                <svg 
-                                
-                                    width="25"
-                                    height="25"
-                                    viewBox="0 0 25 25"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    onClick={() => window.open(x.link, '_blank')}                                    className='cursor-pointer'
-                                >
-                                    <g clipPath="url(#clip0_3338_132101)">
-                                        <g clipPath="url(#clip1_3338_132101)">
-                                            <path
-                                                fillRule="evenodd"
-                                                clipRule="evenodd"
-                                                d="M6.03125 4.89746C6.03125 6.00203 5.13582 6.89746 4.03125 6.89746C2.92668 6.89746 2.03125 6.00203 2.03125 4.89746C2.03125 3.79289 2.92668 2.89746 4.03125 2.89746C5.13582 2.89746 6.03125 3.79289 6.03125 4.89746ZM6.03125 9.39746V22.8975H2.03125V9.39746H6.03125ZM9.03125 9.39746H13.0312V10.2389C13.6568 10.0178 14.33 9.89746 15.0312 9.89746C18.3449 9.89746 21.0312 12.5838 21.0312 15.8975V22.8975H17.0312V15.8975C17.0312 14.7929 16.1358 13.8975 15.0312 13.8975C13.9267 13.8975 13.0312 14.7929 13.0312 15.8975V22.8975H9.03125V15.8975V9.39746Z"
-                                                fill="#A3A5AA"
-                                            />
-                                        </g>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_3338_132101">
-                                            <rect
-                                                width="24"
-                                                height="24"
-                                                fill="white"
-                                                transform="translate(0.03125 0.897461)"
-                                            />
-                                        </clipPath>
-                                        <clipPath id="clip1_3338_132101">
-                                            <rect
-                                                width="24"
-                                                height="24"
-                                                fill="white"
-                                                transform="translate(0.03125 0.897461)"
-                                            />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </div>
+                    
+                            </div> 
                         </div>
                     ))}
                 </div>

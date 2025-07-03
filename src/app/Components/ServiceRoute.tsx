@@ -43,10 +43,10 @@ const ServiceRoute = ({ourTechs}) => {
 
 
 
-   <div className='flex flex-wrap justify-between gap-y-16 gap-x-2 px-8 '>
+   <div className='md:flex flex-wrap justify-between gap-y-16 space-y-16 md:space-y-0 gap-x-2 px-8 '>
 
    {ourTechs.map((item, index) => (
-  <div key={index} className="w-[30%]">
+  <div key={index} className="md:w-[30%] ">
     
     <div className={`flex  ${Array.isArray(item.imgSrc) ? 'flex-row' : ''}`}>
       {/* Handle single or multiple images */}
@@ -62,14 +62,15 @@ const ServiceRoute = ({ourTechs}) => {
           </div>
         ))
       ) : (
-        <div className="w-[75px] h-[50px] relative ">
-          <Image
-            src={item.imgSrc}
-            fill
-            alt={item.title}
-            className={`object-contain ${index === 2 ? "scale-125 ml-3" : ""}`}
-          />
-        </div>
+        <div className="w-[75px] h-[50px] relative  items-start">
+        <Image
+          src={item.imgSrc}
+          fill
+          alt={item.title}
+          className={`object-contain object-left ${index === 2 ? "scale-125 ml-3" : ""}`}
+        />
+      </div>
+      
       )}
     </div>
 

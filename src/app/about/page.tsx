@@ -427,6 +427,20 @@ function Page() {
                                                 "/Faisal.jpeg",
                                                 link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
                                             },
+                                            {
+                                                title: "Azan Khan",
+                                                category: "Flutter Developer",
+                                                image:
+                                                "/azan.jpg",
+                                                link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                                            },
+                                            {
+                                                title: "Kamran Khan",
+                                                category: "Flutter Developer",
+                                                image:
+                                                "/kamran.jpg",
+                                                link: "https://www.linkedin.com/in/faisal-khan-5159b3207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                                            },
                                           
                                         ];
                     
@@ -676,13 +690,13 @@ Our developers seamlessly integrate with your team to deliver innovative solutio
                         <div key={x.title} className=" flex flex-col  min-w-[25%] w-[100%] justify-between items-center  rounded-lg">
                             {/* <img src={x.image} alt={x.title} className="w-full  rounded-md object-cover" /> */}
                          
-<div className='w-[100%] h-[300px]  relative group' onMouseEnter={()=> setDetails(true)} onMouseLeave={()=> setDetails(false)}>
+<div className='w-[100%] h-[350px]  relative group' onMouseEnter={()=> setDetails(true)} onMouseLeave={()=> setDetails(false)}>
 <Image
     src={x.image}
     alt={x.title}
     layout="fill" // Ensures it fills the parent div
     objectFit="cover" // Makes sure it covers the div without distortion
-    className="rounded-md object-cover cursor-pointer"
+    className="rounded-md  cursor-pointer"
   />
 
 {/* <div className="absolute inset-0 bg-white  opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex items-center justify-center cursor-pointer">

@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 // import Background from "./Background.png"
 import { IoMdArrowDropright } from "react-icons/io";
 import Link from "next/link";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
 import Image from "next/image";
 const instrumentSerif = Instrument_Serif({ 
   subsets: ["latin"], 
@@ -41,19 +43,19 @@ export default function Hero() {
     }}
     className="w-screen relative  overflow-hidden flex flex-col  items-center justify-center px-2  "
   >
-    <div className="max-w-screen-xl  md:flex flex-wrap justify-between px-4 pt-8 pb-24 w-full m-auto md:mt-8 ">
+    <div className="max-w-screen-xl  md:flex flex-wrap justify-between px-4 pt-8 pb-16 md:pb-24 w-full m-auto md:mt-8 ">
 
    <div 
  
    className="mt-8 md:pt-2 flex justify-between  w-full items-center"
 
    >
-   <motion.div className="md:max-w-2xl  ml-6 flex flex-col " 
+   <motion.div className="md:max-w-2xl ml-3  md:ml-6 flex flex-col " 
    initial={{opacity:0, x:-100}}
    animate={{opacity:1, x:0}}
    transition={{duration:0.5,ease: "easeInOut"}}
 >
-          <h1 className={`text-4xl md:text-6xl  text-center md:text-start  text-gray-900 leading-tight uppercase `}
+          <h1 className={`text-5xl md:text-6xl   text-start  text-gray-900 leading-tight uppercase `}
             style={{
                
               fontWeight: "500",
@@ -63,7 +65,7 @@ export default function Hero() {
             Branding <br /> Web & <br /> mobile {" "}
           </h1>
           <span 
-          className={`text-4xl  md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}   `}>all in one Circle</span>
+          className={`text-5xl  md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}   `}>all in one Circle</span>
          
 
       
@@ -74,16 +76,25 @@ export default function Hero() {
        initial={{opacity:0, x:100}}
        animate={{opacity:1, x:0}}
        transition={{duration:0.5,ease: "easeInOut"}}
+       className="hidden md:block"
       >
       <Image src='/struct.png' width={300} height={300} alt="struct" className="mr-24"/>
       </motion.div>
+
+
+     
 
      
    </div>
 
     
        
+   <div className=" border md:hidden w-fit px-4 py-3 text-xs rounded-full border-gray-400 flex justify-center items-center gap-1 ml-3 mt-12">
+GET STARTED
 
+<MdOutlineKeyboardArrowRight className="text-lg" />
+
+      </div>
 
 
       </div>

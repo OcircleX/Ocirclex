@@ -274,7 +274,7 @@ useEffect(() => {
 
 
         </nav>
-        <div className="relative">
+        <div className="relative hidden md:block">
             <Link href="./contact">
             <motion.button
               className="flex  items-center bg-[#04081C] text-gray-200 transition border border-black rounded-full px-6 py-2 overflow-hidden gap-3"

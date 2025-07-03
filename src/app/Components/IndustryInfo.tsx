@@ -87,7 +87,7 @@ const IndustryInfo = () => {
 
     <>
 
-      <section className=" py-8 w-full shadow-md bg-white py-[5rem] shadow-md px-4 ">
+      <section className=" py-8 w-full shadow-md bg-white py-[5rem] shadow-md px-4 mt-20 md:mt-0 ">
         <div className="m-auto text-[#04081C] max-w-screen-xl">
           <div className="flex justify-between flex-col md:flex-row">
             <div className="review-left-col-wrapper" 

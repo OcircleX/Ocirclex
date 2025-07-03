@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ImageStacker() {
   return (
-    <div className="w-screen overflow-y-auto bg-[#04081C] pb-24 h-[120vh]" >
+    <div className="w-screen overflow-y-auto bg-[#04081C] md:pb-24 h-[40vh] md:h-[120vh]" >
       <div className="py-[4.375rem] w-full max-w-screen-xl flex justify-center mx-auto px-4">
         <div className="flex flex-col gap-y-[13.75rem] relative items-center w-full">
           

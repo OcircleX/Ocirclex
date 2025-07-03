@@ -51,7 +51,7 @@ const OurServices = () => {
         backgroundPosition: "center",
       }}
     >
-        <div className="w-full mx-auto px-28 py-8 max-w-screen-xl relative">
+        <div className="w-full mx-auto px-10 md:px-28 py-8 max-w-screen-xl relative">
 
         <div className="md:flex justify-between items-center mb-12  " id="creativee">
             <h2 className="text-4xl font-bold   text-[#04081C]
@@ -86,12 +86,12 @@ const OurServices = () => {
     <Link href={service.link}>
     <div
   key={index}
-  className="group w-full flex text-black items-center justify-between py-3 cursor-pointer hover:bg-[#04081C] hover:text-white px-5 transition-all duration-500 rounded-lg"
+  className="group w-full flex text-black items-center justify-between py-3 cursor-pointer hover:bg-[#04081C] hover:text-white md:px-5 transition-all duration-500 rounded-lg"
   style={{
     fontFamily: rethinkSans.style.fontFamily || "serif",
   }}
 >
-  <h1 className="text-3xl leading-tight capitalize">{service.title}</h1>
+  <h1 className="text-2xl md:text-3xl leading-tight capitalize">{service.title}</h1>
 
   {/* Show on normal */}
   <GoArrowUpRight className="text-2xl block group-hover:hidden transition-all duration-500 "  />
@@ -108,13 +108,13 @@ const OurServices = () => {
 <Link href="/services">
 
 <button className="my-4 px-3 w-fit  md:px-6 flex gap-x-2 py-3 border     bg-black
- text-white text-lg font-medium rounded-full hover:bg-white hover:text-black  border-black transition  justify-between items-center"
+ text-white text-lg font-medium rounded-full hover:bg-white hover:text-black  border-black transition  justify-between items-center z-50 "
             style={{
               fontSize: "1rem",
             }}
             id="casestudies"
             >
-EXPLORE OUR SERVICES           <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+EXPLORE OUR SERVICES           <svg className='' width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_233_16584)">
 <g clip-path="url(#clip1_233_16584)">
 <path d="M1.6665 5.65234L4.33317 8.98567L1.6665 12.319" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -147,7 +147,7 @@ EXPLORE OUR SERVICES           <svg width="11" height="17" viewBox="0 0 11 17" f
 
 </div>
 
-<Image src="/gradient-glass.png" width={100} height={100} alt='glass' className='absolute left-0 bottom-1'/>
+<Image src="/gradient-glass.png" width={100} height={100} alt='glass' className='absolute md:left-0 bottom-1  -left-8 z-10'/>
             </div>
 
 

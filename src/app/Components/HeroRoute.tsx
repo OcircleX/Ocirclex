@@ -26,7 +26,7 @@ const HeroRoute = ({pageIntro}) => {
 
   return (
   <div className='w-full flex justify-center bg-[#04081C]'>
-      <div className='max-w-screen-xl  text-white text-center py-16'>
+      <div className=' max-w-screen-xl  text-white text-center py-16'>
         {pageIntro.map((item,index)=> (
           <div key={index}>
              <p className="text-white text-5xl font-semibold capitalize leading-10 " style={{  fontFamily: rethinkSans.style.fontFamily || "serif",}}>{item.title}</p>     
@@ -44,7 +44,7 @@ const HeroRoute = ({pageIntro}) => {
 
 
    <div className='flex justify-center py-8'>
-   <p className='w-[50%] whitespace-pre-line'>
+   <p className='w-[70%] md:w-[50%] whitespace-pre-line md:leading-none'>
   {item.desc}
         </p>
    </div>

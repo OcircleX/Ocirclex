@@ -171,7 +171,7 @@ useGSAP(()=> {
 <h1 id="trust" className="text-xl md:text-xl   text-center w-full py-10 text-white leading-tight"
       
      
-      >Partnered with Innovators Around the Globe <br className="md:hidden" /> </h1>
+      >Partnered with <br className="md:hidden"/> Innovators Around the <br className="md:hidden"/> Globe <br className="md:hidden" /> </h1>
 
 <div  className="w-[30%] pb-8  overflow-hidden flex  max-w-screen-xl" id="infinity"
 
@@ -215,7 +215,7 @@ useGSAP(()=> {
         <div className="w-full md:w-[70%] ">
           <motion.h1
          
-           className={`text-xl md:text-2xl w-full py-8  font-light text-white leading-tight ${rethinkSans.className}`} id="combine">
+           className={`text-xl md:text-2xl w-full py-8  font-light text-white leading-8  md:leading-tight ${rethinkSans.className}`} id="combine">
            At CircleX, we craft tailored digital solutions that drive business growth through exceptional user experience and seamless functionality. Backed by a team of 7 seasoned professionals, we leverage cutting-edge technologies to deliver scalable, high-performance applications designed around your unique goals.
           </motion.h1>
         <Link href="about">

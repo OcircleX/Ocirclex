@@ -51,7 +51,7 @@ const ApproachRoute = ({ourApproach, Projects}) => {
 
           <div className="flex flex-col gap-y-12">
           {ourApproach.map((item, index) => (
-            <div key={index} className='flex items-start gap-6'>
+            <div key={index} className='md:flex items-start gap-6'>
               <Image src={item.imgSrc} alt={item.title} width={150} height={150} />
               <div
                 className='flex flex-col justify-center space-y-5'
@@ -83,7 +83,7 @@ const ApproachRoute = ({ourApproach, Projects}) => {
                 fontWeight: "200",
                 color: "#7BB668",
                 fontStyle: "italic",
-                lineHeight: "83px",
+                lineHeight: "70px",
                 fontFamily: instrumentSerif.style.fontFamily || "serif",
               }}
               ><i>of the iceberg</i></span>
@@ -92,11 +92,11 @@ const ApproachRoute = ({ourApproach, Projects}) => {
           </div>
    
 
-          <div className="flex w-full  justify-between gap-6 mt-6  ">
+          <div className="md:flex w-full  justify-between gap-6 mt-6  space-y-6 md:space-y-0">
 {Projects.map((item,index)=> (
  <div className='flex-1'>
 
-<div className="w-[350px] h-[350px] relative">
+<div className="w-full md:w-[350px]  h-[350px] relative">
 <Image
 src={item.src}
 fill

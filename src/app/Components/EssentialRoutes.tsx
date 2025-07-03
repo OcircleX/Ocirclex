@@ -49,11 +49,11 @@ const EssentialRoutes = ({developmentEssentials}) => {
 
 
             
-          <div className="flex flex-wrap justify-between gap-y-10">
+          <div className="space-y-16 md:space-y-1 md:flex flex-wrap justify-between gap-y-10">
   {developmentEssentials.map((item, index) => (
-    <div key={index} className="w-[30%] space-y-3">
+    <div key={index} className="md:w-[30%] space-y-3">
       <Image src={item.src} alt='api' width={100} height={100} />
-      <h1 className="text-2xl font-semibold">{item.title}</h1>
+      <h1 className="text-2xl md:font-semibold">{item.title}</h1>
       <p className="text-gray-400">{item.desc}</p>
     </div>
   ))}
