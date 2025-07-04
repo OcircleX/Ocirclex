@@ -1,4 +1,3 @@
-
 import Hero from "./Components/Hero";
 import Approch from "./Components/Approch";
 import Showcase from "./Components/Showcase";
@@ -10,24 +9,20 @@ import Steps from "./Components/Steps";
 import WorkProcess from "./Components/WorkProcess";
 import ImageStacker from "./Components/ImageStacker";
 
-
 export default function Home() {
   return (
- <div className="w-full">
-  <Header />
-            <Hero />
-            <Approch />
-            <OurServices/>
-            <WhyChoose/>
-         
-            <Showcase />
-            <ImageStacker/>
-            {/* <WorkProcess/> */}
-            <Steps/>
-            <IndustryInfo />
+    <div className="w-full">
+      <Header />
+      <Hero />
+      <Approch />
+      <OurServices />
+      <WhyChoose />
 
-        </div>
-
-  
+      <Showcase />
+      {/* <ImageStacker/> */}
+      <WorkProcess />
+      <Steps />
+      <IndustryInfo />
+    </div>
   );
 }
