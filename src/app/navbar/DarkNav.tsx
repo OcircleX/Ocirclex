@@ -112,7 +112,7 @@ export default function DarkNav() {
                     <li>Website Development</li>
                   </Link>
                   <Link href="/mobile">
-                    <li>Application Development</li>
+                    <li>Mobile Development</li>
                   </Link>
                   <Link href="/design">
                     <li>Branding & Design</li>
@@ -226,7 +226,7 @@ export default function DarkNav() {
                       }`}
                     >
                       <Link href="/web" className="block w-full h-full">
-                        Web development
+                        Web Development
                       </Link>
                     </li>
 
@@ -238,7 +238,7 @@ export default function DarkNav() {
                       }`}
                     >
                       <Link href="/mobile" className="block w-full h-full">
-                        Mobile development
+                        Mobile Development
                       </Link>
                     </li>
 
