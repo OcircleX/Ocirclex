@@ -1,34 +1,26 @@
 "use client";
 import { Rethink_Sans } from "next/font/google";
 
-import gsap from 'gsap';
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Image from 'next/image';
+import Image from "next/image";
 // import img1 from './1.png'
 // import img2 from './2.png'
 // import img3 from './3.png'
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 // import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
+import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
-
-
 
 const rethinkSans = Rethink_Sans({
   subsets: ["latin"],
   weight: ["400", "700"], // Adjust weights as needed
 });
 
-
 export default function Approch() {
-
-
-
-
   gsap.registerPlugin(ScrollTrigger);
-
 
   const Marquee = [
     "./01.svg",
@@ -38,200 +30,215 @@ export default function Approch() {
     "./05.svg",
     "./06.svg",
     "./07.svg",
-    "./08.svg"
-  ]
+    "./08.svg",
+  ];
 
-  useGSAP(()=> {
-gsap.from("#aboutButton",
-  {y: 100,
-    duration:0.2,
-    opacity:0,
-    delay:0.5,
-   
-   
-    scrollTrigger: {
-    trigger:"#aboutButton"
-    },
-   
-   }
-  )
-  }, {scope:""})
+  useGSAP(
+    () => {
+      gsap.from("#aboutButton", {
+        y: 100,
+        duration: 0.2,
+        opacity: 0,
+        delay: 0.5,
 
-  useGSAP(()=> {
-    gsap.from("#trust",
-       {y: 100,
-        duration:0.5,
-        opacity:0,
-        delay:0.5,
-       
-       
         scrollTrigger: {
-        trigger:"#trust"
+          trigger: "#aboutButton",
         },
-       
-       }
-      )
-      }, {scope:""})
-
-      useGSAP(()=> {
-        gsap.from("#infinity",
-           {y: 100,
-            duration:0.5,
-            opacity:0,
-            delay:0.5,
-           
-           
-            scrollTrigger: {
-            trigger:"#infinity"
-            },
-           
-           }
-          )
-          }, {scope:""})
-
-          useGSAP(()=> {
-            gsap.from("#creative",
-               {y: 100,
-                duration:0.5,
-                opacity:0,
-                delay:0.5,
-               
-               
-                scrollTrigger: {
-                trigger:"#creative"
-                },
-               
-               }
-              )
-              }, {scope:""})
-
-              useGSAP(()=> {
-                gsap.from("#combine",
-                   {y: 100,
-                    duration:1,
-                    opacity:0,
-                    delay:0.5,
-                   
-                   
-                    scrollTrigger: {
-                    trigger:"#combine"
-                    },
-                   
-                   }
-                  )
-                  }, {scope:""})
-
-
-useGSAP(()=> {
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#threepix",
-      start: "top 80%",
-      end: "top 20%", // Extend scroll range for slower effect
-      scrub: 3, // Increase scrub for smoother effect
-      once: true,
-    
-    
+      });
     },
+    { scope: "" }
+  );
+
+  useGSAP(
+    () => {
+      gsap.from("#trust", {
+        y: 100,
+        duration: 0.5,
+        opacity: 0,
+        delay: 0.5,
+
+        scrollTrigger: {
+          trigger: "#trust",
+        },
+      });
+    },
+    { scope: "" }
+  );
+
+  useGSAP(
+    () => {
+      gsap.from("#infinity", {
+        y: 100,
+        duration: 0.5,
+        opacity: 0,
+        delay: 0.5,
+
+        scrollTrigger: {
+          trigger: "#infinity",
+        },
+      });
+    },
+    { scope: "" }
+  );
+
+  useGSAP(
+    () => {
+      gsap.from("#creative", {
+        y: 100,
+        duration: 0.5,
+        opacity: 0,
+        delay: 0.5,
+
+        scrollTrigger: {
+          trigger: "#creative",
+        },
+      });
+    },
+    { scope: "" }
+  );
+
+  useGSAP(
+    () => {
+      gsap.from("#combine", {
+        y: 100,
+        duration: 1,
+        opacity: 0,
+        delay: 0.5,
+
+        scrollTrigger: {
+          trigger: "#combine",
+        },
+      });
+    },
+    { scope: "" }
+  );
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#threepix",
+        start: "top 80%",
+        end: "top 20%", // Extend scroll range for slower effect
+        scrub: 3, // Increase scrub for smoother effect
+        once: true,
+      },
+    });
+
+    tl.from("#thimg1", {
+      y: 150,
+      autoAlpha: 0,
+      duration: 2,
+      ease: "expo.out",
+    })
+      .from(
+        "#thimg2",
+        {
+          y: 150,
+          autoAlpha: 0,
+          duration: 2,
+          ease: "expo.out",
+        },
+        "+=0.3"
+      )
+      .from(
+        "#thimg3",
+        {
+          x: 150,
+          autoAlpha: 0,
+          duration: 2,
+          ease: "expo.out",
+        },
+        "+=0.3"
+      );
   });
 
-  tl.from("#thimg1", {
-    y: 150,
-    autoAlpha: 0,
-    duration: 2,
-    ease: "expo.out",
-  })
-  .from("#thimg2", {
-    y: 150,
-    autoAlpha: 0,
-    duration: 2,
-    ease: "expo.out",
-  }, "+=0.3")
-  .from("#thimg3", {
-    x: 150,
-    autoAlpha: 0,
-    duration: 2,
-    ease: "expo.out",
-  }, "+=0.3");
-  
-
-})
-
-
-                  
-                  
-          
-
   return (
-    
-    <section className="flex flex-col m-auto  pb-[2rem] bg-[#04081C] justify-between items-center w-full   " id="approache">
-   
-<div>
-<h1 id="trust" className="text-xl md:text-xl   text-center w-full py-10 text-white leading-tight"
-      
-     
-      >Partnered with <br className="md:hidden"/> Innovators Around the <br className="md:hidden"/> Globe <br className="md:hidden" /> </h1>
+    <section
+      className="flex flex-col m-auto  pb-[2rem] bg-[#04081C] justify-between items-center w-full   "
+      id="approache"
+    >
+      <div>
+        <h1
+          id="trust"
+          className="text-xl md:text-xl   text-center w-full py-10 text-white leading-tight"
+        >
+          Partnered with <br className="md:hidden" /> Innovators Around the{" "}
+          <br className="md:hidden" /> Globe <br className="md:hidden" />{" "}
+        </h1>
 
-<div  className="w-[30%] pb-8  overflow-hidden flex  max-w-screen-xl" id="infinity"
+        <div
+          className="w-[30%] pb-8  overflow-hidden flex  max-w-screen-xl"
+          id="infinity"
+        >
+          <motion.div
+            className="flex flex-shrink-0 gap-x-6 px-6 gap-y-3 w-full"
+            initial={{ x: "0%" }}
+            animate={{ x: "-100%" }} // Moves only inside 70%
+            transition={{ duration: 8.5, ease: "linear", repeat: Infinity }}
+          >
+            {/* Items fit perfectly inside w-[70%] */}
+            {Marquee.map((src, index) => (
+              <Image
+                key={index}
+                src={src}
+                alt="Marquee Icon"
+                width={75}
+                height={75}
+              />
+            ))}
+          </motion.div>
 
->
-  <motion.div
-    className="flex flex-shrink-0 gap-x-6 px-6 gap-y-3 w-full"
-    initial={{ x: "0%" }}
-    animate={{ x: "-100%" }} // Moves only inside 70%
-    transition={{ duration: 8.5, ease: "linear", repeat: Infinity }}
-  >
-    {/* Items fit perfectly inside w-[70%] */}
-    {Marquee.map((src, index) => (
-      <Image key={index} src={src} alt="Marquee Icon" width={75} height={75} />
-    ))}
-  </motion.div>
-
-  <motion.div
-    className="flex flex-shrink-0 gap-x-6 px-6 gap-y-3 w-full"
-    initial={{ x: "0%" }}
-    animate={{ x: "-100%" }} // Moves only inside 70%
-    transition={{ duration: 8.5, ease: "linear", repeat: Infinity }}
-  >
-    {/* Items fit perfectly inside w-[70%] */}
-    {Marquee.map((src, index) => (
-      <Image key={index} src={src} alt="Marquee Icon" width={75} height={75} className=''/>
-    ))}
-  </motion.div>
-</div>
-</div>
-     
-
+          <motion.div
+            className="flex flex-shrink-0 gap-x-6 px-6 gap-y-3 w-full"
+            initial={{ x: "0%" }}
+            animate={{ x: "-100%" }} // Moves only inside 70%
+            transition={{ duration: 8.5, ease: "linear", repeat: Infinity }}
+          >
+            {/* Items fit perfectly inside w-[70%] */}
+            {Marquee.map((src, index) => (
+              <Image
+                key={index}
+                src={src}
+                alt="Marquee Icon"
+                width={75}
+                height={75}
+                className=""
+              />
+            ))}
+          </motion.div>
+        </div>
+      </div>
 
       <div className="w-full max-w-screen-xl md:flex px-3 py-[4rem] bg-[#04081C] justify-between gap-8">
         <div className="w-full md:w-1/2">
           <motion.button
-          
-          className="mt-8 border px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full  transition" id="creative">
+            className="mt-8 border px-4 py-2 bg-[#04081C] text-white text-sm font-medium rounded-full  transition"
+            id="creative"
+          >
             CREATIVE STUDIO
           </motion.button>
         </div>
         <div className="w-full md:w-[70%] ">
           <motion.h1
-         
-           className={`text-xl md:text-2xl w-full py-8  font-light text-white leading-8  md:leading-tight ${rethinkSans.className}`} id="combine">
-           At CircleX, we craft tailored digital solutions that drive business growth through exceptional user experience and seamless functionality. Backed by a team of 7 seasoned professionals, we leverage cutting-edge technologies to deliver scalable, high-performance applications designed around your unique goals.
+            className={`text-xl md:text-2xl w-full py-8  font-light text-white leading-8  md:leading-tight ${rethinkSans.className}`}
+            id="combine"
+          >
+            At CircleX, we craft tailored digital solutions that drive business
+            growth through exceptional user experience and seamless
+            functionality. Backed by a team of 7 seasoned professionals, we
+            leverage cutting-edge technologies to deliver scalable,
+            high-performance applications designed around your unique goals.
           </motion.h1>
-        <Link href="about">
-        <h1
-         
-         id="aboutButton"
-         className="px-6 py-3 mt-2  bg-white text-[#04081C] rounded-full shadow-md hover:bg-gray-200 transition text-left w-fit">
-           MEET THE TEAM ›
-         </h1>
-        </Link>
-
+          <Link href="about">
+            <h1
+              id="aboutButton"
+              className="px-4 py-2 mt-2 text-sm bg-white text-[#04081C] rounded-full shadow-md hover:bg-gray-200 transition text-left w-fit"
+            >
+              MEET THE TEAM ›
+            </h1>
+          </Link>
         </div>
       </div>
-
-
-
 
       {/* <div className="w-full max-w-screen-xl mx-auto md:hidden flex flex-col justify-between gap-4 items-center pt-6 overflow-hidden px-4">
   <div className="w-full h-[300px] rounded-md overflow-hidden relative">
@@ -263,8 +270,7 @@ useGSAP(()=> {
   </div>
 </div> */}
 
-
-{/* 
+      {/* 
 <div className="w-full max-w-screen-xl mx-auto hidden md:flex  justify-between gap-4 items-center pt-6 h-[440px] overflow-hidden px-4" id="threepix">
       <div className="w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
   <Image
@@ -297,12 +303,6 @@ useGSAP(()=> {
   />
 </div>
 </div> */}
-
-
-
-
-
-
     </section>
   );
 }

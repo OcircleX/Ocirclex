@@ -1,17 +1,41 @@
 "use client";
-import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+
+const dropVariants = {
+  hidden: { opacity: 0, height: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    height: "auto",
+    scale: 1,
+    transition: { duration: 0.4, ease: "easeInOut" },
+  },
+  exit: {
+    opacity: 0,
+    height: 0,
+    scale: 0.95,
+    transition: { duration: 0.3, ease: "easeInOut" },
+  },
+};
+
 export default function Header() {
   const [servhovered, setservhovered] = useState(false);
   const [abouthovered, setabouthovered] = useState(false);
   const [homehovered, sethomehovered] = useState(false);
   const [conthovered, setconthovered] = useState(false);
   const [bloghovered, setbloghovered] = useState(false);
+
+  const [dropMob, setDropMob] = useState(false);
+
+  const isToggleDropMob = () => {
+    setDropMob((prev) => !prev);
+  };
 
   const [toggleDropDown, setToggleDropDown] = useState(false);
 
@@ -43,27 +67,64 @@ export default function Header() {
   return (
     <header className="w-screen shadow-md py-4 md:px-6 bg-[#fafafa] flex justify-center relative">
       {burgerOn && (
-        <div className="w-full min-h-screen  bg-white bg-opacity-80 backdrop-blur-[8px] text-lg text-black absolute top-0 z-20 flex px-4 py-8 md:hidden">
+        <div className="w-full min-h-screen  bg-white bg-opacity-70 backdrop-blur-[8px] text-lg text-black absolute top-0 z-20 flex px-4 py-8 md:hidden">
           <div
-            className="text-[23px] font-extrabold absolute top-8 right-8"
+            className="text-[23px] font-extrabold absolute top-8 right-8 z-50"
             onClick={toggleBurger}
           >
             {" "}
             <RxCross1 style={{ strokeWidth: 0.5 }} />
           </div>
 
-          <ul className="flex flex-col text-center justify-center gap-2 relative  w-full">
+          <ul className="flex flex-col items-center justify-center gap-5 relative  w-full text-3xl">
             <Link href="/">
               {" "}
               <li>Home</li>
-            </Link>
-            <Link href="/services">
-              {" "}
-              <li>Services</li>
-            </Link>
+            </Link>{" "}
+            <li
+              className={`flex justify-center items-center gap-2 ${
+                dropMob && ""
+              } "`}
+              onClick={isToggleDropMob}
+            >
+              Services{" "}
+              <IoMdArrowDropdown
+                className={`transition-transform duration-300 ${
+                  dropMob ? "rotate-180" : "rotate-0"
+                }`}
+              />{" "}
+            </li>
+            <AnimatePresence initial={false}>
+              {dropMob && (
+                <motion.ul
+                  variants={dropVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className="flex flex-col text-center text-gray-500 text-[20px] space-y-2 overflow-hidden"
+                >
+                  <Link href="/web">
+                    <li>Website Development</li>
+                  </Link>
+                  <Link href="/mobile">
+                    <li>Application Development</li>
+                  </Link>
+                  <Link href="/design">
+                    <li>Branding & Design</li>
+                  </Link>
+                  <Link href="/ourteam">
+                    <li>Team as a Service</li>
+                  </Link>
+                </motion.ul>
+              )}
+            </AnimatePresence>
             <Link href="/about">
               {" "}
               <li>About Us</li>
+            </Link>
+            <Link href="/contact">
+              {" "}
+              <li>Contact Us</li>
             </Link>
             {/* <Link href="/blog">  <li>Blog</li></Link> */}
           </ul>
