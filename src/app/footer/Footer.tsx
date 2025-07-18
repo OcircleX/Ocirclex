@@ -123,7 +123,8 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p className="text-lg">• Behance</p>
+                  <p className="text-lg ">• Behance</p>
+              
                 </Link>
               </div>
             </div>
@@ -174,20 +175,46 @@ function Footer() {
         </div>
 
         <div
-          className=" hidden md:flex mb-4 space-y-2 md:space-y-0 justify-between items-center text-sm text-gray-200 md:gap-x-12 md:mx-auto md:w-full max-w-screen-xl px-4"
+          className=" hidden md:flex mb-4 space-y-2  md:space-y-0 justify-between items-center text-sm text-gray-200 md:gap-x-12 md:mx-auto md:w-full max-w-screen-xl px-4"
           id="linkss"
         >
-          <p className="text-lg">• ISLAMABAD, PAKISTAN</p>
-          <p className=" text-lg">• support@ocirclex.com</p>
-          <p className=" text-lg">• +92 344 9622270</p>
+          {/* <p className="text-lg">• ISLAMABAD, PAKISTAN</p> */}
+          {/* <p className=" text-lg">• support@ocirclex.com</p> */}
 
+          <div
+    className="text-md relative text-white  cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] flex items-start gap-2">
+    
+    
+    <span>• </span>
+    <span>2501 CHATHAM RD STE R <br />
+    SPRINGFIELD IL 62704</span>
+  </div>  
+          <div
+    className=" relative text-white  cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+    <span>• support@ocirclex.com</span>
+  </div>  
+
+
+{/* 
+  <div
+    className="relative text-white  cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+    <span>• +92 344 9622270</span>
+  </div>   */}
+          {/* <p className=" text-lg">• +92 344 9622270</p> */}
+          <div
+    className=" relative text-white  cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+    <span>• +92 344 9622270</span>
+  </div>  
           <Link
             href="https://www.linkedin.com/company/circlex/?viewAsMember=true"
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            <p className=" ">• LinkedIn</p>
+            <div
+    className=" relative text-white  cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+    <span>• LinkedIn</span>
+  </div>  
           </Link>
           <Link
             href="https://www.behance.net/Circle_Xproject"
@@ -195,8 +222,10 @@ function Footer() {
             rel="noopener noreferrer"
           >
             {" "}
-            <p className=" ">• Behance</p>
-          </Link>
+            <div
+    className=" relative text-white  cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+    <span>• Behance</span>
+  </div>          </Link>
           <Link href=""></Link>
         </div>
 
