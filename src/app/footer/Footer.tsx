@@ -466,12 +466,18 @@ function Footer() {
               </defs>
             </svg>
           </div>
-          <div className="w-[65%] md:w-1/3 sm:flex-1">
-            <p className="text-center text-sm text-gray-400 " id="copyr">
-              © Copyright 2024
-              <span className="mx-1">| Designed & Developed By Circle X</span>
-            </p>
-          </div>
+          <div className="w-[65%] md:w-1/3 sm:flex-1 text-center">
+  <p className="text-sm text-gray-400" id="copyr">
+    © Copyright 2024
+    <span className="mx-1">| Designed & Developed By Circle X</span>
+  </p>
+  <Link href="/privacy">
+    <p className="text-sm text-gray-400 cursor-pointer" id="copyr">
+      Privacy Policy
+    </p>
+  </Link>
+</div>
+
         </div>
       </footer>
     </div>

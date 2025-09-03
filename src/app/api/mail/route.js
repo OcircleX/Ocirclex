@@ -17,7 +17,7 @@ export async function POST(request) {
 
   const mailOptions = {
     from: "circlex02@gmail.com",
-    to: 'support@ocirclex.com',
+    to: 'circlex02@gmail.com',
     subject: body.Subject,
     text: 
     `You have recieved a new message from your website form

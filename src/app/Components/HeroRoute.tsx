@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import { Instrument_Serif } from "next/font/google";
 import { Rethink_Sans } from "next/font/google";
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 
 const instrumentSerif = Instrument_Serif({ 
@@ -21,7 +23,7 @@ const instrumentSerif = Instrument_Serif({
 
 const HeroRoute = ({pageIntro}) => {
 
-
+const pathname = usePathname()
 
 
   return (
@@ -43,7 +45,7 @@ const HeroRoute = ({pageIntro}) => {
         ><i>{item.titlegreen}</i></p>
 
 
-   <div className='flex justify-center py-8'>
+   <div className={`flex justify-center py-8 ${pathname == "/privacy" && "hidden"}`}>
    <p className='w-[70%] md:w-[50%] whitespace-pre-line md:leading-none'>
   {item.desc}
         </p>
