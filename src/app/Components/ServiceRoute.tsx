@@ -1,7 +1,10 @@
+"use client"
 import React from 'react'
 import { Instrument_Serif } from "next/font/google";
 import { Rethink_Sans } from "next/font/google";
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { SlideRight } from '../services/animation';
 
 
 const instrumentSerif = Instrument_Serif({ 
@@ -24,7 +27,11 @@ const ServiceRoute = ({ourTechs}) => {
 
     <div className='w-full flex justify-center bg-white pb-12'>
       <div className='max-w-screen-xl  text-white  py-12'>
-    <div className='bg-white py-16 px-4'>
+    <motion.div
+       variants={SlideRight(0.1)}
+                          initial="hidden"
+                            whileInView={"visible"}
+    className='bg-white py-16 px-4'>
        <h2 className="text-4xl font-bold   text-black
  ">
               TOOLS </h2>   
@@ -39,7 +46,7 @@ const ServiceRoute = ({ourTechs}) => {
           fontFamily: instrumentSerif.style.fontFamily || "serif",
         }}
         ><i>we trust</i></p>
-    </div>
+    </motion.div>
 
 
 
@@ -52,30 +59,46 @@ const ServiceRoute = ({ourTechs}) => {
       {/* Handle single or multiple images */}
       {Array.isArray(item.imgSrc) ? (
         item.imgSrc.map((src, i) => (
-          <div key={i} className="w-[75px] h-[50px] relative ">
+          <motion.div
+            variants={SlideRight(0.2)}
+                          initial="hidden"
+                            whileInView={"visible"}
+          key={i} className="w-[75px] h-[50px] relative ">
             <Image
               src={src}
               fill
               alt={`${item.title} ${i + 1}`}
               className="object-contain"
             />
-          </div>
+          </motion.div>
         ))
       ) : (
-        <div className="w-[75px] h-[50px] relative  items-start">
+        <motion.div
+          variants={SlideRight(0.2)}
+                          initial="hidden"
+                            whileInView={"visible"}
+        className="w-[75px] h-[50px] relative  items-start">
         <Image
           src={item.imgSrc}
           fill
           alt={item.title}
           className={`object-contain object-left ${index === 2 ? "scale-125 ml-3" : ""}`}
         />
-      </div>
+      </motion.div>
       
       )}
     </div>
 
-    <h1 className="font-semibold my-2 text-black">{item.title}</h1>
-    <p className="text-gray-500">{item.descr}</p>
+    <motion.h1
+     variants={SlideRight(0.3)}
+                          initial="hidden"
+                            whileInView={"visible"}
+    className="font-semibold my-2 text-black">{item.title}</motion.h1>
+    <motion.p
+     variants={SlideRight(0.4)}
+                          initial="hidden"
+                            whileInView={"visible"}
+    className="text-gray-500">{item.descr}</motion.p>
   </div>
 ))}
     

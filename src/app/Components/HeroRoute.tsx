@@ -4,6 +4,8 @@ import { Instrument_Serif } from "next/font/google";
 import { Rethink_Sans } from "next/font/google";
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { SlideRight } from '../services/animation';
 
 
 const instrumentSerif = Instrument_Serif({ 
@@ -31,9 +33,17 @@ const pathname = usePathname()
       <div className=' max-w-screen-xl  text-white text-center py-16'>
         {pageIntro.map((item,index)=> (
           <div key={index}>
-             <p className="text-white text-5xl font-semibold capitalize leading-10 " style={{  fontFamily: rethinkSans.style.fontFamily || "serif",}}>{item.title}</p>     
+             <motion.p
+             variants={SlideRight(0.1)}
+                          initial="hidden"
+                            whileInView={"visible"}
+             className="text-white text-5xl font-semibold capitalize leading-10 " style={{  fontFamily: rethinkSans.style.fontFamily || "serif",}}>{item.title}</motion.p>     
 
-<p className="showcase" 
+<motion.p
+variants={SlideRight(0.2)}
+                          initial="hidden"
+                            whileInView={"visible"}
+className="showcase" 
          style={{
          
           fontWeight: "200",
@@ -42,13 +52,17 @@ const pathname = usePathname()
          
           fontFamily: instrumentSerif.style.fontFamily || "serif",
         }}
-        ><i>{item.titlegreen}</i></p>
+        ><i>{item.titlegreen}</i></motion.p>
 
 
    <div className={`flex justify-center py-8 ${pathname == "/privacy" && "hidden"}`}>
-   <p className='w-[70%] md:w-[50%] whitespace-pre-line md:leading-none'>
+   <motion.p
+   variants={SlideRight(0.3)}
+                          initial="hidden"
+                            whileInView={"visible"}
+   className='w-[70%] md:w-[50%] whitespace-pre-line md:leading-none'>
   {item.desc}
-        </p>
+        </motion.p>
    </div>
           </div>
         ))}

@@ -1,16 +1,9 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/mail/route": "app/api/mail/route.js",
-  "/about/page": "app/about/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/design/page": "app/design/page.js",
-  "/mobile/page": "app/mobile/page.js",
   "/page": "app/page.js",
-  "/parralax/page": "app/parralax/page.js",
-  "/privacy/page": "app/privacy/page.js",
   "/services/page": "app/services/page.js",
-  "/tawk/page": "app/tawk/page.js",
-  "/ourteam/page": "app/ourteam/page.js",
-  "/web/page": "app/web/page.js"
+  "/web/page": "app/web/page.js",
+  "/mobile/page": "app/mobile/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js"
 }

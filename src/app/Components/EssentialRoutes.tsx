@@ -5,6 +5,8 @@ import { Instrument_Serif } from "next/font/google";
 import { Rethink_Sans } from "next/font/google";
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { SlideLeft, SlideRight } from '../services/animation';
 
 
 const instrumentSerif = Instrument_Serif({ 
@@ -30,7 +32,11 @@ const EssentialRoutes = ({developmentEssentials}) => {
       <div className='w-full max-w-screen-xl  text-white  py-24 px-4'>
       
     
-      <div className="md:flex   w-full mb-12 " id="creativee">
+      <motion.div
+       variants={SlideRight(0.1)}
+                          initial="hidden"
+                            whileInView={"visible"}
+      className="md:flex   w-full mb-12 " id="creativee">
             <h2 className="text-4xl font-bold text-white ">
               {label} <br />
               <span className="showcase" 
@@ -45,17 +51,21 @@ const EssentialRoutes = ({developmentEssentials}) => {
               ><i>Essentials</i></span>
             </h2>
          
-          </div>
+          </motion.div>
 
 
             
           <div className="space-y-16 md:space-y-1 md:flex flex-wrap justify-between gap-y-10">
   {developmentEssentials.map((item, index) => (
-    <div key={index} className="md:w-[30%] space-y-3">
+    <motion.div
+     variants={SlideLeft(0.2)}
+                          initial="hidden"
+                            whileInView={"visible"}
+    key={index} className="md:w-[30%] space-y-3">
       <Image src={item.src} alt='api' width={100} height={100} />
       <h1 className="text-2xl md:font-semibold">{item.title}</h1>
-      <p className="text-gray-400">{item.desc}</p>
-    </div>
+      <p className="text-gray-400 whitespace-normal">{item.desc}</p>
+    </motion.div>
   ))}
 </div>
 

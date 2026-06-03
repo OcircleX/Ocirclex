@@ -1,6 +1,9 @@
+"use client"
+import { motion } from "framer-motion";
 import { Instrument_Serif, Rethink_Sans } from "next/font/google";
 import Image from "next/image";
 import React from "react";
+import { SlideLeft, SlideRight } from "../services/animation";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -11,14 +14,18 @@ const instrumentSerif = Instrument_Serif({
 const rethinkSans = Rethink_Sans({
   subsets: ["latin"],
   weight: ["400", "400", "500", "700"], // Adjust weights as needed
-});
+}); 
 
 const Steps = () => {
   return (
-    <section className="pt-16 pb-16 md:pb-32   w-full bg-white flex flex-col items-center">
+    <section className="pt-16 pb-16 md:pb-32   w-full text-black bg-white flex flex-col items-center">
       <div className=" max-w-screen-xl flex flex-col items-center px-4">
         <div className="space-y-6 w-full ">
-          <h2 className="text-4xl font-bold text-black bg-white">
+          <motion.h2 
+              variants={SlideRight(0.4)}
+                          initial="hidden"
+                            whileInView={"visible"}
+          className="text-4xl font-bold text-black bg-white">
             OUR <br />
             <span
               className="showcase"
@@ -31,10 +38,13 @@ const Steps = () => {
             >
               <i>proven path</i>
             </span>
-          </h2>
+          </motion.h2>
 
           <div className="relative">
-            <p
+            <motion.p
+                variants={SlideRight(0.4)}
+                          initial="hidden"
+                            whileInView={"visible"}
               className="text-xl md:text-[33px] text-black pt-4 pb-24  md:leading-10 tracking-wide font-light relative"
               style={{
                 fontFamily: rethinkSans.style.fontFamily || "serif",
@@ -43,7 +53,7 @@ const Steps = () => {
               We begin by understanding your goals, then design and develop
               user-focused solutions, rigorously test for quality, and launch
               with ongoing support to ensure long-term success.
-            </p>
+            </motion.p>
             <div className="w-[150px] h-[150px]  absolute right-0  -bottom-14 rotate-135 hidden md:block">
               <Image src="/cube abstract shape-3.png" alt="cube" fill />
             </div>
@@ -91,15 +101,19 @@ const Steps = () => {
             </defs>
           </svg>
 
-          <div>
-            <h1 className=" text-4xl relative">Requirements</h1>
+          <motion.div
+           variants={SlideLeft(0.4)}
+                          initial="hidden"
+                            whileInView={"visible"}
+          >
+            <h1 className=" text-4xl relative ">Requirements</h1>
             <ul className="absolute list-disc ml-4 mt-2">
               <li>Introduction</li>
               <li>Needs Assessment</li>
               <li>Collaboration</li>
               <li>Timeline</li>
             </ul>
-          </div>
+          </motion.div>
           <svg
             width="1198"
             height="12"
@@ -153,7 +167,11 @@ const Steps = () => {
             </defs>
           </svg>
 
-          <div>
+            <motion.div
+           variants={SlideLeft(0.5)}
+                          initial="hidden"
+                            whileInView={"visible"}
+          >
             <h1 className=" text-4xl relative">Design & Prototype</h1>
             <ul className="absolute list-disc ml-4 mt-2">
               <li>Design System</li>
@@ -161,7 +179,7 @@ const Steps = () => {
               <li>Interactive prototypes</li>
               <li>User Journeys</li>
             </ul>
-          </div>
+          </motion.div>
           <svg
             width="702"
             height="12"
@@ -215,7 +233,11 @@ const Steps = () => {
             </defs>
           </svg>
 
-          <div>
+             <motion.div
+           variants={SlideLeft(0.6)}
+                          initial="hidden"
+                            whileInView={"visible"}
+          >
             <h1 className=" text-4xl relative">Development</h1>
             <ul className="absolute list-disc ml-4 mt-2">
               <li>Transforming Design</li>
@@ -223,7 +245,7 @@ const Steps = () => {
               <li>Back & Frontend Integration</li>
               <li>Database & API Integration</li>
             </ul>
-          </div>
+          </motion.div>
           <svg
             width="702"
             height="12"
@@ -277,7 +299,11 @@ const Steps = () => {
             </defs>
           </svg>
 
-          <div>
+            <motion.div
+           variants={SlideRight(0.7)}
+                          initial="hidden"
+                            whileInView={"visible"}
+          >
             <h1 className=" text-4xl relative">Launch</h1>
             <ul className="absolute list-disc ml-4 mt-2">
               <li>Cross-device testing</li>
@@ -286,7 +312,7 @@ const Steps = () => {
 
               <li>Quality assurance (QA)</li>
             </ul>
-          </div>
+          </motion.div>
           <svg
             width="1198"
             height="12"
@@ -340,7 +366,11 @@ const Steps = () => {
             </defs>
           </svg>
 
-          <div>
+             <motion.div
+           variants={SlideRight(0.8)}
+                          initial="hidden"
+                            whileInView={"visible"}
+          >
             <h1 className=" text-4xl relative">Support & Maintenance</h1>
             <ul className="absolute list-disc ml-4 mt-2">
               <li>Ongoing Technical Support</li>
@@ -348,7 +378,7 @@ const Steps = () => {
               <li>Version updates</li>
               <li>Continous Improvement</li>
             </ul>
-          </div>
+          </motion.div>
           <svg
             width="430"
             height="12"
@@ -367,7 +397,7 @@ const Steps = () => {
       {/* mobile points */}
 
       <div
-        className="w-full mx-auto  max-w-screen-xl space-y-32 md:hidden "
+        className="w-full mx-auto  max-w-screen-xl  space-y-32 md:hidden bg-white"
         style={{
           fontFamily: rethinkSans.style.fontFamily || "serif",
         }}
@@ -524,7 +554,7 @@ const Steps = () => {
 
         {/* 3rd */}
 
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center justify-between gap-3 bg-white">
           <svg
             width="35"
             height="6"
@@ -600,7 +630,7 @@ const Steps = () => {
 
         {/* 4th */}
 
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center justify-between gap-3 bg-white">
           <svg
             width="35"
             height="6"
@@ -649,7 +679,7 @@ const Steps = () => {
               Launch
             </h1>
             <ul
-              className="absolute list-disc ml-4 mt-2 text-gray-700 "
+              className="absolute list-disc ml-4 mt-2 text-gray-700 bg-white "
               style={{
                 fontWeight: 200,
               }}
@@ -677,7 +707,7 @@ const Steps = () => {
 
         {/* 5th */}
 
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center justify-between gap-3 ">
           <svg
             width="35"
             height="6"
