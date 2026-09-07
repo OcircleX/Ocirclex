@@ -1,22 +1,8 @@
 "use client"
 import React from 'react'
-import { Instrument_Serif } from "next/font/google";
-import { Rethink_Sans } from "next/font/google";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SlideRight } from '../services/animation';
-
-
-const instrumentSerif = Instrument_Serif({ 
-    subsets: ["latin"], 
-    weight: ["400"], 
-    style: "italic" // ✅ Correct way to load italic
-  });
-  
-  const rethinkSans = Rethink_Sans({
-    subsets: ["latin"],
-    weight: ["400", "700"], // Adjust weights as needed
-  });
 
 const ServiceRoute = ({ourTechs}) => {
 
@@ -32,25 +18,15 @@ const ServiceRoute = ({ourTechs}) => {
                           initial="hidden"
                             whileInView={"visible"}
     className='bg-white py-16 px-4'>
-       <h2 className="text-4xl font-bold   text-black
- ">
+       <h2 className="text-3xl font-bold text-black sm:text-4xl">
               TOOLS </h2>   
 
-<p className="showcase" 
-         style={{
-         
-          fontWeight: "200",
-          color: "#7BB668",
-          fontStyle: "italic",
-          lineHeight: "83px",
-          fontFamily: instrumentSerif.style.fontFamily || "serif",
-        }}
-        ><i>we trust</i></p>
+<p className="showcase"><i>we trust</i></p>
     </motion.div>
 
 
 
-   <div className='md:flex flex-wrap justify-between gap-y-16 space-y-16 md:space-y-0 gap-x-2 px-8 '>
+   <div className='space-y-16 px-4 md:flex md:flex-wrap md:justify-between md:gap-x-2 md:gap-y-16 md:space-y-0 md:px-8 '>
 
    {ourTechs.map((item, index) => (
   <div key={index} className="md:w-[30%] ">

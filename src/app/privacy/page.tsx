@@ -28,7 +28,7 @@ const PageIntro = [
   <div className="bg-white min-h-screen">
   <div className="max-w-7xl  mx-auto px-4 py-16">
     <div className="  p-8">
-      <h1 className="text-5xl font-bold text-gray-900 mb-8">Privacy Policy
+      <h1 className="mb-8 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl">Privacy Policy
       </h1>
 
       <section className="mb-8">

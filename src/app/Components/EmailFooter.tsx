@@ -1,20 +1,6 @@
 
 import React from 'react'
-import { Instrument_Serif } from "next/font/google";
-import { Rethink_Sans } from "next/font/google";
-import Image from 'next/image';
 
-
-const instrumentSerif = Instrument_Serif({ 
-    subsets: ["latin"], 
-    weight: ["400"], 
-    style: "italic" // ✅ Correct way to load italic
-  });
-  
-  const rethinkSans = Rethink_Sans({
-    subsets: ["latin"],
-    weight: ["400", "700"], // Adjust weights as needed
-  });
 const EmailFooter = () => {
   return (
   <div className='w-full flex justify-center bg-[#04081C] relative md:h-[700px]'>
@@ -24,16 +10,7 @@ const EmailFooter = () => {
       <div className="md:flex   w-full mb-12 " id="creativee">
             <h2 className="text-3xl md:text-4xl md:font-bold text-white ">
               Let's Start <br />
-              <span className="showcase" 
-               style={{
-               
-                fontWeight: "200",
-                color: "#7BB668",
-                fontStyle: "italic",
-                lineHeight: "70px",
-                fontFamily: instrumentSerif.style.fontFamily || "serif",
-              }}
-              ><i>WORK TOGETHER</i></span>
+              <span className="showcase"><i>WORK TOGETHER</i></span>
             </h2>
          
           </div>

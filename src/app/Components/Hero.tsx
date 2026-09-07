@@ -1,89 +1,52 @@
-"use client";
-import { Instrument_Serif, Rethink_Sans } from "next/font/google";
-
-import { motion } from "framer-motion";
-// import Background from "./Background.png"
-import { IoMdArrowDropright } from "react-icons/io";
-import Link from "next/link";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-
 import Image from "next/image";
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: "italic", // ✅ Correct way to load italic
-});
-
-const rethinkSans = Rethink_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"], // Adjust weights as needed
-});
+import Link from "next/link";
 
 export default function Hero() {
-  const Marquee = [
-    "./01.svg",
-    "./02.svg",
-    "./03.svg",
-    "./04.svg",
-    "./05.svg",
-    "./06.svg",
-    "./07.svg",
-    "./08.svg",
-  ];
-
   return (
     <section
       style={{
-        backgroundImage: `url(${"./Background.png"})`,
+        backgroundImage: "url(/Background.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="w-screen relative  overflow-hidden flex flex-col  items-center justify-center px-2  "
+      className="relative flex w-full flex-col items-center justify-center overflow-hidden px-4"
     >
-      <div className="max-w-screen-xl  md:flex flex-wrap justify-between px-4 pt-8 pb-16 md:pb-24 w-full m-auto md:mt-8 ">
-        <div className="mt-8 md:pt-2 flex justify-between  w-full items-center">
-          <motion.div
-            className="md:max-w-2xl ml-3  md:ml-6 flex flex-col "
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <h1
-              className={`text-5xl md:text-6xl   text-start  text-gray-900 leading-tight uppercase `}
-              style={{
-                fontWeight: "500",
-                fontFamily: rethinkSans.style.fontFamily,
-              }}
-            >
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="hero-orb absolute -left-16 top-8 h-56 w-56 rounded-full bg-[#7BB668]/20 blur-3xl" />
+        <div className="hero-orb-slow absolute -right-10 top-24 h-72 w-72 rounded-full bg-[#7BB668]/12 blur-3xl" />
+      </div>
+
+      <div className="relative z-10 m-auto w-full max-w-screen-xl px-4 pb-12 pt-4 md:mt-8 md:flex md:flex-wrap md:justify-between md:pb-24">
+        <div className="mt-4 flex w-full items-center justify-between md:mt-8 md:pt-2">
+          <div className="ml-0 flex flex-col md:ml-6 md:max-w-2xl">
+            <h1 className="text-start text-[2rem] font-medium uppercase leading-[1.12] text-gray-900 sm:text-5xl md:text-6xl">
               Branding <br /> Web & <br /> mobile{" "}
             </h1>
-            <span
-              className={`text-5xl  md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}   `}
-            >
+            <span className="font-instrument text-[2rem] font-extralight italic leading-[1.12] text-[#7BB668] sm:text-5xl md:text-6xl">
               all in one Circle
             </span>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="hidden md:block"
-          >
+          <div className="hidden md:block">
             <Image
               src="/struct.png"
               width={300}
               height={300}
-              alt="struct"
+              alt=""
               className="mr-24"
+              priority
             />
-          </motion.div>
+          </div>
         </div>
 
-        <div className=" border text-black md:hidden w-fit px-4 py-3 text-xs rounded-full border-gray-400 flex justify-center items-center gap-1 ml-3 mt-12">
+        <Link
+          href="/contact"
+          className="mt-12 flex w-fit items-center justify-center gap-1 rounded-full border border-gray-400 px-4 py-3 text-xs text-black md:hidden"
+        >
           GET STARTED
           <MdOutlineKeyboardArrowRight className="text-lg" />
-        </div>
+        </Link>
       </div>
     </section>
   );

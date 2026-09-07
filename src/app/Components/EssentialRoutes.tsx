@@ -1,24 +1,10 @@
 
 'use client'
 import React from 'react'
-import { Instrument_Serif } from "next/font/google";
-import { Rethink_Sans } from "next/font/google";
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { SlideLeft, SlideRight } from '../services/animation';
-
-
-const instrumentSerif = Instrument_Serif({ 
-    subsets: ["latin"], 
-    weight: ["400"], 
-    style: "italic" // ✅ Correct way to load italic
-  });
-  
-  const rethinkSans = Rethink_Sans({
-    subsets: ["latin"],
-    weight: ["400", "700"], // Adjust weights as needed
-  });
 const EssentialRoutes = ({developmentEssentials}) => {
   const pathname = usePathname();
 
@@ -37,18 +23,9 @@ const EssentialRoutes = ({developmentEssentials}) => {
                           initial="hidden"
                             whileInView={"visible"}
       className="md:flex   w-full mb-12 " id="creativee">
-            <h2 className="text-4xl font-bold text-white ">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl ">
               {label} <br />
-              <span className="showcase" 
-               style={{
-               
-                fontWeight: "200",
-                color: "#7BB668",
-                fontStyle: "italic",
-                lineHeight: "83px",
-                fontFamily: instrumentSerif.style.fontFamily || "serif",
-              }}
-              ><i>Essentials</i></span>
+              <span className="showcase"><i>Essentials</i></span>
             </h2>
          
           </motion.div>

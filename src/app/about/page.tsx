@@ -1,27 +1,13 @@
 'use client'
 import Image from 'next/image'
 import React, { useState } from 'react'
-// import img2 from '../../../images/2.png'
-// import img1 from '../../../images/1.png'
-// import img3 from '../../../images/3.png'
-import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
 import Link from 'next/link';
 
 import DarkNav from '@/app/navbar/DarkNav'
-import { Instrument_Serif } from "next/font/google";
 import HeroRoute from '../Components/HeroRoute';
 import EmailFooter from '../Components/EmailFooter';
 import { motion } from 'framer-motion';
 import { SlideDown, SlideLeft, SlideRight } from '../services/animation';
-gsap.registerPlugin(ScrollTrigger);
-
-const instrumentSerif = Instrument_Serif({ 
-    subsets: ["latin"], 
-    weight: ["400"], 
-    style: "italic" // ✅ Correct way to load italic
-  });
 
 function Page() {
 
@@ -128,12 +114,12 @@ function Page() {
             
           }}
           >
-          <div className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row  justify-between gap-4 items-center pt-6 h-[1400px] md:h-[440px] overflow-hidden px-4 ">
+          <div className="mx-auto flex h-auto w-full max-w-screen-xl flex-col items-stretch justify-between gap-4 overflow-hidden px-4 pt-6 md:h-[440px] md:flex-row md:items-center">
       <motion.div
            variants={SlideLeft(0.1)}
                           initial="hidden"
                             whileInView={"visible"}
-      className="w-full md:w-[25%] h-full  rounded-md overflow-hidden flex-grow-0 relative" id='imgtree'>
+      className="relative h-[280px] w-full flex-grow-0 overflow-hidden rounded-md md:h-full md:w-[25%]" id='imgtree'>
   <Image
      src='/wasifabc.png'
      alt="Image description"
@@ -147,7 +133,7 @@ function Page() {
   variants={SlideLeft(0.2)}
                           initial="hidden"
                             whileInView={"visible"}
-className="w-full md:w-[50%] h-full rounded-md overflow-hidden flex-grow-0 relative">
+className="relative h-[280px] w-full flex-grow-0 overflow-hidden rounded-md md:h-full md:w-[50%]">
   <Image
      src='/wasifdef.png'
      alt="Image description"
@@ -161,7 +147,7 @@ className="w-full md:w-[50%] h-full rounded-md overflow-hidden flex-grow-0 relat
     variants={SlideLeft(0.3)}
                           initial="hidden"
                             whileInView={"visible"}
-  className="w-full md:w-[25%] h-full rounded-md overflow-hidden flex-grow-0 relative">
+  className="relative h-[280px] w-full flex-grow-0 overflow-hidden rounded-md md:h-full md:w-[25%]">
   <Image
      src='/wasifghi.png'
      alt="Image description"
@@ -221,19 +207,10 @@ className="w-full md:w-[50%] h-full rounded-md overflow-hidden flex-grow-0 relat
                variants={SlideDown(0.1)}
                           initial="hidden"
                             whileInView={"visible"}
-          className="text-4xl    text-white
-">
+          className="text-3xl text-white sm:text-4xl"
+          >
             Why  <br />
-            <span className="showcase" 
-             style={{
-             
-              fontWeight: "200",
-              color: "#7BB668",
-              fontStyle: "italic",
-              lineHeight: "83px",
-              fontFamily: instrumentSerif.style.fontFamily || "serif",
-            }}
-            ><i>OcircleX</i></span>
+            <span className="showcase"><i>OcircleX</i></span>
           </motion.h2>
           {/* <button className="mt-4 px-3 md:px-6 flex gap-x-2 py-3 border border-gray-100   bg-transparent
 text-white text-lg font-medium rounded-full hover:bg-blue-800 transition"
@@ -272,14 +249,14 @@ Our developers seamlessly integrate with your team to deliver innovative solutio
 
             <div className=" py-[4rem] px-4  w-full  bg-white  shadow-md  ">
                 <div className="m-auto text-[#04081C] max-w-screen-xl">
-                    <div className="flex flex-col md:flex-row justify-between md:items-center">
+                    <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
                         <motion.div
                              variants={SlideRight(0.1)}
                           initial="hidden"
                             whileInView={"visible"}
                         className="" id='thecore'>
-                            <h1 className="text-4xl md:text-6xl font-bold text-[#04081C] leading-4">THE CORE OF</h1>
-                            <span className={`text-5xl md:text-7xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}  leading-[83px] `}><i>our identity</i></span>
+                            <h1 className="text-3xl font-bold leading-tight text-[#04081C] sm:text-4xl md:text-6xl">THE CORE OF</h1>
+                            <span className="font-instrument text-4xl font-extralight italic leading-[1.15] text-[#7BB668] sm:text-5xl md:text-7xl"><i>our identity</i></span>
                         </motion.div>
 
                         <div className="flex md:justify-end">
@@ -287,7 +264,7 @@ Our developers seamlessly integrate with your team to deliver innovative solutio
                                  variants={SlideLeft(0.1)}
                           initial="hidden"
                             whileInView={"visible"}
-                            id='seeour' className=" px-6 border py-3 hover:text-white cursor-pointer border-[#171D3F] rounded-full text-[#04081C] text-lg font-medium hover:bg-blue-800 ">
+                            id='seeour' className="mt-4 cursor-pointer rounded-full border border-[#171D3F] px-5 py-2.5 text-sm font-medium text-[#04081C] hover:bg-blue-800 hover:text-white md:mt-0 md:px-6 md:py-3 md:text-lg ">
                                 SEE OUR SERVICES
                             </motion.div>
                         </div>
@@ -375,17 +352,17 @@ Our developers seamlessly integrate with your team to deliver innovative solutio
                           initial="hidden"
                             whileInView={"visible"}
                 className='' id="meet">
-                        <h1 className="text-2xl md:text-4xl font-bold text-black leading-3 md:leading-tight">MEET </h1>
-                        <span id="team" className={`text-5xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}  `}>Our Team</span>
+                        <h1 className="text-2xl font-bold leading-tight text-black md:text-4xl">MEET </h1>
+                        <span id="team" className="font-instrument text-4xl font-extralight italic leading-[1.15] text-[#7BB668] md:text-6xl">Our Team</span>
                     </motion.div>
 
                 
                 </div>
              
 
-                <div className="flex flex-col md:flex-row w-full overflow-auto  justify-between items-center  scrollbar scrollbar-thin pt-2    gap-x-4 h-auto " id='teamimg'>
+                <div className="flex h-auto w-full flex-col items-center justify-between gap-x-4 gap-y-8 overflow-x-auto pt-2 scrollbar-thin md:flex-row" id='teamimg'>
                     {team.map((x,index) => (
-                        <div key={x.title} className=" flex flex-col  min-w-[25%] w-[100%] justify-between items-center  rounded-lg">
+                        <div key={x.title} className="flex w-full flex-col items-center justify-between rounded-lg md:min-w-[25%] md:w-[25%]">
                             {/* <img src={x.image} alt={x.title} className="w-full  rounded-md object-cover" /> */}
                          
 <motion.div
@@ -443,8 +420,8 @@ className='w-[100%] h-[350px]  relative group' onMouseEnter={()=> setDetails(tru
                           initial="hidden"
                             whileInView={"visible"}
                 className='' id="whatwe">
-                        <h1 className="text-2xl md:text-4xl font-bold text-white leading-3 md:leading-tight">WHAT WE </h1>
-                        <span id="team" className={`text-5xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}  `}>excel at</span>
+                        <h1 className="text-2xl font-bold leading-tight text-white md:text-4xl">WHAT WE </h1>
+                        <span id="team" className="font-instrument text-4xl font-extralight italic leading-[1.15] text-[#7BB668] md:text-6xl">excel at</span>
                     </motion.div>
                     <motion.div
                      variants={SlideRight(0.15)}

@@ -1,24 +1,11 @@
 "use client"
 import React from "react";
-import { Instrument_Serif } from "next/font/google";
-import { Rethink_Sans } from "next/font/google";
 import Image from "next/image";
 import { GoArrowUpRight } from "react-icons/go";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { motion } from "framer-motion";
 import { SlideLeft, SlideRight } from '../services/animation';
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: "italic", // ✅ Correct way to load italic
-});
-
-const rethinkSans = Rethink_Sans({
-  subsets: ["latin"],
-  weight: ["400", "700"], // Adjust weights as needed
-});
 
 const OurServices = () => {
   const services = [
@@ -53,7 +40,7 @@ const OurServices = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-full mx-auto px-10 md:px-28 py-8 max-w-screen-xl relative">
+      <div className="relative mx-auto w-full max-w-screen-xl px-5 py-8 md:px-12 lg:px-28">
         <div
           className="md:flex justify-between items-center mb-6 md:mb-12  "
           id="creativee"
@@ -62,19 +49,10 @@ const OurServices = () => {
           variants={SlideRight(0.4)}
                           initial="hidden"
                             whileInView={"visible"}
-            className="text-4xl font-bold   text-[#04081C] leading-tigher
- "
+            className="text-3xl font-bold text-[#04081C] leading-tight sm:text-4xl"
           >
             OUR <br />
-            <span
-              className="showcase"
-              style={{
-                fontWeight: "200",
-                color: "#7BB668",
-                fontStyle: "italic",
-                fontFamily: instrumentSerif.style.fontFamily || "serif",
-              }}
-            >
+            <span className="showcase">
               <i>services</i>
             </span>
           </motion.h2> 
@@ -91,11 +69,8 @@ const OurServices = () => {
       variants={SlideRight(service.delay)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false }}
+      viewport={{ once: true }}
       className="group w-full flex items-center justify-between py-3 text-black cursor-pointer hover:bg-[#04081C] hover:text-white md:px-5 rounded-lg transition-colors duration-300"
-      style={{
-        fontFamily: rethinkSans.style.fontFamily || "serif",
-      }}
     >
       <h1 className="text-2xl md:text-3xl leading-tight capitalize">
         {service.title}

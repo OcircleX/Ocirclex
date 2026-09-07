@@ -1,199 +1,171 @@
 "use client";
-import { Instrument_Serif } from "next/font/google";
-import { Rethink_Sans } from "next/font/google";
-import { useEffect, useState } from "react";
+import { Fragment, useRef, type RefObject } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { SlideLeft, SlideRight } from "../services/animation";
 
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: "italic", // ✅ Correct way to load italic
-});
-
-const rethinkSans = Rethink_Sans({
-  subsets: ["latin"],
-  weight: ["400", "700"], // Adjust weights as needed
-});
-
-const Showcase = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-const card = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
+const projects = [
+  {
+    title: "Task Management",
+    category: "Web dev & UI Design",
+    image: "/Nuegas.png",
   },
-};
-
-const image = {
-  hidden: { opacity: 0, scale: 1.05 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
+  {
+    title: "Fitness Application",
+    category: "Mobile App Dev",
+    image: "/Fitness.png",
   },
-};
-
-const content = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, delay: 0.15 },
+  {
+    title: "Hospital Management System",
+    category: "Web dev & UI Design",
+    image: "/Hospital.png",
   },
-};
+];
 
-  const projects = [
-    {
-      title: "Task Management",
-      category: "Web dev & UI Design",
-      image: "/Nuegas.png",
-      link: "/projects/dynamic-structures",
-    },
-    {
-      title: "Fitness  Application",
-      category: "Mobile App Dev",
-      image: "/Fitness.png",
-      link: "/projects/visionary-framework",
-    },
-    {
-      title: "Hospital Management System",
-      category: "Web dev & UI Design",
-      image: "/Hospital.png",
-      link: "/projects/design-revolution",
-    },
-  ];
-
-  const items = [
-    {
-      title: "WE DELIVER CREATIVE PROJECTS",
-      subtitle: "OUR DIGITALISED DESIGN TEAM TO ELEVATE",
-    },
-    {
-      title: "WE PARTNER CLOSELY WITH BRAINSTORM",
-      subtitle: "ENSURING DESIGNS ALIGN WITH ALL VISION AND GOALS",
-    },
-    {
-      title: "WE ARE BOTH INNOVATIVE AND FUNCTIONAL",
-      subtitle: "THROUGH CONTINUOUS FEEDBACKS AND REVISIONS",
-    },
-  ];
-
-  return ( 
-    <>
-      <section className="py-16   w-full bg-[#04081C]">
-        <div className="w-full mx-auto px-6 max-w-screen-xl">
-          <div className="flex justify-between items-start mb-12" id="creativee">
-  <motion.h2
-    variants={SlideLeft(0.2)}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: false }}
-    className="text-3xl md:text-4xl text-white"
-    style={{
-      fontFamily: rethinkSans.style.fontFamily || "serif",
-    }}
-  >
-    View Our <br />
-    <span
-      className="showcase"
+function PortfolioCardVisual({
+  project,
+  index,
+  scale,
+  dim,
+}: {
+  project: (typeof projects)[number];
+  index: number;
+  scale?: MotionValue<number>;
+  dim?: MotionValue<number>;
+}) {
+  return (
+    <article
+      className="portfolio-card sticky mb-6 last:mb-0"
       style={{
-        fontWeight: "200",
-        color: "#7BB668",
-        fontStyle: "italic",
-        lineHeight: "70px",
-        fontFamily: instrumentSerif.style.fontFamily || "serif",
+        top: `calc(5.5rem + ${index * 28}px)`,
+        zIndex: 10 + index,
       }}
+      data-cursor="view"
     >
-      <i>portfolio</i>
-    </span>
-  </motion.h2>
+      <motion.div
+        className="portfolio-card-inner will-change-transform overflow-hidden rounded-2xl bg-[#0b1028] shadow-[0_24px_80px_rgba(0,0,0,0.45)] ring-1 ring-white/10 md:rounded-3xl"
+        style={{
+          ...(scale ? { scale } : {}),
+          transformOrigin: "top center",
+        }}
+      >
+        <div className="relative aspect-[16/11] w-full md:aspect-[16/9] md:h-[68vh] md:max-h-[720px]">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10" />
+          <motion.div
+            className="portfolio-card-dim pointer-events-none absolute inset-0 bg-[#04081C]"
+            style={{ opacity: dim ?? 0 }}
+          />
 
-  <motion.button
-    variants={SlideRight(0.3)}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: false }}
-    className="md:mt-4 px-3 md:px-6 flex gap-x-2 py-4 border border-gray-500 bg-transparent text-white text-md font-medium rounded-full items-center text-xs"
-  >
-    ALL CASE STUDIES
-  </motion.button>
-</div>
-
-          <div className="relative ">
-            {projects.map((project, index) => (
-         <motion.a
-  key={index}
-  variants={card}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
-  className="block h-full mt-12 space-y-4 shadow-lg rounded-lg overflow-hidden relative"
->
-  {/* IMAGE */}
-  <motion.div
-    variants={image}
-    className="w-full rounded-md overflow-hidden relative"
-  >
-    <Image
-      src={project.image}
-      alt={project.title}
-      height={680}
-      width={1380}
-      className="rounded-md"
-    />
-  </motion.div>
-
-  {/* DESKTOP CONTENT */}
-  <motion.div
-    variants={content}
-    className="p-6 absolute bottom-12 left-6 hidden sm:flex flex-col"
-  >
-    <button className="mt-6 px-6 py-3 bg-[#04081C] text-white text-lg font-medium rounded-full hover:bg-blue-800 transition md:text-base md:px-4 md:py-2 md:w-[70%]">
-      {project.category}
-    </button>
-
-    <h3
-      className={`w-[40vh] tracking-[-1.62px] mt-4 text-[54px] font-bold leading-[120%] ${
-        index === 0 ? "text-white" : "text-black"
-      }`}
-    >
-      {project.title}
-    </h3>
-  </motion.div>
-
-  {/* MOBILE CONTENT */}
-  <motion.div
-    variants={content}
-    className="md:hidden p-3 flex flex-col gap-1"
-  >
-    <button className="bg-[#04081C] px-2 py-1 text-white text-xs font-medium rounded-full hover:bg-blue-800 transition">
-      {project.category}
-    </button>
-
-    <h3
-      className={`font-bold text-sm ${
-        index === 0 ? "text-white" : "text-black"
-      }`}
-    >
-      {project.title}
-    </h3>
-  </motion.div>
-</motion.a>
-
-            ))}
+          <div className="absolute bottom-5 left-5 right-5 flex flex-col sm:bottom-10 sm:left-8 sm:right-auto">
+            <span className="w-fit rounded-full bg-[#04081C] px-3 py-1.5 text-[11px] font-medium text-white sm:px-4 sm:py-2 sm:text-sm">
+              {project.category}
+            </span>
+            <h3 className="mt-3 max-w-xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-[54px] md:leading-[1.15]">
+              {project.title}
+            </h3>
           </div>
         </div>
-      </section>
+      </motion.div>
+    </article>
+  );
+}
 
-    </>
+function ScalingPortfolioCard({
+  project,
+  index,
+  nextSlotRef,
+}: {
+  project: (typeof projects)[number];
+  index: number;
+  nextSlotRef: RefObject<HTMLDivElement | null>;
+}) {
+  const { scrollYProgress } = useScroll({
+    target: nextSlotRef,
+    offset: ["start end", "start 18%"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.88]);
+  const dim = useTransform(scrollYProgress, [0, 1], [0, 0.45]);
+
+  return (
+    <PortfolioCardVisual
+      project={project}
+      index={index}
+      scale={scale}
+      dim={dim}
+    />
+  );
+}
+
+const Showcase = () => {
+  const slotA = useRef<HTMLDivElement>(null);
+  const slotB = useRef<HTMLDivElement>(null);
+  const slotC = useRef<HTMLDivElement>(null);
+  const slotRefs = [slotA, slotB, slotC];
+
+  return (
+    <section className="relative z-10 w-full overflow-x-clip bg-[#04081C] py-16 md:py-24">
+      <div className="mx-auto w-full max-w-screen-xl px-5 md:px-6">
+        <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-start md:mb-14" id="creativee">
+          <motion.h2
+            variants={SlideLeft(0.2)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-3xl text-white md:text-4xl"
+          >
+            View Our <br />
+            <span className="showcase">
+              <i>portfolio</i>
+            </span>
+          </motion.h2>
+
+          <motion.a
+            href="https://www.behance.net/Circle_Xproject"
+            target="_blank"
+            rel="noreferrer"
+            variants={SlideRight(0.3)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-0 flex shrink-0 items-center gap-x-2 rounded-full border border-gray-500 bg-transparent px-3 py-2 text-xs font-medium text-white md:mt-4 md:px-6 md:py-4 md:text-sm"
+          >
+            ALL CASE STUDIES
+          </motion.a>
+        </div>
+
+        <div className="relative">
+          {projects.map((project, index) => {
+            const nextSlotRef = slotRefs[index + 1];
+
+            return (
+              <Fragment key={project.title}>
+                <div
+                  ref={slotRefs[index]}
+                  className="h-0 w-0 overflow-hidden"
+                  aria-hidden
+                />
+                {nextSlotRef ? (
+                  <ScalingPortfolioCard
+                    project={project}
+                    index={index}
+                    nextSlotRef={nextSlotRef}
+                  />
+                ) : (
+                  <PortfolioCardVisual project={project} index={index} />
+                )}
+              </Fragment>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 };
 

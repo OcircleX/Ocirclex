@@ -3,30 +3,75 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #f3f5f0;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  overflow-y: auto;
+  max-width: 100%;
+  background-color: #f3f5f0;
+  color-scheme: light;
+  scrollbar-width: thin;
+  scrollbar-color: #7BB668 #0b1028;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-  overflow-y: hidden;
-
-
+  font-family: var(--font-rethink), system-ui, sans-serif;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #04081C;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #9ad186 0%, #7BB668 55%, #5d934d 100%);
+  border: 2px solid #04081C;
+  border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #8fc97c;
+}
+
+html::-webkit-scrollbar-corner {
+  background: #04081C;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+html.tawk-open,
+html.tawk-open body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+@media (max-width: 768px) {
+  html.tawk-open body {
+    position: relative;
+    width: 100%;
+  }
+
+  iframe[title="chat widget"],
+  iframe[title*="Tawk"],
+  div[id^="tawk"] {
+    max-width: 100% !important;
+  }
 }
 
 @keyframes fadeDown {
@@ -42,4 +87,35 @@ html {
 
 .animate-fadeDown {
   animation: fadeDown 0.3s ease-out forwards;
+}
+
+@keyframes logo-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.logo-marquee {
+  animation: logo-marquee 18s linear infinite;
+  will-change: transform;
+}
+
+@keyframes hero-orb {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(18px, 12px, 0); }
+}
+
+.hero-orb {
+  animation: hero-orb 16s ease-in-out infinite;
+}
+
+.hero-orb-slow {
+  animation: hero-orb 22s ease-in-out infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee,
+  .hero-orb,
+  .hero-orb-slow {
+    animation: none;
+  }
 }

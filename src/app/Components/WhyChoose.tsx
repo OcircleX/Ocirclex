@@ -1,20 +1,7 @@
 "use client"
 import React from 'react'
-import { Instrument_Serif } from "next/font/google";
-import { Rethink_Sans } from "next/font/google";
 import { motion } from "framer-motion";
-import { SlideLeft, SlideRight, SlideUp } from '../services/animation';
-
-const instrumentSerif = Instrument_Serif({ 
-    subsets: ["latin"], 
-    weight: ["400"], 
-    style: "italic" // ✅ Correct way to load italic
-  });
-  
-  const rethinkSans = Rethink_Sans({
-    subsets: ["latin"],
-    weight: ["400", "700"], // Adjust weights as needed
-  });
+import { SlideLeft, SlideRight } from '../services/animation';
 
 const WhyChoose = () => {
   const listVariant = {
@@ -40,28 +27,16 @@ const itemVariant = {
     >
         <div className="w-full mx-auto px-6 max-w-screen-xl">
 
-      <div className="flex justify-between items-start mb-12" id="creativee">
+      <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:mb-12 sm:flex-row sm:items-start">
   <motion.h2
     variants={SlideLeft(0.2)}
     initial="hidden"
     whileInView="visible"
-    viewport={{ once: false }}
+    viewport={{ once: true }}
     className="text-3xl md:text-4xl text-white"
-    style={{
-      fontFamily: rethinkSans.style.fontFamily || "serif",
-    }}
   >
     Why Choose <br />
-    <span
-      className="showcase"
-      style={{
-        fontWeight: "200",
-        color: "#7BB668",
-        fontStyle: "italic",
-        lineHeight: "70px",
-        fontFamily: instrumentSerif.style.fontFamily || "serif",
-      }}
-    >
+    <span className="showcase">
       <i>OcircleX</i>
     </span>
   </motion.h2>
@@ -70,8 +45,8 @@ const itemVariant = {
     variants={SlideRight(0.3)}
     initial="hidden"
     whileInView="visible"
-    viewport={{ once: false }}
-    className="md:mt-4 px-3 md:px-6 flex gap-x-2 py-4 border border-gray-500 bg-transparent text-white text-md font-medium rounded-full items-center text-xs"
+    viewport={{ once: true }}
+    className="mt-1 flex shrink-0 items-center gap-x-2 rounded-full border border-gray-500 bg-transparent px-3 py-2 text-xs font-medium text-white sm:mt-4 sm:px-6 sm:py-4 sm:text-sm"
   >
     ALL CASE STUDIES
   </motion.button>
@@ -83,7 +58,7 @@ const itemVariant = {
   variants={listVariant}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false }}
+  viewport={{ once: true }}
   className="text-white leading-6 md:leading-none text-sm md:text-2xl list-disc pl-5 font-extralight md:font-light space-y-4 md:space-y-6"
 >
   {[

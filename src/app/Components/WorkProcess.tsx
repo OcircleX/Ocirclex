@@ -1,55 +1,30 @@
 "use client"
 import React from 'react'
-import { Instrument_Serif } from "next/font/google";
-import { Rethink_Sans } from "next/font/google";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SlideLeft, SlideRight, SlideUp } from '../services/animation';
 
-
-const instrumentSerif = Instrument_Serif({ 
-    subsets: ["latin"], 
-    weight: ["400"], 
-    style: "italic" // ✅ Correct way to load italic
-  });
-  
-  const rethinkSans = Rethink_Sans({
-    subsets: ["latin"],
-    weight: ["400", "700"], // Adjust weights as needed
-  });
-
 const WorkProcess = () => {
   
   return (
-    <section className="pt-32 pb-16   w-full bg-[#04081C] "
-  
-    >
+    <section className="relative z-20 w-full bg-[#04081C] pt-32 pb-16">
         <div className="w-full mx-auto px-6 max-w-screen-xl">
 
-        <div className="md:flex justify-between items-center mb-12  " id="creativee">
+        <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-start md:mb-12" id="creativee">
             <motion.h2 
                 variants={SlideRight(0.4)}
                           initial="hidden"
                             whileInView={"visible"}
-            className="text-4xl font-bold   text-white
- ">
+            className="text-3xl font-bold text-white sm:text-4xl">
               OUR  <br />
-              <span className="showcase" 
-               style={{
-               
-                fontWeight: "200",
-                color: "#7BB668",
-                fontStyle: "italic",
-                lineHeight: "83px",
-                fontFamily: instrumentSerif.style.fontFamily || "serif",
-              }}
-              ><i>Work Process</i></span>
+              <span className="showcase"><i>Work Process</i></span>
             </motion.h2>
             
             <motion.div  variants={SlideLeft(0.4)}
                           initial="hidden"
-                            whileInView={"visible"}>
-                                 <Image src="/green-cube.png" width={240} height={280} alt='cube' className=''/>
+                            whileInView={"visible"}
+                            className="hidden shrink-0 sm:block">
+                                 <Image src="/green-cube.png" width={240} height={280} alt='cube' className='h-28 w-auto md:h-auto'/>
                             </motion.div>
         
           </div>
@@ -60,7 +35,7 @@ const WorkProcess = () => {
 variants={SlideUp(0.5)}
                           initial="hidden"
                             whileInView={"visible"}
-className="text-white text-4xl capitalize leading-10 " style={{  fontFamily: rethinkSans.style.fontFamily || "serif",}}>Driven by creativity and powered by expertise, our team brings fresh ideas and top-tier skills to every project we touch.</motion.p>
+className="text-xl capitalize leading-8 text-white sm:text-2xl sm:leading-9 md:text-4xl md:leading-10">Driven by creativity and powered by expertise, our team brings fresh ideas and top-tier skills to every project we touch.</motion.p>
 
 
 

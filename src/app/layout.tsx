@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import "./style.css";
+import { instrumentSerif, rethinkSans } from "./fonts";
 
 import Footer from "./footer/Footer";
+import CustomCursor from "./Components/CustomCursor";
+import TawkLoader from "./Components/TawkLoader";
 
 export const metadata: Metadata = {
   title: "CircleX Pvt Ltd",
@@ -19,33 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="cupcake">
-      <body>
-        <main className="h-[80%] flex justify-center">
-          {children}
-        </main>
-
-        {/* ✅ Tawk.to Live Chat Script (App Router correct way) */}
-        <Script
-          id="tawk-to"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-              (function(){
-                var s1=document.createElement("script"),
-                s0=document.getElementsByTagName("script")[0];
-                s1.async=true;
-                s1.src='https://embed.tawk.to/686cc6b01731c019090354cc/1ivkeg916';
-                s1.charset='UTF-8';
-                s1.setAttribute('crossorigin','*');
-                s0.parentNode.insertBefore(s1,s0);
-              })();
-            `,
-          }}
-        />
-
+    <html
+      lang="en"
+      className={`${rethinkSans.variable} ${instrumentSerif.variable}`}
+    >
+      <body className="font-sans antialiased">
+        <CustomCursor />
+        <main className="w-full">{children}</main>
         <Footer />
+        <TawkLoader />
       </body>
     </html>
   );

@@ -8,7 +8,10 @@ export default {
   ],
   theme: {
     extend: {
-     
+      fontFamily: {
+        sans: ["var(--font-rethink)", "system-ui", "sans-serif"],
+        instrument: ["var(--font-instrument)", "Georgia", "serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

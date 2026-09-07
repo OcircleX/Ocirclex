@@ -1,11 +1,17 @@
 
 
 .industryexperience {
-    font-size: 40px; /* Default for mobile */
+    font-size: clamp(2rem, 8vw, 3.75rem);
+    line-height: 1.15;
   }
 
   .showcase {
-    font-size: 48px;
+    font-size: clamp(2rem, 8vw, 3.75rem);
+    line-height: 1.15;
+    font-family: var(--font-instrument), Georgia, serif;
+    font-style: italic;
+    font-weight: 200;
+    color: #7BB668;
   }
 
   #ProjectContent2 {

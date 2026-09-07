@@ -1,109 +1,12 @@
 'use client'
 import React, { useState } from 'react'
 import DarkNav from '../navbar/DarkNav'
-import { Instrument_Serif } from "next/font/google";
 import Image from 'next/image';
 import { GoArrowUpRight } from "react-icons/go";
-import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
-gsap.registerPlugin(ScrollTrigger);
-
-
-
-const instrumentSerif = Instrument_Serif({ 
-    subsets: ["latin"], 
-    weight: ["400"], 
-    style: "italic" // ✅ Correct way to load italic
-  });
 
 const Services = () => {
     const [details, setDetails] = useState(false)
 
-
-    useGSAP(()=> {
-        gsap.from("#enthu",
-          {x: 100,
-            duration:1,
-            opacity:0,
-            delay:0.2,
-            ease: "expo.out",
-           
-        
-           
-           }
-          )
-          }, {scope:""})
-
-          useGSAP(()=> {
-            gsap.from("#imgthree",
-              {y: 100,
-                duration:1,
-                opacity:0,
-                delay:1,
-                ease: "expo.out",
-               
-            
-               
-               }
-              )
-              }, {scope:""})
-          
-
-          useGSAP(()=> {
-            gsap.from("#servv",
-              {x: -100,
-                duration:1.5,
-                opacity:0,
-                delay:1,
-                ease: "expo.out",
-               
-            
-               
-               }
-              )
-              }, {scope:""})
-
-
-
-              useGSAP(()=> {
-                gsap.from("#meet",
-                   {x: -100,
-                    duration:1,
-                    opacity:0,
-                    delay:0.5,
-                   
-                   
-                    scrollTrigger: {
-                    trigger:"#meet"
-                    },
-                   
-                   }
-                  )
-                  }, {scope:""})
-
-
-
-
-                  useGSAP(()=> {
-                    gsap.from("#teamimg",
-                       {y: 100,
-                        x:100,
-                        duration:1,
-                        opacity:0,
-                        delay:0.5,
-                       
-                       
-                        scrollTrigger: {
-                        trigger:"#teamimg"
-                        },
-                       
-                       }
-                      )
-                      }, {scope:""})
-    
-
-    
                       const team = [
                         {
                             title: "FAZAL BASIT",
@@ -177,27 +80,27 @@ const Services = () => {
 <section className='w-full flex flex-col items-center justify-center px-4'>
 
     <div className='w-full mt-8 md:mt-24'>
-    <div className="w-full items-center flex flex-col py-[2rem] text-center leading-10 md:leding-6" id="enthu">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white leading-9" >
+    <div className="flex w-full flex-col items-center py-[2rem] text-center leading-tight" id="enthu">
+                    <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-6xl" >
                         ENTHUSIASM FOR</h1>
-                    <span id='service' className={`text-5xl md:text-7xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}  md:leading-1 `}>each service</span>
+                    <span id='service' className="font-instrument text-4xl font-extralight italic leading-[1.15] text-[#7BB668] sm:text-5xl md:text-7xl">each service</span>
                   
                 </div>
     </div>
     
     
 
-<div className='w-full  flex max-w-screen-xl   h-[300px] justify-between mt-12'>
+<div className='mt-12 flex h-auto min-h-[240px] w-full max-w-screen-xl justify-between md:h-[300px]'>
     <div className='md:w-[28%]  relative hidden sm:block' id="imgthree">
         <Image src="/Container.png" fill alt='container' />
 
     </div>
 
-    <div className='w-full md:w-[65%] flex flex-col space-y-4 md:space-y-3  overflow-hidden h-[300px] md:ml-16' id="servv">
+    <div className='flex h-auto w-full flex-col space-y-4 overflow-hidden md:ml-16 md:h-[300px] md:w-[65%] md:space-y-3' id="servv">
 
 {/* WEB DESIGN */}
 <div className="w-full flex text-[#a3a5aa] items-center justify-between py-1 cursor-pointer">
-    <h1 className="text-3xl  leading-tight">WEB DEVELOPMENT</h1>
+    <h1 className="text-xl leading-tight sm:text-2xl md:text-3xl">WEB DEVELOPMENT</h1>
     <GoArrowUpRight className=' text-2xl'/>
 
 </div>
@@ -206,21 +109,21 @@ const Services = () => {
 
 {/* DEVELOPMENT */}
 <div className="w-full flex items-center justify-between md:py-1.5 text-[#a3a5aa] cursor-pointer">
-    <h1 className="text-3xl text-[#a3a5aa] leading-tight">APP DEVELOPMENT</h1>
+    <h1 className="text-xl leading-tight text-[#a3a5aa] sm:text-2xl md:text-3xl">APP DEVELOPMENT</h1>
     <GoArrowUpRight className=' text-2xl'/>
 </div>
 <div className="bg-gray-800  rounded-full w-full h-0.5"></div>
 
 {/* UI/UX CONCEPT */}
 <div className="w-full flex items-center justify-between py-1.5 text-[#a3a5aa] cursor-pointer">
-    <h1 className="text-3xl text-[#a3a5aa] leading-tight">BRANDING & DESIGN</h1>
+    <h1 className="text-xl leading-tight text-[#a3a5aa] sm:text-2xl md:text-3xl">BRANDING & DESIGN</h1>
     <GoArrowUpRight className=' text-2xl'/>
 </div>
 <div className="bg-gray-800  rounded-full w-full h-0.5"></div>
 
 {/* BRANDING */}
 <div className="w-full flex items-center justify-between py-1 text-[#a3a5aa] cursor-pointer">
-    <h1 className="text-3xl text-[#a3a5aa] leading-tight">UI/UX DESIGN</h1>
+    <h1 className="text-xl leading-tight text-[#a3a5aa] sm:text-2xl md:text-3xl">UI/UX DESIGN</h1>
     <GoArrowUpRight className=' text-2xl'/>
 </div>
 <div className="bg-gray-800  rounded-full w-full h-0.5"></div>
@@ -242,17 +145,17 @@ const Services = () => {
 <div className="max-w-screen-xl justify-between w-full m-auto ">
                 <div className="w-full py-[4rem] items-center md:flex pt-6 mt-6 justify-between">
                     <div className='' id="meet">
-                        <h1 className="text-2xl md:text-4xl font-bold text-white leading-3 md:leading-tight">MEET </h1>
-                        <span id="team" className={`text-5xl md:text-6xl font-extralight text-[#7BB668] italic  ${instrumentSerif.className}  `}>Our Team</span>
+                        <h1 className="text-2xl font-bold leading-tight text-white md:text-4xl">MEET </h1>
+                        <span id="team" className="font-instrument text-4xl font-extralight italic leading-[1.15] text-[#7BB668] md:text-6xl">Our Team</span>
                     </div>
 
                 
                 </div>
              
 
-                <div className="md:flex w-full overflow-auto  justify-between items-center  scrollbar scrollbar-thin pt-2    gap-x-4 h-auto " id='teamimg'>
+                <div className="flex h-auto w-full flex-col items-center justify-between gap-x-4 gap-y-8 overflow-x-auto pt-2 scrollbar-thin md:flex-row" id='teamimg'>
                     {team.map((x,index) => (
-                        <div key={index} className=" flex flex-col  min-w-[25%] justify-between items-center  rounded-lg">
+                        <div key={index} className="flex w-full flex-col items-center justify-between rounded-lg md:min-w-[25%] md:w-[25%]">
                             {/* <img src={x.image} alt={x.title} className="w-full  rounded-md object-cover" /> */}
                          
                             <div className='w-[100%] h-[350px]  relative group' onMouseEnter={()=> setDetails(true)} onMouseLeave={()=> setDetails(false)}>

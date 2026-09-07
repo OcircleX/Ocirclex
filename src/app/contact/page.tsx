@@ -4,68 +4,11 @@
 
 import React, { useState } from 'react'
 
-import { Instrument_Serif } from "next/font/google";
 import DarkNav from '../navbar/DarkNav';
-import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
 import Link from 'next/link';
-gsap.registerPlugin(ScrollTrigger);
-
-
-
-const instrumentSerif = Instrument_Serif({ 
-    subsets: ["latin"], 
-    weight: ["400"], 
-    style: "italic" // ✅ Correct way to load italic
-  });
-
 
 
 function Page() {
-
-
-    useGSAP(()=> {
-        gsap.from("#getin",
-          {x: -100,
-            duration:1,
-            opacity:0,
-            delay:0.2,
-            ease: "expo.out",
-           
-        
-           
-           }
-          )
-          }, {scope:""})
-
-          useGSAP(()=> {
-            gsap.from("#oursup",
-              {x: 100,
-                duration:1,
-                opacity:0,
-                delay:0.2,
-                ease: "expo.out",
-               
-            
-               
-               }
-              )
-              }, {scope:""})
-
-              useGSAP(()=> {
-                gsap.from("#formanim",
-                  {y: 100,
-                    duration:1,
-                    opacity:0,
-                    delay:0.5,
-                    ease: "expo.out",
-                   
-                
-                   
-                   }
-                  )
-                  }, {scope:""})
 
 
     const [formData, setFormData] = useState({
@@ -233,17 +176,17 @@ function Page() {
 
         <div className='w-full relative bg-[#04081C]'>
             <DarkNav />
-            <section className="w-full relative bg-[#04081C] to-gray-100 py-20 flex flex-col items-center justify-between">
+            <section className="relative flex w-full flex-col items-center justify-between bg-[#04081C] px-4 py-12 to-gray-100 md:py-20">
                 <div className="max-w-screen-xl justify-between w-full m-auto">
 
 
         
 
-                    <div className="w-full items-center flex flex-col py-[2rem] text-center -mt-4 leading-9">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white leading-9" id='getin'>
+                    <div className="flex w-full flex-col items-center px-4 py-[2rem] text-center leading-tight">
+                        <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-6xl" id='getin'>
                             GET IN TOUCH WITH
                         </h1>
-                        <span className={`text-5xl md:text-7xl font-extralight text-[#7BB668] italic ${instrumentSerif.className}`} id='oursup'>
+                        <span className="font-instrument text-4xl font-extralight italic leading-[1.15] text-[#7BB668] sm:text-5xl md:text-7xl" id='oursup'>
                             our support
                         </span>
                     </div>

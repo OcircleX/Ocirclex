@@ -1,17 +1,10 @@
-import { Rethink_Sans } from 'next/font/google';
 import React from 'react'
 import Image from 'next/image';
-
-const rethinkSans = Rethink_Sans({
-    subsets: ["latin"],
-    weight: ["400", "700"], // Adjust weights as needed
-  });
-  
 
 const BlogComponent = () => {
   return (
     <div>
-      <div className={`w-[300px] text-gray-500 ${rethinkSans.className}`}>
+      <div className="w-full max-w-[300px] text-gray-500">
 <div className='w-full relative h-[200px] '>
     <Image src='/blogpic.png' 	fill={true} alt='blogpic' className='object-cover rounded-lg'/>
 </div>

@@ -1,13 +1,14 @@
+import dynamic from "next/dynamic";
 import Hero from "./Components/Hero";
 import Approch from "./Components/Approch";
-import Showcase from "./Components/Showcase";
-import IndustryInfo from "./Components/IndustryInfo";
 import Header from "./navbar/header";
 import OurServices from "./Components/OurServices";
 import WhyChoose from "./Components/WhyChoose";
-import Steps from "./Components/Steps";
-import WorkProcess from "./Components/WorkProcess";
-import ImageStacker from "./Components/ImageStacker";
+
+const Showcase = dynamic(() => import("./Components/Showcase"));
+const WorkProcess = dynamic(() => import("./Components/WorkProcess"));
+const Steps = dynamic(() => import("./Components/Steps"));
+const IndustryInfo = dynamic(() => import("./Components/IndustryInfo"));
 
 export default function Home() {
   return (
@@ -17,9 +18,7 @@ export default function Home() {
       <Approch />
       <OurServices />
       <WhyChoose />
-
       <Showcase />
-      {/* <ImageStacker/> */}
       <WorkProcess />
       <Steps />
       <IndustryInfo />
